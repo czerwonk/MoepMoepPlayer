@@ -15,20 +15,21 @@
 
 - (void)resetPlayer;
 
-- (void)verifyIfPlayable;
-
 @end
 
 @implementation StreamPlayer
 
 @synthesize delegate;
 @dynamic streamUrl;
+@synthesize status;
 
 - (id)init {
     self = [super init];
 
     if (self) {
         player = [[AVPlayer alloc] init];
+        [player addObserver:self forKeyPath:@"currentItem.status" options:0 context:NULL];
+
         [self initializeAudioSession];
     }
 
@@ -60,15 +61,15 @@
 }
 
 - (void)resetPlayer {
+    self.status = PlayerStatusLoading;
     [self.delegate playerStartedLoadingFromUrl:self.streamUrl];
 
     NSURL *url = [[NSURL alloc] initWithString:self.streamUrl];
     AVPlayerItem *item = [[AVPlayerItem alloc] initWithURL:url];
-    [player replaceCurrentItemWithPlayerItem:item];
-    [self verifyIfPlayable];
-
-    [item release];
     [url release];
+
+    [player replaceCurrentItemWithPlayerItem:item];
+    [item release];
 }
 
 - (void)play {
@@ -80,6 +81,7 @@
     }
 
     [player play];
+    self.status = PlayerStatusPlaying;
 }
 
 - (void)pause {
@@ -87,21 +89,6 @@
 
     AVAudioSession *session = [AVAudioSession sharedInstance];
     [session setActive:NO error:nil];
-}
-
-- (void)verifyIfPlayable {
-    NSArray *keys = [NSArray arrayWithObjects:@"playable", nil];
-    [player.currentItem.asset loadValuesAsynchronouslyForKeys:keys completionHandler:^ {
-        NSError *error = nil;
-        AVKeyValueStatus status = [player.currentItem.asset statusOfValueForKey:@"playable" error:&error];
-        
-        if (status == AVKeyValueStatusLoaded && player.currentItem.asset.playable) {
-            [self.delegate playerIsReadyToPlay];
-        }
-        else {
-            [self.delegate playerFailedToLoadStream];
-        }
-    }];
 }
 
 - (void)dealloc {
@@ -118,6 +105,24 @@
 - (void)endInterruption {
     [self resetPlayer];
     [self play];
+}
+
+- (void)refresh {
+    [self resetPlayer];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object
+                        change:(NSDictionary *)change context:(void *)context {
+    if (player.currentItem.status == AVPlayerItemStatusReadyToPlay) {
+        if (player.currentItem.asset.playable) {
+            self.status = PlayerStatusReady;
+            [self.delegate playerIsReadyToPlay];
+        }
+        else {
+            self.status = PlayerStatusStopped;
+            [self.delegate playerFailedToLoadStream];
+        }
+    }
 }
 
 @end

@@ -74,6 +74,12 @@
     [self.playButton setSelected:NO];
 }
 
+- (IBAction)refreshButtonClicked {
+    [self stopPlaying];
+    [player refresh];
+}
+
+
 - (void)dealloc {
     [super dealloc];
 
@@ -84,9 +90,9 @@
 
 - (void)playerStartedLoadingFromUrl:(NSString *)streamUrl {
     self.playButton.enabled = NO;
+    self.playButton.titleLabel.textAlignment = UITextAlignmentCenter;
     self.playButton.titleLabel.text = @"Verbinde...";
 }
-
 
 - (void)playerIsReadyToPlay {
     self.playButton.enabled = YES;
@@ -94,6 +100,7 @@
 
 - (void)playerFailedToLoadStream {
     self.playButton.enabled = NO;
+    self.playButton.titleLabel.textAlignment = UITextAlignmentCenter;
     self.playButton.titleLabel.text = @"Fail";
 }
 

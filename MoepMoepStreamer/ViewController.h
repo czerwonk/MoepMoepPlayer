@@ -23,5 +23,6 @@
 @property (nonatomic, retain) IBOutlet UIButton *playButton;
 
 - (IBAction)playButtonClicked;
+- (IBAction)refreshButtonClicked;
 
 @end
