@@ -24,6 +24,7 @@
 
 @synthesize imageView;
 @synthesize playButton;
+@synthesize activityView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -51,6 +52,11 @@
     }
 }
 
+- (IBAction)refreshButtonClicked {
+    [self stopPlaying];
+    [player refresh];
+}
+
 - (void)downloadImage {
     NSURL *url = [[NSURL alloc] initWithString:@"http://www.moepmoep.org/images/show_datensuppe.jpg"];
     NSData *data = [[NSData alloc] initWithContentsOfURL:url];
@@ -74,12 +80,6 @@
     [self.playButton setSelected:NO];
 }
 
-- (IBAction)refreshButtonClicked {
-    [self stopPlaying];
-    [player refresh];
-}
-
-
 - (void)dealloc {
     [super dealloc];
 
@@ -89,16 +89,19 @@
 }
 
 - (void)playerStartedLoadingFromUrl:(NSString *)streamUrl {
+    [self.activityView startAnimating];
     self.playButton.enabled = NO;
     self.playButton.titleLabel.textAlignment = UITextAlignmentCenter;
     self.playButton.titleLabel.text = @"Verbinde...";
 }
 
 - (void)playerIsReadyToPlay {
+    [self.activityView stopAnimating];
     self.playButton.enabled = YES;
 }
 
 - (void)playerFailedToLoadStream {
+    [self.activityView stopAnimating];
     self.playButton.enabled = NO;
     self.playButton.titleLabel.textAlignment = UITextAlignmentCenter;
     self.playButton.titleLabel.text = @"Fail";
