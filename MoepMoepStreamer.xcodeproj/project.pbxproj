@@ -27,6 +27,10 @@
 		6570BF6014FEBAE1008C3C52 /* libochamcrest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6570BF5F14FEBAE1008C3C52 /* libochamcrest.a */; };
 		6597646C14FEB35600473A40 /* StreamPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A3F /* StreamPlayer.m */; };
 		6597646C14FEB35600473A43 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A42 /* AudioToolbox.framework */; };
+		6597646C14FEB35600473A45 /* 09-chat-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A44 /* 09-chat-2.png */; };
+		6597646C14FEB35600473A47 /* 194-note-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A46 /* 194-note-2.png */; };
+		6597646C14FEB35600473A49 /* 83-calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A48 /* 83-calendar.png */; };
+		6597646C14FEB35600473A4B /* 01-refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A4A /* 01-refresh.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +140,10 @@
 		6597646C14FEB35600473A3F /* StreamPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreamPlayer.m; sourceTree = "<group>"; };
 		6597646C14FEB35600473A41 /* StreamPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamPlayer.h; sourceTree = "<group>"; };
 		6597646C14FEB35600473A42 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		6597646C14FEB35600473A44 /* 09-chat-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "09-chat-2.png"; sourceTree = "<group>"; };
+		6597646C14FEB35600473A46 /* 194-note-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "194-note-2.png"; sourceTree = "<group>"; };
+		6597646C14FEB35600473A48 /* 83-calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "83-calendar.png"; sourceTree = "<group>"; };
+		6597646C14FEB35600473A4A /* 01-refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "01-refresh.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +240,10 @@
 		6554915D14FD7B7B00139480 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6597646C14FEB35600473A4A /* 01-refresh.png */,
+				6597646C14FEB35600473A48 /* 83-calendar.png */,
+				6597646C14FEB35600473A46 /* 194-note-2.png */,
+				6597646C14FEB35600473A44 /* 09-chat-2.png */,
 				6554915C14FD7B7B0013947F /* wbb3-header-logo.png */,
 			);
 			path = Resources;
@@ -440,6 +452,10 @@
 				61E069FA3A11768DD7DEEBF6 /* MainStoryboard.storyboard in Resources */,
 				6554915D14FD7B7B0013947F /* wbb3-header-logo.png in Resources */,
 				652770E814FD897400EBA085 /* moepmoepapp.png in Resources */,
+				6597646C14FEB35600473A45 /* 09-chat-2.png in Resources */,
+				6597646C14FEB35600473A47 /* 194-note-2.png in Resources */,
+				6597646C14FEB35600473A49 /* 83-calendar.png in Resources */,
+				6597646C14FEB35600473A4B /* 01-refresh.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
