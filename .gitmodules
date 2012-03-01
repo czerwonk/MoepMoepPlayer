@@ -1,0 +1,9 @@
+[submodule "Libs/OCHamcrest"]
+	path = Libs/OCHamcrest
+	url = git://github.com/jonreid/OCHamcrest.git
+[submodule "Libs/OCMock"]
+	path = Libs/OCMock
+	url = git://github.com/erikdoe/ocmock.git
+[submodule "Libs/JSON"]
+	path = Libs/JSON
+	url = git://github.com/stig/json-framework.git
