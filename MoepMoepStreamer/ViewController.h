@@ -21,6 +21,7 @@
 
 @property (nonatomic, retain) IBOutlet UIImageView *imageView;
 @property (nonatomic, retain) IBOutlet UIButton *playButton;
+@property (nonatomic, retain) IBOutlet UIActivityIndicatorView *activityView;
 
 - (IBAction)playButtonClicked;
 - (IBAction)refreshButtonClicked;
