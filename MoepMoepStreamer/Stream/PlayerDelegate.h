@@ -9,6 +9,6 @@
 
 - (void)playerStartedLoadingFromUrl:(NSString *)streamUrl;
 - (void)playerIsReadyToPlay;
-- (void)playerFailedToLoadStream;
+- (void)playerFailed;
 
 @end
