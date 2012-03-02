@@ -32,7 +32,14 @@
 		6597646C14FEB35600473A49 /* 83-calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A48 /* 83-calendar.png */; };
 		6597646C14FEB35600473A4B /* 01-refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A4A /* 01-refresh.png */; };
 		6597646C14FEB35600473A4D /* ShowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A4C /* ShowTableViewCell.xib */; };
-		6597646C14FEB35600473A52 /* SendeplanTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A51 /* SendeplanTableViewController.m */; };
+		6597646C14FEB35600473A52 /* TimetableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A51 /* TimetableTableViewController.m */; };
+		6597646C14FEB35600473A55 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6597646C14FEB35600473A57 /* TimetableInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A56 /* TimetableInteractor.m */; };
+		6597646C14FEB35600473A58 /* TimetableInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A56 /* TimetableInteractor.m */; };
+		6597646C14FEB35600473A5C /* Timetable.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A5B /* Timetable.m */; };
+		6597646C14FEB35600473A5D /* Timetable.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A5B /* Timetable.m */; };
+		6597646C14FEB35600473A60 /* Show.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A5F /* Show.m */; };
+		6597646C14FEB35600473A61 /* Show.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A5F /* Show.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,8 +154,15 @@
 		6597646C14FEB35600473A48 /* 83-calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "83-calendar.png"; sourceTree = "<group>"; };
 		6597646C14FEB35600473A4A /* 01-refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "01-refresh.png"; sourceTree = "<group>"; };
 		6597646C14FEB35600473A4C /* ShowTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowTableViewCell.xib; sourceTree = "<group>"; };
-		6597646C14FEB35600473A51 /* SendeplanTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendeplanTableViewController.m; sourceTree = "<group>"; };
-		6597646C14FEB35600473A53 /* SendeplanTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendeplanTableViewController.h; sourceTree = "<group>"; };
+		6597646C14FEB35600473A51 /* TimetableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimetableTableViewController.m; sourceTree = "<group>"; };
+		6597646C14FEB35600473A53 /* TimetableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimetableTableViewController.h; sourceTree = "<group>"; };
+		6597646C14FEB35600473A56 /* TimetableInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimetableInteractor.m; sourceTree = "<group>"; };
+		6597646C14FEB35600473A59 /* TimetableInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimetableInteractor.h; sourceTree = "<group>"; };
+		6597646C14FEB35600473A5A /* TimetableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimetableView.h; sourceTree = "<group>"; };
+		6597646C14FEB35600473A5B /* Timetable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Timetable.m; sourceTree = "<group>"; };
+		6597646C14FEB35600473A5E /* Timetable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timetable.h; sourceTree = "<group>"; };
+		6597646C14FEB35600473A5F /* Show.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Show.m; sourceTree = "<group>"; };
+		6597646C14FEB35600473A62 /* Show.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Show.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,7 +237,7 @@
 				61E069FA3A11768DD7DEEBE9 /* Supporting Files */,
 				6554915D14FD7B7B00139480 /* Resources */,
 				6597646C14FEB35600473A3A /* Stream */,
-				6597646C14FEB35600473A3B /* Sendeplan */,
+				6597646C14FEB35600473A3B /* Timetable */,
 				6597646C14FEB35600473A3C /* Chat */,
 			);
 			path = MoepMoepStreamer;
@@ -307,13 +321,20 @@
 			path = Stream;
 			sourceTree = "<group>";
 		};
-		6597646C14FEB35600473A3B /* Sendeplan */ = {
+		6597646C14FEB35600473A3B /* Timetable */ = {
 			isa = PBXGroup;
 			children = (
-				6597646C14FEB35600473A53 /* SendeplanTableViewController.h */,
-				6597646C14FEB35600473A51 /* SendeplanTableViewController.m */,
+				6597646C14FEB35600473A62 /* Show.h */,
+				6597646C14FEB35600473A5F /* Show.m */,
+				6597646C14FEB35600473A5E /* Timetable.h */,
+				6597646C14FEB35600473A5B /* Timetable.m */,
+				6597646C14FEB35600473A5A /* TimetableView.h */,
+				6597646C14FEB35600473A59 /* TimetableInteractor.h */,
+				6597646C14FEB35600473A56 /* TimetableInteractor.m */,
+				6597646C14FEB35600473A53 /* TimetableTableViewController.h */,
+				6597646C14FEB35600473A51 /* TimetableTableViewController.m */,
 			);
-			path = Sendeplan;
+			path = Timetable;
 			sourceTree = "<group>";
 		};
 		6597646C14FEB35600473A3C /* Chat */ = {
@@ -504,7 +525,11 @@
 				61E069FA3A11768DD7DEEBF9 /* ViewController.m in Sources */,
 				6558AEA614FD948600378967 /* ChatViewController.m in Sources */,
 				6597646C14FEB35600473A40 /* StreamPlayer.m in Sources */,
-				6597646C14FEB35600473A52 /* SendeplanTableViewController.m in Sources */,
+				6597646C14FEB35600473A52 /* TimetableTableViewController.m in Sources */,
+				6597646C14FEB35600473A55 /* (null) in Sources */,
+				6597646C14FEB35600473A57 /* TimetableInteractor.m in Sources */,
+				6597646C14FEB35600473A5C /* Timetable.m in Sources */,
+				6597646C14FEB35600473A60 /* Show.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,6 +538,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6570BF5414FEBA88008C3C52 /* MoepMoepStreamerTests.m in Sources */,
+				6597646C14FEB35600473A58 /* TimetableInteractor.m in Sources */,
+				6597646C14FEB35600473A5D /* Timetable.m in Sources */,
+				6597646C14FEB35600473A61 /* Show.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
