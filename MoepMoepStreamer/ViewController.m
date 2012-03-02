@@ -30,8 +30,8 @@
     [super viewDidLoad];
 
     player = [[StreamPlayer alloc] init];
-    player.streamUrl = @"http://radio.moepmoep.org:8000/stream.mp3";
     player.delegate = self;
+    player.streamUrl = @"http://radio.moepmoep.org:8000/stream.mp3";
 
     [self downloadImage];
 }
@@ -100,7 +100,7 @@
     self.playButton.enabled = YES;
 }
 
-- (void)playerFailedToLoadStream {
+- (void)playerFailed {
     [self.activityView stopAnimating];
     self.playButton.enabled = NO;
     self.playButton.titleLabel.textAlignment = UITextAlignmentCenter;

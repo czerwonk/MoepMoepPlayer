@@ -85,6 +85,7 @@
 }
 
 - (void)pause {
+    self.status = PlayerStatusStopped;
     [player pause];
 
     AVAudioSession *session = [AVAudioSession sharedInstance];
@@ -113,15 +114,13 @@
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object
                         change:(NSDictionary *)change context:(void *)context {
-    if (player.currentItem.status == AVPlayerItemStatusReadyToPlay) {
-        if (player.currentItem.asset.playable) {
-            self.status = PlayerStatusReady;
-            [self.delegate playerIsReadyToPlay];
-        }
-        else {
-            self.status = PlayerStatusStopped;
-            [self.delegate playerFailedToLoadStream];
-        }
+    if (player.currentItem.status == AVPlayerItemStatusReadyToPlay && player.currentItem.asset.playable) {
+        self.status = PlayerStatusReady;
+        [self.delegate playerIsReadyToPlay];
+    }
+    else if (player.currentItem.status == AVPlayerItemStatusFailed) {
+        self.status = PlayerStatusStopped;
+        [self.delegate playerFailed];
     }
 }
 
