@@ -8,7 +8,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface SendeplanTableViewController : UIViewController<UITableViewDataSource, UITableViewDelegate> {
+@interface TimetableTableViewController : UIViewController<UITableViewDataSource, UITableViewDelegate> {
     @private
     NSArray *days;
 }

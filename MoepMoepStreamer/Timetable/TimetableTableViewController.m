@@ -5,15 +5,15 @@
 //  Copyright 2012 Daniel Czerwonk. All rights reserved.
 //
 
-#import "SendeplanTableViewController.h"
+#import "TimetableTableViewController.h"
 
-@interface SendeplanTableViewController ()
+@interface TimetableTableViewController ()
 
 - (void)scrollToCurrentWeekday;
 
 @end
 
-@implementation SendeplanTableViewController
+@implementation TimetableTableViewController
 
 @synthesize table;
 
