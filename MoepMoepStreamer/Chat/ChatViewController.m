@@ -17,10 +17,12 @@
 @implementation ChatViewController
 
 @synthesize webView;
+@synthesize activityView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.webView.delegate = self;
     [self loadChat];
 }
 
@@ -31,6 +33,18 @@
 
     [self.webView loadRequest:request];
     [request release];
+}
+
+- (void)webViewDidStartLoad:(UIWebView *)webView {
+    [activityView startAnimating];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    [activityView stopAnimating];
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
+    [activityView stopAnimating];
 }
 
 @end

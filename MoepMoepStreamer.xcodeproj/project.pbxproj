@@ -124,7 +124,7 @@
 		61E069FA3A11768DD7DEEBF8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		61E069FA3A11768DD7DEEC03 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		61E069FA3A11768DD7DEEC12 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		652770E714FD897400EBA085 /* moepmoepapp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = moepmoepapp.png; path = ../moepmoepapp.png; sourceTree = "<group>"; };
+		652770E714FD897400EBA085 /* moepmoepapp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = moepmoepapp.png; path = ../../moepmoepapp.png; sourceTree = "<group>"; };
 		6554915C14FD7B7B0013947F /* wbb3-header-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wbb3-header-logo.png"; sourceTree = "<group>"; };
 		6558AEA414FD948600378967 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
 		6558AEA514FD948600378967 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
@@ -218,7 +218,6 @@
 			children = (
 				61E069FA3A11768DD7DEEBF8 /* ViewController.m */,
 				61E069FA3A11768DD7DEEBF7 /* ViewController.h */,
-				652770E714FD897400EBA085 /* moepmoepapp.png */,
 				61E069FA3A11768DD7DEEBF2 /* AppDelegate.m */,
 				61E069FA3A11768DD7DEEBF1 /* AppDelegate.h */,
 				61E069FA3A11768DD7DEEBE9 /* Supporting Files */,
@@ -246,6 +245,7 @@
 			children = (
 				6597646C14FEB35600473A4C /* ShowTableViewCell.xib */,
 				61E069FA3A11768DD7DEEBF5 /* MainStoryboard.storyboard */,
+				652770E714FD897400EBA085 /* moepmoepapp.png */,
 				6597646C14FEB35600473A4A /* 01-refresh.png */,
 				6597646C14FEB35600473A48 /* 83-calendar.png */,
 				6597646C14FEB35600473A46 /* 194-note-2.png */,
