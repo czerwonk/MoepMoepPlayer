@@ -31,6 +31,8 @@
 		6597646C14FEB35600473A47 /* 194-note-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A46 /* 194-note-2.png */; };
 		6597646C14FEB35600473A49 /* 83-calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A48 /* 83-calendar.png */; };
 		6597646C14FEB35600473A4B /* 01-refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A4A /* 01-refresh.png */; };
+		6597646C14FEB35600473A4D /* ShowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A4C /* ShowTableViewCell.xib */; };
+		6597646C14FEB35600473A52 /* SendeplanTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A51 /* SendeplanTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,7 +119,7 @@
 		61E069FA3A11768DD7DEEBF0 /* MoepMoepStreamer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MoepMoepStreamer-Prefix.pch"; sourceTree = "<group>"; };
 		61E069FA3A11768DD7DEEBF1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		61E069FA3A11768DD7DEEBF2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		61E069FA3A11768DD7DEEBF4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		61E069FA3A11768DD7DEEBF4 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = MainStoryboard.storyboard; path = ../en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		61E069FA3A11768DD7DEEBF7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		61E069FA3A11768DD7DEEBF8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		61E069FA3A11768DD7DEEC03 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -144,6 +146,9 @@
 		6597646C14FEB35600473A46 /* 194-note-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "194-note-2.png"; sourceTree = "<group>"; };
 		6597646C14FEB35600473A48 /* 83-calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "83-calendar.png"; sourceTree = "<group>"; };
 		6597646C14FEB35600473A4A /* 01-refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "01-refresh.png"; sourceTree = "<group>"; };
+		6597646C14FEB35600473A4C /* ShowTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowTableViewCell.xib; sourceTree = "<group>"; };
+		6597646C14FEB35600473A51 /* SendeplanTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendeplanTableViewController.m; sourceTree = "<group>"; };
+		6597646C14FEB35600473A53 /* SendeplanTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendeplanTableViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,7 +219,6 @@
 				61E069FA3A11768DD7DEEBF8 /* ViewController.m */,
 				61E069FA3A11768DD7DEEBF7 /* ViewController.h */,
 				652770E714FD897400EBA085 /* moepmoepapp.png */,
-				61E069FA3A11768DD7DEEBF5 /* MainStoryboard.storyboard */,
 				61E069FA3A11768DD7DEEBF2 /* AppDelegate.m */,
 				61E069FA3A11768DD7DEEBF1 /* AppDelegate.h */,
 				61E069FA3A11768DD7DEEBE9 /* Supporting Files */,
@@ -240,6 +244,8 @@
 		6554915D14FD7B7B00139480 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6597646C14FEB35600473A4C /* ShowTableViewCell.xib */,
+				61E069FA3A11768DD7DEEBF5 /* MainStoryboard.storyboard */,
 				6597646C14FEB35600473A4A /* 01-refresh.png */,
 				6597646C14FEB35600473A48 /* 83-calendar.png */,
 				6597646C14FEB35600473A46 /* 194-note-2.png */,
@@ -304,6 +310,8 @@
 		6597646C14FEB35600473A3B /* Sendeplan */ = {
 			isa = PBXGroup;
 			children = (
+				6597646C14FEB35600473A53 /* SendeplanTableViewController.h */,
+				6597646C14FEB35600473A51 /* SendeplanTableViewController.m */,
 			);
 			path = Sendeplan;
 			sourceTree = "<group>";
@@ -456,6 +464,7 @@
 				6597646C14FEB35600473A47 /* 194-note-2.png in Resources */,
 				6597646C14FEB35600473A49 /* 83-calendar.png in Resources */,
 				6597646C14FEB35600473A4B /* 01-refresh.png in Resources */,
+				6597646C14FEB35600473A4D /* ShowTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,6 +504,7 @@
 				61E069FA3A11768DD7DEEBF9 /* ViewController.m in Sources */,
 				6558AEA614FD948600378967 /* ChatViewController.m in Sources */,
 				6597646C14FEB35600473A40 /* StreamPlayer.m in Sources */,
+				6597646C14FEB35600473A52 /* SendeplanTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,7 +548,7 @@
 		61E069FA3A11768DD7DEEBF5 /* MainStoryboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				61E069FA3A11768DD7DEEBF4 /* en */,
+				61E069FA3A11768DD7DEEBF4 /* MainStoryboard.storyboard */,
 			);
 			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
