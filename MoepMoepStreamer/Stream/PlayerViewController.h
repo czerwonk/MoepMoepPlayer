@@ -12,7 +12,7 @@
 
 @protocol Player;
 
-@interface ViewController : UIViewController<PlayerDelegate> {
+@interface PlayerViewController : UIViewController<PlayerDelegate> {
 
     @private
     id<Player> player;
