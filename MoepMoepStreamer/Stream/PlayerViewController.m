@@ -6,11 +6,11 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "PlayerViewController.h"
 #import "Player.h"
 #import "StreamPlayer.h"
 
-@interface ViewController ()
+@interface PlayerViewController ()
 
 - (void)downloadImage;
 
@@ -20,7 +20,7 @@
 
 @end
 
-@implementation ViewController
+@implementation PlayerViewController
 
 @synthesize imageView;
 @synthesize playButton;
@@ -31,7 +31,7 @@
 
     player = [[StreamPlayer alloc] init];
     player.delegate = self;
-    player.streamUrl = @"http://radio.moepmoep.org:8000/stream.mp3";
+    player.streamUrl = @"http://radio.moepmoep.org/icecast_stream.m3u";
 
     [self downloadImage];
 }
@@ -41,7 +41,8 @@
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+    return interfaceOrientation == UIInterfaceOrientationPortrait
+                || interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown;
 }
 
 - (IBAction)playButtonClicked {

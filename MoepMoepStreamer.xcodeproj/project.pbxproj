@@ -14,7 +14,7 @@
 		61E069FA3A11768DD7DEEBEF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E069FA3A11768DD7DEEBEE /* main.m */; };
 		61E069FA3A11768DD7DEEBF3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E069FA3A11768DD7DEEBF2 /* AppDelegate.m */; };
 		61E069FA3A11768DD7DEEBF6 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61E069FA3A11768DD7DEEBF5 /* MainStoryboard.storyboard */; };
-		61E069FA3A11768DD7DEEBF9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E069FA3A11768DD7DEEBF8 /* ViewController.m */; };
+		61E069FA3A11768DD7DEEBF9 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E069FA3A11768DD7DEEBF8 /* PlayerViewController.m */; };
 		61E069FA3A11768DD7DEEC13 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E069FA3A11768DD7DEEC12 /* AVFoundation.framework */; };
 		652770E814FD897400EBA085 /* moepmoepapp.png in Resources */ = {isa = PBXBuildFile; fileRef = 652770E714FD897400EBA085 /* moepmoepapp.png */; };
 		6554915D14FD7B7B0013947F /* wbb3-header-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6554915C14FD7B7B0013947F /* wbb3-header-logo.png */; };
@@ -40,6 +40,7 @@
 		6597646C14FEB35600473A5D /* Timetable.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A5B /* Timetable.m */; };
 		6597646C14FEB35600473A60 /* Show.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A5F /* Show.m */; };
 		6597646C14FEB35600473A61 /* Show.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A5F /* Show.m */; };
+		6597646C14FEB35600473A64 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A63 /* MainTabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,8 +128,8 @@
 		61E069FA3A11768DD7DEEBF1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		61E069FA3A11768DD7DEEBF2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		61E069FA3A11768DD7DEEBF4 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = MainStoryboard.storyboard; path = ../en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		61E069FA3A11768DD7DEEBF7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		61E069FA3A11768DD7DEEBF8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		61E069FA3A11768DD7DEEBF7 /* PlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
+		61E069FA3A11768DD7DEEBF8 /* PlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
 		61E069FA3A11768DD7DEEC03 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		61E069FA3A11768DD7DEEC12 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		652770E714FD897400EBA085 /* moepmoepapp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = moepmoepapp.png; path = ../../moepmoepapp.png; sourceTree = "<group>"; };
@@ -163,6 +164,8 @@
 		6597646C14FEB35600473A5E /* Timetable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timetable.h; sourceTree = "<group>"; };
 		6597646C14FEB35600473A5F /* Show.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Show.m; sourceTree = "<group>"; };
 		6597646C14FEB35600473A62 /* Show.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Show.h; sourceTree = "<group>"; };
+		6597646C14FEB35600473A63 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
+		6597646C14FEB35600473A65 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,8 +233,8 @@
 		61E069FA3A11768DD7DEEBE8 /* MoepMoepStreamer */ = {
 			isa = PBXGroup;
 			children = (
-				61E069FA3A11768DD7DEEBF8 /* ViewController.m */,
-				61E069FA3A11768DD7DEEBF7 /* ViewController.h */,
+				6597646C14FEB35600473A65 /* MainTabBarController.h */,
+				6597646C14FEB35600473A63 /* MainTabBarController.m */,
 				61E069FA3A11768DD7DEEBF2 /* AppDelegate.m */,
 				61E069FA3A11768DD7DEEBF1 /* AppDelegate.h */,
 				61E069FA3A11768DD7DEEBE9 /* Supporting Files */,
@@ -313,6 +316,8 @@
 		6597646C14FEB35600473A3A /* Stream */ = {
 			isa = PBXGroup;
 			children = (
+				61E069FA3A11768DD7DEEBF8 /* PlayerViewController.m */,
+				61E069FA3A11768DD7DEEBF7 /* PlayerViewController.h */,
 				6597646C14FEB35600473A41 /* StreamPlayer.h */,
 				6597646C14FEB35600473A3F /* StreamPlayer.m */,
 				6597646C14FEB35600473A3E /* PlayerDelegate.h */,
@@ -522,7 +527,7 @@
 			files = (
 				61E069FA3A11768DD7DEEBEF /* main.m in Sources */,
 				61E069FA3A11768DD7DEEBF3 /* AppDelegate.m in Sources */,
-				61E069FA3A11768DD7DEEBF9 /* ViewController.m in Sources */,
+				61E069FA3A11768DD7DEEBF9 /* PlayerViewController.m in Sources */,
 				6558AEA614FD948600378967 /* ChatViewController.m in Sources */,
 				6597646C14FEB35600473A40 /* StreamPlayer.m in Sources */,
 				6597646C14FEB35600473A52 /* TimetableTableViewController.m in Sources */,
@@ -530,6 +535,7 @@
 				6597646C14FEB35600473A57 /* TimetableInteractor.m in Sources */,
 				6597646C14FEB35600473A5C /* Timetable.m in Sources */,
 				6597646C14FEB35600473A60 /* Show.m in Sources */,
+				6597646C14FEB35600473A64 /* MainTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

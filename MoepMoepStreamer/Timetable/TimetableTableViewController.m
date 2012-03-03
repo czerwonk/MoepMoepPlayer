@@ -67,5 +67,8 @@ static int ArraySundayIndex = 6;
     [days release];
 }
 
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
+    return YES;
+}
 
 @end
