@@ -5,7 +5,8 @@
 //  Copyright 2012 Daniel Czerwonk. All rights reserved.
 //
 
-@protocol TimetableViewDelegate
+@protocol TimetableViewDelegate<NSObject>
 
+- (void)refresh;
 
 @end

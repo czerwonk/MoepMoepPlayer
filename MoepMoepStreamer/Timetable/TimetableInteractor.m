@@ -6,9 +6,51 @@
 //
 
 #import "TimetableInteractor.h"
+#import "Timetable.h"
 
 
 @implementation TimetableInteractor
 
+@dynamic view;
+@dynamic dataRetriever;
+
+- (void)setView:(id<TimetableView>)aView {
+    [view release];
+    view = [aView retain];
+    view.viewDelegate = self;
+}
+
+- (id<DataRetriever>)dataRetriever {
+    return dataRetriever;
+}
+
+- (void)setDataRetriever:(id<DataRetriever>)retriever {
+    [dataRetriever release];
+    dataRetriever = [retriever retain];
+    dataRetriever.delegate = self;
+}
+
+- (void)refresh {
+    [self.dataRetriever retrieveDataAsynchronous];
+}
+
+- (void)retriever:(id<DataRetriever>)retriever retrievedData:(id)object {
+    if (retriever == self.dataRetriever) {
+        [view setTimetable:(Timetable *)object];
+    }
+}
+
+- (void)retriever:(id<DataRetriever>)retriever failedRetrievingData:(NSError *)error {
+    if (retriever == self.dataRetriever) {
+        [view showErrorWithMessage:error.localizedDescription];
+    }
+}
+
+- (void)dealloc {
+    [super dealloc];
+
+    [dataRetriever release];
+    [view release];
+}
 
 @end

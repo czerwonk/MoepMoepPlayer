@@ -6,11 +6,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <SenTestingKit/SenTestingKit.h>
+
+#define HC_SHORTHAND
+#import <OCHamcrestIOS/OCHamcrestIOS.h>
+#import <OCMock/OCMock.h>
 
 
-@interface Test : NSObject {
+@interface Test : SenTestCase
 
-}
-
+- (void)verifyMockExpectations:(id)mock;
 
 @end

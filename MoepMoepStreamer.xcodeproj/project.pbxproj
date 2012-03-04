@@ -23,8 +23,8 @@
 		6570BF4A14FEBA88008C3C52 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E069FA3A11768DD7DEEBE2 /* UIKit.framework */; };
 		6570BF4B14FEBA88008C3C52 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E069FA3A11768DD7DEEBE4 /* Foundation.framework */; };
 		6570BF5114FEBA88008C3C52 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6570BF4F14FEBA88008C3C52 /* InfoPlist.strings */; };
-		6570BF5414FEBA88008C3C52 /* MoepMoepStreamerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6570BF5314FEBA88008C3C52 /* MoepMoepStreamerTests.m */; };
-		6570BF6014FEBAE1008C3C52 /* libochamcrest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6570BF5F14FEBAE1008C3C52 /* libochamcrest.a */; };
+		65820BE21502EE2700A93BB5 /* OCHamcrestIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65820BE11502EE2700A93BB5 /* OCHamcrestIOS.framework */; };
+		65820C431502F34F00A93BB5 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A39 /* libOCMock.a */; };
 		6597646C14FEB35600473A40 /* StreamPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A3F /* StreamPlayer.m */; };
 		6597646C14FEB35600473A43 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A42 /* AudioToolbox.framework */; };
 		6597646C14FEB35600473A45 /* 09-chat-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A44 /* 09-chat-2.png */; };
@@ -41,6 +41,12 @@
 		6597646C14FEB35600473A60 /* Show.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A5F /* Show.m */; };
 		6597646C14FEB35600473A61 /* Show.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A5F /* Show.m */; };
 		6597646C14FEB35600473A64 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A63 /* MainTabBarController.m */; };
+		6597646C14FEB35600473A6C /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6597646C14FEB35600473A73 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A72 /* BaseViewController.m */; };
+		6597646C14FEB35600473A74 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A72 /* BaseViewController.m */; };
+		6597646C14FEB35600473A77 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A76 /* Localizable.strings */; };
+		6597646C14FEB35600473A7A /* TimetableInteractorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A79 /* TimetableInteractorTest.m */; };
+		6597646C14FEB35600473A7D /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A7C /* Test.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,10 +145,9 @@
 		6570BF4814FEBA88008C3C52 /* MoepMoepStreamerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoepMoepStreamerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6570BF4E14FEBA88008C3C52 /* MoepMoepStreamerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MoepMoepStreamerTests-Info.plist"; sourceTree = "<group>"; };
 		6570BF5014FEBA88008C3C52 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6570BF5214FEBA88008C3C52 /* MoepMoepStreamerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoepMoepStreamerTests.h; sourceTree = "<group>"; };
-		6570BF5314FEBA88008C3C52 /* MoepMoepStreamerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoepMoepStreamerTests.m; sourceTree = "<group>"; };
 		6570BF5514FEBA88008C3C52 /* MoepMoepStreamerTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MoepMoepStreamerTests-Prefix.pch"; sourceTree = "<group>"; };
 		6570BF5F14FEBAE1008C3C52 /* libochamcrest.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libochamcrest.a; path = "Libs/OCHamcrest/Source/build/Release-iphonesimulator/libochamcrest.a"; sourceTree = "<group>"; };
+		65820BE11502EE2700A93BB5 /* OCHamcrestIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrestIOS.framework; path = Libs/OCHamcrest/Source/build/Release/OCHamcrestIOS.framework; sourceTree = "<group>"; };
 		6597644B14FEB33A00473A39 /* SBJson.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SBJson.xcodeproj; path = Libs/JSON/SBJson.xcodeproj; sourceTree = "<group>"; };
 		6597645E14FEB35500473A39 /* OCMock.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OCMock.xcodeproj; path = Libs/OCMock/Source/OCMock.xcodeproj; sourceTree = "<group>"; };
 		6597646C14FEB35600473A3D /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
@@ -166,6 +171,18 @@
 		6597646C14FEB35600473A62 /* Show.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Show.h; sourceTree = "<group>"; };
 		6597646C14FEB35600473A63 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
 		6597646C14FEB35600473A65 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
+		6597646C14FEB35600473A66 /* TimetableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimetableViewDelegate.h; sourceTree = "<group>"; };
+		6597646C14FEB35600473A69 /* Deserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deserializer.h; sourceTree = "<group>"; };
+		6597646C14FEB35600473A6E /* DataRetriever.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataRetriever.h; sourceTree = "<group>"; };
+		6597646C14FEB35600473A6F /* DataRetrieverDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataRetrieverDelegate.h; sourceTree = "<group>"; };
+		6597646C14FEB35600473A71 /* View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = View.h; sourceTree = "<group>"; };
+		6597646C14FEB35600473A72 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		6597646C14FEB35600473A75 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		6597646C14FEB35600473A76 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		6597646C14FEB35600473A79 /* TimetableInteractorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimetableInteractorTest.m; sourceTree = "<group>"; };
+		6597646C14FEB35600473A7B /* TimetableInteractorTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimetableInteractorTest.h; sourceTree = "<group>"; };
+		6597646C14FEB35600473A7C /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
+		6597646C14FEB35600473A7E /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,7 +202,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6570BF6014FEBAE1008C3C52 /* libochamcrest.a in Frameworks */,
+				65820C431502F34F00A93BB5 /* libOCMock.a in Frameworks */,
+				65820BE21502EE2700A93BB5 /* OCHamcrestIOS.framework in Frameworks */,
 				6570BF4914FEBA88008C3C52 /* SenTestingKit.framework in Frameworks */,
 				6570BF4A14FEBA88008C3C52 /* UIKit.framework in Frameworks */,
 				6570BF4B14FEBA88008C3C52 /* Foundation.framework in Frameworks */,
@@ -198,6 +216,7 @@
 		61E069FA3A11768DD7DEEBD5 = {
 			isa = PBXGroup;
 			children = (
+				65820BE11502EE2700A93BB5 /* OCHamcrestIOS.framework */,
 				6597645E14FEB35500473A39 /* OCMock.xcodeproj */,
 				6597644B14FEB33A00473A39 /* SBJson.xcodeproj */,
 				61E069FA3A11768DD7DEEBD6 /* Products */,
@@ -233,6 +252,7 @@
 		61E069FA3A11768DD7DEEBE8 /* MoepMoepStreamer */ = {
 			isa = PBXGroup;
 			children = (
+				6597646C14FEB35600473A76 /* Localizable.strings */,
 				6597646C14FEB35600473A65 /* MainTabBarController.h */,
 				6597646C14FEB35600473A63 /* MainTabBarController.m */,
 				61E069FA3A11768DD7DEEBF2 /* AppDelegate.m */,
@@ -242,6 +262,7 @@
 				6597646C14FEB35600473A3A /* Stream */,
 				6597646C14FEB35600473A3B /* Timetable */,
 				6597646C14FEB35600473A3C /* Chat */,
+				6597646C14FEB35600473A67 /* Infrastructure */,
 			);
 			path = MoepMoepStreamer;
 			sourceTree = "<group>";
@@ -275,9 +296,10 @@
 		6570BF4C14FEBA88008C3C52 /* MoepMoepStreamerTests */ = {
 			isa = PBXGroup;
 			children = (
-				6570BF5214FEBA88008C3C52 /* MoepMoepStreamerTests.h */,
-				6570BF5314FEBA88008C3C52 /* MoepMoepStreamerTests.m */,
+				6597646C14FEB35600473A7E /* Test.h */,
+				6597646C14FEB35600473A7C /* Test.m */,
 				6570BF4D14FEBA88008C3C52 /* Supporting Files */,
+				6597646C14FEB35600473A78 /* Timetable */,
 			);
 			path = MoepMoepStreamerTests;
 			sourceTree = "<group>";
@@ -329,6 +351,7 @@
 		6597646C14FEB35600473A3B /* Timetable */ = {
 			isa = PBXGroup;
 			children = (
+				6597646C14FEB35600473A66 /* TimetableViewDelegate.h */,
 				6597646C14FEB35600473A62 /* Show.h */,
 				6597646C14FEB35600473A5F /* Show.m */,
 				6597646C14FEB35600473A5E /* Timetable.h */,
@@ -349,6 +372,44 @@
 				6558AEA414FD948600378967 /* ChatViewController.h */,
 			);
 			path = Chat;
+			sourceTree = "<group>";
+		};
+		6597646C14FEB35600473A67 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				6597646C14FEB35600473A68 /* Service Access */,
+				6597646C14FEB35600473A70 /* User Interface */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		6597646C14FEB35600473A68 /* Service Access */ = {
+			isa = PBXGroup;
+			children = (
+				6597646C14FEB35600473A6F /* DataRetrieverDelegate.h */,
+				6597646C14FEB35600473A6E /* DataRetriever.h */,
+				6597646C14FEB35600473A69 /* Deserializer.h */,
+			);
+			path = "Service Access";
+			sourceTree = "<group>";
+		};
+		6597646C14FEB35600473A70 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				6597646C14FEB35600473A75 /* BaseViewController.h */,
+				6597646C14FEB35600473A72 /* BaseViewController.m */,
+				6597646C14FEB35600473A71 /* View.h */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		6597646C14FEB35600473A78 /* Timetable */ = {
+			isa = PBXGroup;
+			children = (
+				6597646C14FEB35600473A7B /* TimetableInteractorTest.h */,
+				6597646C14FEB35600473A79 /* TimetableInteractorTest.m */,
+			);
+			path = Timetable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -491,6 +552,7 @@
 				6597646C14FEB35600473A49 /* 83-calendar.png in Resources */,
 				6597646C14FEB35600473A4B /* 01-refresh.png in Resources */,
 				6597646C14FEB35600473A4D /* ShowTableViewCell.xib in Resources */,
+				6597646C14FEB35600473A77 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,6 +598,8 @@
 				6597646C14FEB35600473A5C /* Timetable.m in Sources */,
 				6597646C14FEB35600473A60 /* Show.m in Sources */,
 				6597646C14FEB35600473A64 /* MainTabBarController.m in Sources */,
+				6597646C14FEB35600473A6C /* (null) in Sources */,
+				6597646C14FEB35600473A73 /* BaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,10 +607,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6570BF5414FEBA88008C3C52 /* MoepMoepStreamerTests.m in Sources */,
 				6597646C14FEB35600473A58 /* TimetableInteractor.m in Sources */,
 				6597646C14FEB35600473A5D /* Timetable.m in Sources */,
 				6597646C14FEB35600473A61 /* Show.m in Sources */,
+				6597646C14FEB35600473A74 /* BaseViewController.m in Sources */,
+				6597646C14FEB35600473A7A /* TimetableInteractorTest.m in Sources */,
+				6597646C14FEB35600473A7D /* Test.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -612,6 +678,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -637,6 +707,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -661,6 +735,7 @@
 				INFOPLIST_FILE = "MoepMoepStreamer/MoepMoepStreamer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = MoepMoepStreamer;
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Libs/OCMock/Source/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -671,9 +746,11 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"\"$(SRCROOT)/Libs/OCHamcrest/Source/build/Release\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MoepMoepStreamerTests/MoepMoepStreamerTests-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Libs/OCMock/Headers\"";
 				INFOPLIST_FILE = "MoepMoepStreamerTests/MoepMoepStreamerTests-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -690,9 +767,11 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"\"$(SRCROOT)/Libs/OCHamcrest/Source/build/Release\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MoepMoepStreamerTests/MoepMoepStreamerTests-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Libs/OCMock/Headers\"";
 				INFOPLIST_FILE = "MoepMoepStreamerTests/MoepMoepStreamerTests-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
