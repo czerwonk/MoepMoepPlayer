@@ -10,5 +10,9 @@
 
 @implementation Show
 
+@synthesize title;
+@synthesize showDescription;
+@synthesize startTime;
+@synthesize weekday;
 
 @end

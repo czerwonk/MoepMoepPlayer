@@ -6,12 +6,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TimetableTableViewController.h"
 
 
 @interface MainTabBarController : UITabBarController {
 
 }
-
-
 
 @end

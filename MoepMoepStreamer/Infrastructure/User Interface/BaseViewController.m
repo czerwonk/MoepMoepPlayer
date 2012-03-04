@@ -16,11 +16,15 @@
 
 @implementation BaseViewController
 
+@synthesize activityView;
+
 - (void)showErrorWithMessage:(NSString *)message {
+    [self.activityView stopAnimating];
     [self showAlertViewWithTitle:NSLocalizedString(@"Error", @"Error") andMessage:message];
 }
 
 - (void)showInfoWithMessage:(NSString *)message {
+    [self.activityView stopAnimating];
     [self showAlertViewWithTitle:NSLocalizedString(@"Info", @"Info") andMessage:message];
 }
 

@@ -6,11 +6,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BaseViewController.h"
+#import "TimetableView.h"
 
 
-@interface TimetableTableViewController : UIViewController<UITableViewDataSource, UITableViewDelegate> {
+@interface TimetableTableViewController : BaseViewController<UITableViewDataSource, UITableViewDelegate, TimetableView> {
     @private
     NSArray *days;
+    NSMutableDictionary *showsGroupedByWeekday;
+    NSMutableDictionary *headerViews;
 }
 
 @property (nonatomic, retain) IBOutlet UITableView *table;

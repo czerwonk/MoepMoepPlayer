@@ -25,19 +25,24 @@
                                     <outlet property="delegate" destination="IPH-8p-QM2" id="i2s-J3-o8j"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="whiteLarge" id="r6B-nd-esb">
+                                <rect key="frame" x="0.0" y="187" width="320" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Sendeplan" image="83-calendar.png" id="mIH-ww-bU5"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
                     <connections>
+                        <outlet property="activityView" destination="r6B-nd-esb" id="qfM-NW-6dc"/>
                         <outlet property="table" destination="GSW-QK-hbL" id="ZD9-kL-a1u"/>
                     </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="7" y="296"/>
         </scene>
-        <!--View Controller - Player-->
+        <!--Player View Controller - Player-->
         <scene sceneID="CZK-mr-9PU">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sVU-xE-JSQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -93,10 +98,6 @@
                                 <rect key="frame" x="36" y="354" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="x8q-SM-LlZ">
-                                <rect key="frame" x="20" y="383" width="280" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </pageControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="id7-Lq-tiO">
                                 <rect key="frame" x="255" y="346" width="45" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -188,6 +189,12 @@
         <image name="wbb3-header-logo.png" width="596" height="150"/>
     </resources>
     <classes>
+        <class className="BaseViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BaseViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="activityView" candidateClass="UIActivityIndicatorView"/>
+            </relationships>
+        </class>
         <class className="ChatViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ChatViewController.h"/>
             <relationships>
@@ -197,21 +204,24 @@
         </class>
         <class className="MainTabBarController" superclassName="UITabBarController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MainTabBarController.h"/>
-        </class>
-        <class className="TimetableTableViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TimetableTableViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="table" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="timetableViewController" candidateClass="TimetableTableViewController"/>
             </relationships>
         </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+        <class className="PlayerViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PlayerViewController.h"/>
             <relationships>
                 <relationship kind="action" name="playButtonClicked"/>
                 <relationship kind="action" name="refreshButtonClicked"/>
                 <relationship kind="outlet" name="activityView" candidateClass="UIActivityIndicatorView"/>
                 <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="playButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="TimetableTableViewController" superclassName="BaseViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TimetableTableViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="table" candidateClass="UITableView"/>
             </relationships>
         </class>
     </classes>

@@ -5,7 +5,7 @@
 //  Copyright 2012 Daniel Czerwonk. All rights reserved.
 //
 
-@protocol View
+@protocol View<NSObject>
 
 - (void)showErrorWithMessage:(NSString *)message;
 

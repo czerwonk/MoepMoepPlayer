@@ -20,4 +20,6 @@
 @property (nonatomic, retain) id<TimetableView> view;
 @property (nonatomic, retain) id<DataRetriever> dataRetriever;
 
+- (id)initWithDataRetriever:(id<DataRetriever>)retriever;
+
 @end

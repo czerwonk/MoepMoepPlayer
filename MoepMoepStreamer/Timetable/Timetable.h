@@ -12,5 +12,6 @@
 
 }
 
+@property (nonatomic, retain) NSArray *shows;
 
 @end
