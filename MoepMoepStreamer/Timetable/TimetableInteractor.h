@@ -6,11 +6,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TimetableView.h"
+#import "TimetableViewDelegate.h"
+#import "DataRetriever.h"
 
 
-@interface TimetableInteractor : NSObject {
-
+@interface TimetableInteractor : NSObject<TimetableViewDelegate, DataRetrieverDelegate> {
+    @private
+    id<DataRetriever> dataRetriever;
+    id<TimetableView> view;
 }
 
+@property (nonatomic, retain) id<TimetableView> view;
+@property (nonatomic, retain) id<DataRetriever> dataRetriever;
 
 @end

@@ -5,8 +5,15 @@
 //  Copyright 2012 Daniel Czerwonk. All rights reserved.
 //
 
-@protocol TimetableView
+#import "View.h"
+#import "TimetableViewDelegate.h"
 
+@class Timetable;
 
+@protocol TimetableView<View>
+
+@property (nonatomic, retain) id<TimetableViewDelegate> viewDelegate;
+
+- (void)setTimetable:(Timetable *)timetable;
 
 @end

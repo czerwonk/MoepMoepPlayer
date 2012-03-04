@@ -6,11 +6,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Test.h"
 
 
-@interface TimetableInteractorTest : NSObject {
+@interface TimetableInteractorTest : Test {
 
 }
 
+- (void)testRefreshShouldRetrieveData;
+
+- (void)testShouldUpdateViewAfterReceivedData;
+
+- (void)testShouldNotifyViewOnError;
+
+- (void)testShouldSetDelegateOfDataRetriever;
+
+- (void)testShouldSetDelegateOfView;
 
 @end

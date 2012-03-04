@@ -10,5 +10,13 @@
 
 @implementation Test
 
+- (void)verifyMockExpectations:(id)mock {
+    @try {
+        [mock verify];
+    }
+    @catch (NSException *ex) {
+        STFail(ex.reason);
+    }
+}
 
 @end
