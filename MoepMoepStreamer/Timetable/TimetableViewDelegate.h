@@ -7,6 +7,6 @@
 
 @protocol TimetableViewDelegate<NSObject>
 
-- (void)refresh;
+- (void)refreshTimetable;
 
 @end

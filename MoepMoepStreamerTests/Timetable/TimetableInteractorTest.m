@@ -18,7 +18,7 @@
 
     TimetableInteractor *interactor = [[[TimetableInteractor alloc] init] autorelease];
     interactor.dataRetriever = dataRetriever;
-    [interactor refresh];
+    [interactor refreshTimetable];
 
     [self verifyMockExpectations:dataRetriever];
 }

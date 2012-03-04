@@ -10,5 +10,12 @@
 
 @implementation Timetable
 
+@synthesize shows;
+
+- (void)dealloc {
+    [super dealloc];
+
+    [shows release];
+}
 
 @end
