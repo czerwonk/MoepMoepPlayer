@@ -753,7 +753,7 @@
 				INFOPLIST_FILE = "MoepMoepStreamer/MoepMoepStreamer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = MoepMoepStreamer;
-				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Libs/OCMock/Source/**";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Libs/OCMock/Source/** \"${PROJECT_DIR}/Libs/JSON/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
