@@ -28,7 +28,7 @@
      [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse *response,
                                                                                       NSData *data,
                                                                                       NSError *error) {
-         NSHTTPURLResponse *res = response;
+         NSHTTPURLResponse *res = (NSHTTPURLResponse *)response;
          if (res.statusCode == 200) {
              [self deserializeAndReturnData:data];
          }

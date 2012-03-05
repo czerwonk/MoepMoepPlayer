@@ -11,7 +11,7 @@
 
 @interface TimetableInteractor ()
 
-- (void)runSyncInMainThread:(void (^)())block;
+- (void)runSyncInMainThread:(void (^)(void))block;
 
 @end
 
