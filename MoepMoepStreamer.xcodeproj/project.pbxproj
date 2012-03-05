@@ -33,7 +33,6 @@
 		6597646C14FEB35600473A4B /* 01-refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A4A /* 01-refresh.png */; };
 		6597646C14FEB35600473A4D /* ShowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A4C /* ShowTableViewCell.xib */; };
 		6597646C14FEB35600473A52 /* TimetableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A51 /* TimetableTableViewController.m */; };
-		6597646C14FEB35600473A55 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6597646C14FEB35600473A57 /* TimetableInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A56 /* TimetableInteractor.m */; };
 		6597646C14FEB35600473A58 /* TimetableInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A56 /* TimetableInteractor.m */; };
 		6597646C14FEB35600473A5C /* Timetable.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A5B /* Timetable.m */; };
@@ -41,7 +40,6 @@
 		6597646C14FEB35600473A60 /* Show.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A5F /* Show.m */; };
 		6597646C14FEB35600473A61 /* Show.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A5F /* Show.m */; };
 		6597646C14FEB35600473A64 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A63 /* MainTabBarController.m */; };
-		6597646C14FEB35600473A6C /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6597646C14FEB35600473A73 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A72 /* BaseViewController.m */; };
 		6597646C14FEB35600473A74 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A72 /* BaseViewController.m */; };
 		6597646C14FEB35600473A77 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A76 /* Localizable.strings */; };
@@ -122,6 +120,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = 030EF0DC14632FF700B04273;
 			remoteInfo = OCMockLib;
+		};
+		65E9E736150546B6007007F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6597644B14FEB33A00473A39 /* SBJson.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BCC2626813920FC7003D9994;
+			remoteInfo = "sbjson-ios";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -441,6 +446,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				65E9E737150546B6007007F2 /* PBXTargetDependency */,
 			);
 			name = MoepMoepStreamer;
 			productName = StreamTest;
@@ -608,12 +614,10 @@
 				6558AEA614FD948600378967 /* ChatViewController.m in Sources */,
 				6597646C14FEB35600473A40 /* StreamPlayer.m in Sources */,
 				6597646C14FEB35600473A52 /* TimetableTableViewController.m in Sources */,
-				6597646C14FEB35600473A55 /* (null) in Sources */,
 				6597646C14FEB35600473A57 /* TimetableInteractor.m in Sources */,
 				6597646C14FEB35600473A5C /* Timetable.m in Sources */,
 				6597646C14FEB35600473A60 /* Show.m in Sources */,
 				6597646C14FEB35600473A64 /* MainTabBarController.m in Sources */,
-				6597646C14FEB35600473A6C /* (null) in Sources */,
 				6597646C14FEB35600473A73 /* BaseViewController.m in Sources */,
 				6597646C14FEB35600473A80 /* TimetableDataRetriever.m in Sources */,
 				6597646C14FEB35600473A83 /* ShowTableViewCell.m in Sources */,
@@ -651,6 +655,11 @@
 			isa = PBXTargetDependency;
 			target = 61E069FA3A11768DD7DEEBDA /* MoepMoepStreamer */;
 			targetProxy = 6570BF5D14FEBAC9008C3C52 /* PBXContainerItemProxy */;
+		};
+		65E9E737150546B6007007F2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "sbjson-ios";
+			targetProxy = 65E9E736150546B6007007F2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -736,8 +745,10 @@
 		61E069FA3A11768DD7DEEBDC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MoepMoepStreamer/MoepMoepStreamer-Prefix.pch";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "MoepMoepStreamer/MoepMoepStreamer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = MoepMoepStreamer;
@@ -748,8 +759,10 @@
 		61E069FA3A11768DD7DEEBDD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MoepMoepStreamer/MoepMoepStreamer-Prefix.pch";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "MoepMoepStreamer/MoepMoepStreamer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = MoepMoepStreamer;
