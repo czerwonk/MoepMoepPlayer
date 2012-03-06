@@ -11,7 +11,8 @@ typedef enum {
     PlayerStatusStopped,
     PlayerStatusLoading,
     PlayerStatusPlaying,
-    PlayerStatusReady
+    PlayerStatusReady,
+    PlayerStandby
 } PlayerStatus;
 
 @protocol Player<NSObject>
