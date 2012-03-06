@@ -93,7 +93,7 @@
     [self.activityView startAnimating];
     self.playButton.enabled = NO;
     self.playButton.titleLabel.textAlignment = UITextAlignmentCenter;
-    self.playButton.titleLabel.text = @"Verbinde...";
+    self.playButton.titleLabel.text = NSLocalizedString(@"Connect", @"Verbinde...");
 }
 
 - (void)playerIsReadyToPlay {
@@ -105,7 +105,7 @@
     [self.activityView stopAnimating];
     self.playButton.enabled = NO;
     self.playButton.titleLabel.textAlignment = UITextAlignmentCenter;
-    self.playButton.titleLabel.text = @"Fail";
+    self.playButton.titleLabel.text = NSLocalizedString(@"Offline", @"Offline");
 }
 
 @end
