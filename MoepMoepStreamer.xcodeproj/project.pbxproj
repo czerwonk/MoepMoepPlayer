@@ -48,6 +48,9 @@
 		6597646C14FEB35600473A80 /* TimetableDataRetriever.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A7F /* TimetableDataRetriever.m */; };
 		6597646C14FEB35600473A83 /* ShowTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A82 /* ShowTableViewCell.m */; };
 		6597646C14FEB35600473A86 /* TimetableDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A85 /* TimetableDeserializer.m */; };
+		65E9E737150546B6007007F4 /* NotificationKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B6007007F3 /* NotificationKeys.m */; };
+		65E9E737150546B6007007F5 /* NotificationKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B6007007F3 /* NotificationKeys.m */; };
+		65E9E737150546B6007007F8 /* stream_info.json in Resources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B6007007F7 /* stream_info.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -197,6 +200,9 @@
 		6597646C14FEB35600473A84 /* ShowTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowTableViewCell.h; sourceTree = "<group>"; };
 		6597646C14FEB35600473A85 /* TimetableDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimetableDeserializer.m; sourceTree = "<group>"; };
 		6597646C14FEB35600473A87 /* TimetableDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimetableDeserializer.h; sourceTree = "<group>"; };
+		65E9E737150546B6007007F3 /* NotificationKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationKeys.m; sourceTree = "<group>"; };
+		65E9E737150546B6007007F6 /* NotificationKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationKeys.h; sourceTree = "<group>"; };
+		65E9E737150546B6007007F7 /* stream_info.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; path = stream_info.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +272,9 @@
 		61E069FA3A11768DD7DEEBE8 /* MoepMoepStreamer */ = {
 			isa = PBXGroup;
 			children = (
+				65E9E737150546B6007007F7 /* stream_info.json */,
+				65E9E737150546B6007007F6 /* NotificationKeys.h */,
+				65E9E737150546B6007007F3 /* NotificationKeys.m */,
 				6597646C14FEB35600473A76 /* Localizable.strings */,
 				6597646C14FEB35600473A65 /* MainTabBarController.h */,
 				6597646C14FEB35600473A63 /* MainTabBarController.m */,
@@ -574,6 +583,7 @@
 				6597646C14FEB35600473A4B /* 01-refresh.png in Resources */,
 				6597646C14FEB35600473A4D /* ShowTableViewCell.xib in Resources */,
 				6597646C14FEB35600473A77 /* Localizable.strings in Resources */,
+				65E9E737150546B6007007F8 /* stream_info.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -622,6 +632,7 @@
 				6597646C14FEB35600473A80 /* TimetableDataRetriever.m in Sources */,
 				6597646C14FEB35600473A83 /* ShowTableViewCell.m in Sources */,
 				6597646C14FEB35600473A86 /* TimetableDeserializer.m in Sources */,
+				65E9E737150546B6007007F4 /* NotificationKeys.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -635,6 +646,7 @@
 				6597646C14FEB35600473A74 /* BaseViewController.m in Sources */,
 				6597646C14FEB35600473A7A /* TimetableInteractorTest.m in Sources */,
 				6597646C14FEB35600473A7D /* Test.m in Sources */,
+				65E9E737150546B6007007F5 /* NotificationKeys.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

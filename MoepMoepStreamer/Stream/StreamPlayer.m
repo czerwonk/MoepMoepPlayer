@@ -7,6 +7,7 @@
 
 #import <AudioToolbox/AudioToolbox.h>
 #import "StreamPlayer.h"
+#import "NotificationKeys.h"
 
 
 @interface StreamPlayer ()
@@ -14,6 +15,12 @@
 - (void)initializeAudioSession;
 
 - (void)resetPlayer;
+
+- (void)initializeApplicationStateObservation;
+
+- (void)applicationWillBeSentToBackground;
+
+- (void)applicationReturnedFromBackground;
 
 @end
 
@@ -31,6 +38,7 @@
         [player addObserver:self forKeyPath:@"currentItem.status" options:0 context:NULL];
 
         [self initializeAudioSession];
+        [self initializeApplicationStateObservation];
     }
 
     return self;
@@ -61,6 +69,10 @@
 }
 
 - (void)resetPlayer {
+    if (self.streamUrl == nil) {
+        return;
+    }
+    
     self.status = PlayerStatusLoading;
     [self.delegate playerStartedLoadingFromUrl:self.streamUrl];
 
@@ -92,13 +104,6 @@
     [session setActive:NO error:nil];
 }
 
-- (void)dealloc {
-    [super dealloc];
-
-    [player release];
-    [streamUrl release];
-}
-
 - (void)beginInterruption {
     [player pause];
 }
@@ -122,6 +127,44 @@
         self.status = PlayerStatusStopped;
         [self.delegate playerFailed];
     }
+}
+
+- (void)initializeApplicationStateObservation {
+    [[NSNotificationCenter defaultCenter] addObserverForName:ApplicationWillBeSentToBackground
+                                                      object:nil
+                                                       queue:nil
+                                                  usingBlock:^(NSNotification *notification) {
+                                                      [self applicationWillBeSentToBackground];
+                                                  }];
+    [[NSNotificationCenter defaultCenter] addObserverForName:ApplicationReturnedFromBackground
+                                                      object:nil
+                                                       queue:nil
+                                                  usingBlock:^(NSNotification *notification) {
+                                                      [self applicationReturnedFromBackground];
+                                                  }];
+}
+
+- (void)applicationWillBeSentToBackground {
+    if (status != PlayerStatusPlaying) {
+        [player release];
+        player = nil;
+        status = PlayerStandby;
+    }
+}
+
+- (void)applicationReturnedFromBackground {
+    if (status == PlayerStandby) {
+        player = [[AVPlayer alloc] init];
+        [self resetPlayer];
+    }
+}
+
+- (void)dealloc {
+    [super dealloc];
+
+    [player release];
+    [streamUrl release];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end
