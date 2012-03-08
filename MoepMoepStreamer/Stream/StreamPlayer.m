@@ -16,6 +16,8 @@
 
 - (void)resetPlayer;
 
+- (void)releasePlayer;
+
 - (void)initializeApplicationStateObservation;
 
 - (void)applicationWillBeSentToBackground;
@@ -34,9 +36,6 @@
     self = [super init];
 
     if (self) {
-        player = [[AVPlayer alloc] init];
-        [player addObserver:self forKeyPath:@"currentItem.status" options:0 context:NULL];
-
         [self initializeAudioSession];
         [self initializeApplicationStateObservation];
     }
@@ -56,6 +55,21 @@
     if (![session setCategory:AVAudioSessionCategoryPlayback error:&error]) {
         NSLog(@"Error: %@", error);
     }
+}
+
+- (void)initializeApplicationStateObservation {
+    [[NSNotificationCenter defaultCenter] addObserverForName:ApplicationWillBeSentToBackground
+                                                      object:nil
+                                                       queue:nil
+                                                  usingBlock:^(NSNotification *notification) {
+                                                      [self applicationWillBeSentToBackground];
+                                                  }];
+    [[NSNotificationCenter defaultCenter] addObserverForName:ApplicationReturnedFromBackground
+                                                      object:nil
+                                                       queue:nil
+                                                  usingBlock:^(NSNotification *notification) {
+                                                      [self applicationReturnedFromBackground];
+                                                  }];
 }
 
 - (NSString *)streamUrl {
@@ -80,8 +94,16 @@
     AVPlayerItem *item = [[AVPlayerItem alloc] initWithURL:url];
     [url release];
 
-    [player replaceCurrentItemWithPlayerItem:item];
+    [self releasePlayer];
+    player = [[AVPlayer alloc] initWithPlayerItem:item];
+    [player addObserver:self forKeyPath:@"currentItem.status" options:0 context:NULL];
     [item release];
+}
+
+- (void)releasePlayer {
+    [player removeObserver:self forKeyPath:@"currentItem.status"];
+    [player release];
+    player = nil;
 }
 
 - (void)play {
@@ -104,15 +126,6 @@
     [session setActive:NO error:nil];
 }
 
-- (void)beginInterruption {
-    [player pause];
-}
-
-- (void)endInterruption {
-    [self resetPlayer];
-    [self play];
-}
-
 - (void)refresh {
     [self resetPlayer];
 }
@@ -129,19 +142,13 @@
     }
 }
 
-- (void)initializeApplicationStateObservation {
-    [[NSNotificationCenter defaultCenter] addObserverForName:ApplicationWillBeSentToBackground
-                                                      object:nil
-                                                       queue:nil
-                                                  usingBlock:^(NSNotification *notification) {
-                                                      [self applicationWillBeSentToBackground];
-                                                  }];
-    [[NSNotificationCenter defaultCenter] addObserverForName:ApplicationReturnedFromBackground
-                                                      object:nil
-                                                       queue:nil
-                                                  usingBlock:^(NSNotification *notification) {
-                                                      [self applicationReturnedFromBackground];
-                                                  }];
+- (void)beginInterruption {
+    [player pause];
+}
+
+- (void)endInterruption {
+    [self resetPlayer];
+    [self play];
 }
 
 - (void)applicationWillBeSentToBackground {
@@ -154,7 +161,6 @@
 
 - (void)applicationReturnedFromBackground {
     if (status == PlayerStandby) {
-        player = [[AVPlayer alloc] init];
         [self resetPlayer];
     }
 }
@@ -162,7 +168,7 @@
 - (void)dealloc {
     [super dealloc];
 
-    [player release];
+    [self releasePlayer];
     [streamUrl release];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }

@@ -107,6 +107,7 @@
 - (void)playerIsReadyToPlay {
     [self.activityView stopAnimating];
     self.playButton.enabled = YES;
+    self.playButton.frame = self.playButton.frame;
 }
 
 - (void)playerFailed {
