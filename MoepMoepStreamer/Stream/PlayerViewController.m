@@ -7,15 +7,19 @@
 //
 
 #import "PlayerViewController.h"
-#import "Player.h"
 #import "StreamPlayer.h"
-#import "Stream.h"
 
 @interface PlayerViewController ()
 
-- (void)startPlaying;
+- (void)playerStartedLoading;
 
-- (void)stopPlaying;
+- (void)playerIsReadyToPlay;
+
+- (void)playerFailed;
+
+- (void)playerStartedPlaying;
+
+- (void)playerStoppedPlaying;
 
 - (void)streamSwitched;
 
@@ -74,30 +78,43 @@
 
 - (IBAction)playButtonClicked {
     if (isPlaying) {
-        [self stopPlaying];
+        [player pause];
     } else {
-        [self startPlaying];
+        [player play];
     }
 }
 
 - (IBAction)refreshButtonClicked {
-    [self stopPlaying];
     [player refresh];
 }
 
-- (void)startPlaying {
-    [player play];
-    isPlaying = YES;
-    [self.playButton setSelected:YES];
+- (void)playerChangedStatusTo:(PlayerStatus)status {
+    isPlaying = status == PlayerStatusPlaying;
+
+    switch (status) {
+        case PlayerStatusLoading:
+            [self playerStartedLoading];
+            break;
+
+        case PlayerStatusReady:
+            [self playerIsReadyToPlay];
+            break;
+
+        case PlayerStatusFailed:
+            [self playerFailed];
+            break;
+
+        case PlayerStatusPlaying:
+            [self playerStartedPlaying];
+            break;
+
+        case PlayerStatusStopped:
+            [self playerStoppedPlaying];
+            break;
+    }
 }
 
-- (void)stopPlaying {
-    [player pause];
-    isPlaying = NO;
-    [self.playButton setSelected:NO];
-}
-
-- (void)playerStartedLoadingFromUrl:(NSString *)streamUrl {
+- (void)playerStartedLoading {
     [self.activityView startAnimating];
     self.playButton.enabled = NO;
     self.playButton.titleLabel.frame = self.playButton.frame;
@@ -116,6 +133,14 @@
     self.playButton.titleLabel.frame = self.playButton.frame;
     self.playButton.titleLabel.textAlignment = UITextAlignmentCenter;
     self.playButton.titleLabel.text = NSLocalizedString(@"Offline", @"Offline");
+}
+
+- (void)playerStartedPlaying {
+    [self.playButton setSelected:YES];
+}
+
+- (void)playerStoppedPlaying {
+    [self.playButton setSelected:NO];
 }
 
 - (void)streamSwitched {
@@ -160,6 +185,9 @@
     [streams release];
     [currentStream release];
     [streamTextLabel release];
+    [pickerView release];
+    [segmentedControl release];
+    [activityView release];
 }
 
 @end
