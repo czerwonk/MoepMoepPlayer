@@ -14,6 +14,7 @@
     @private
     NSString *streamUrl;
     AVPlayer *player;
+    PlayerStatus status;
 }
 
 @end

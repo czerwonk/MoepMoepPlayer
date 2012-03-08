@@ -5,10 +5,10 @@
 //  Copyright 2012 Daniel Czerwonk. All rights reserved.
 //
 
+#import "PlayerStatus.h"
+
 @protocol PlayerDelegate
 
-- (void)playerStartedLoadingFromUrl:(NSString *)streamUrl;
-- (void)playerIsReadyToPlay;
-- (void)playerFailed;
+- (void)playerChangedStatusTo:(PlayerStatus)status;
 
 @end

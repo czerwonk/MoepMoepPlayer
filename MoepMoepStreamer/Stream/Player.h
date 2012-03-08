@@ -6,20 +6,13 @@
 //
 
 #import "PlayerDelegate.h"
-
-typedef enum {
-    PlayerStatusStopped,
-    PlayerStatusLoading,
-    PlayerStatusPlaying,
-    PlayerStatusReady,
-    PlayerStandby
-} PlayerStatus;
+#import "PlayerStatus.h"
 
 @protocol Player<NSObject>
 
 @property (copy) NSString *streamUrl;
 @property (nonatomic, retain) id<PlayerDelegate> delegate;
-@property (nonatomic) PlayerStatus status;
+@property (nonatomic, readonly) PlayerStatus status;
 
 - (void)play;
 - (void)pause;

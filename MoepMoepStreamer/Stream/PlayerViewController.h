@@ -10,8 +10,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import "PlayerDelegate.h"
 #import "Stream.h"
-
-@protocol Player;
+#import "Player.h"
 
 @interface PlayerViewController : UIViewController<PlayerDelegate, UIPickerViewDataSource, UIPickerViewDelegate> {
 

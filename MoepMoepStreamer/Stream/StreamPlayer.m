@@ -13,15 +13,11 @@
 @interface StreamPlayer ()
 
 - (void)initializeAudioSession;
-
 - (void)resetPlayer;
-
 - (void)releasePlayer;
-
 - (void)initializeApplicationStateObservation;
-
+- (void)setStatus:(PlayerStatus)status;
 - (void)applicationWillBeSentToBackground;
-
 - (void)applicationReturnedFromBackground;
 
 @end
@@ -30,7 +26,7 @@
 
 @synthesize delegate;
 @dynamic streamUrl;
-@synthesize status;
+@dynamic status;
 
 - (id)init {
     self = [super init];
@@ -82,13 +78,16 @@
     [self resetPlayer];
 }
 
+- (PlayerStatus)status {
+    return status;
+}
+
 - (void)resetPlayer {
     if (self.streamUrl == nil) {
         return;
     }
     
-    self.status = PlayerStatusLoading;
-    [self.delegate playerStartedLoadingFromUrl:self.streamUrl];
+    [self setStatus:PlayerStatusLoading];
 
     NSURL *url = [[NSURL alloc] initWithString:self.streamUrl];
     AVPlayerItem *item = [[AVPlayerItem alloc] initWithURL:url];
@@ -115,11 +114,11 @@
     }
 
     [player play];
-    self.status = PlayerStatusPlaying;
+    [self setStatus:PlayerStatusPlaying];
 }
 
 - (void)pause {
-    self.status = PlayerStatusStopped;
+    [self setStatus:PlayerStatusStopped];
     [player pause];
 
     AVAudioSession *session = [AVAudioSession sharedInstance];
@@ -133,13 +132,16 @@
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object
                         change:(NSDictionary *)change context:(void *)context {
     if (player.currentItem.status == AVPlayerItemStatusReadyToPlay && player.currentItem.asset.playable) {
-        self.status = PlayerStatusReady;
-        [self.delegate playerIsReadyToPlay];
+        [self setStatus:PlayerStatusReady];
     }
     else if (player.currentItem.status == AVPlayerItemStatusFailed) {
-        self.status = PlayerStatusStopped;
-        [self.delegate playerFailed];
+        [self setStatus:PlayerStatusFailed];
     }
+}
+
+- (void)setStatus:(PlayerStatus)newStatus {
+    status = newStatus;
+    [self.delegate playerChangedStatusTo:status];
 }
 
 - (void)beginInterruption {
@@ -155,7 +157,7 @@
     if (status != PlayerStatusPlaying) {
         [player release];
         player = nil;
-        status = PlayerStandby;
+        [self setStatus:PlayerStandby];
     }
 }
 

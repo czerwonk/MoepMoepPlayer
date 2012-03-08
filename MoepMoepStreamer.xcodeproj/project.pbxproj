@@ -53,6 +53,8 @@
 		65E9E737150546B6007007F8 /* stream_info.json in Resources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B6007007F7 /* stream_info.json */; };
 		65E9E737150546B6007007FA /* Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B6007007F9 /* Stream.m */; };
 		65E9E737150546B6007007FB /* Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B6007007F9 /* Stream.m */; };
+		65E9E737150546B6007007FE /* PlayerInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B6007007FD /* PlayerInteractor.m */; };
+		65E9E737150546B6007007FF /* PlayerInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B6007007FD /* PlayerInteractor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -207,6 +209,11 @@
 		65E9E737150546B6007007F7 /* stream_info.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; path = stream_info.json; sourceTree = "<group>"; };
 		65E9E737150546B6007007F9 /* Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stream.m; sourceTree = "<group>"; };
 		65E9E737150546B6007007FC /* Stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stream.h; sourceTree = "<group>"; };
+		65E9E737150546B6007007FD /* PlayerInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerInteractor.m; sourceTree = "<group>"; };
+		65E9E737150546B600700800 /* PlayerInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerInteractor.h; sourceTree = "<group>"; };
+		65E9E737150546B600700801 /* PlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerView.h; sourceTree = "<group>"; };
+		65E9E737150546B600700802 /* PlayerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewDelegate.h; sourceTree = "<group>"; };
+		65E9E737150546B600700803 /* PlayerStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerStatus.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -365,6 +372,11 @@
 		6597646C14FEB35600473A3A /* Stream */ = {
 			isa = PBXGroup;
 			children = (
+				65E9E737150546B600700803 /* PlayerStatus.h */,
+				65E9E737150546B600700802 /* PlayerViewDelegate.h */,
+				65E9E737150546B600700801 /* PlayerView.h */,
+				65E9E737150546B600700800 /* PlayerInteractor.h */,
+				65E9E737150546B6007007FD /* PlayerInteractor.m */,
 				65E9E737150546B6007007FC /* Stream.h */,
 				65E9E737150546B6007007F9 /* Stream.m */,
 				61E069FA3A11768DD7DEEBF8 /* PlayerViewController.m */,
@@ -640,6 +652,7 @@
 				6597646C14FEB35600473A86 /* TimetableDeserializer.m in Sources */,
 				65E9E737150546B6007007F4 /* NotificationKeys.m in Sources */,
 				65E9E737150546B6007007FA /* Stream.m in Sources */,
+				65E9E737150546B6007007FE /* PlayerInteractor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -655,6 +668,7 @@
 				6597646C14FEB35600473A7D /* Test.m in Sources */,
 				65E9E737150546B6007007F5 /* NotificationKeys.m in Sources */,
 				65E9E737150546B6007007FB /* Stream.m in Sources */,
+				65E9E737150546B6007007FF /* PlayerInteractor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
