@@ -51,6 +51,8 @@
 		65E9E737150546B6007007F4 /* NotificationKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B6007007F3 /* NotificationKeys.m */; };
 		65E9E737150546B6007007F5 /* NotificationKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B6007007F3 /* NotificationKeys.m */; };
 		65E9E737150546B6007007F8 /* stream_info.json in Resources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B6007007F7 /* stream_info.json */; };
+		65E9E737150546B6007007FA /* Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B6007007F9 /* Stream.m */; };
+		65E9E737150546B6007007FB /* Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B6007007F9 /* Stream.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -203,6 +205,8 @@
 		65E9E737150546B6007007F3 /* NotificationKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationKeys.m; sourceTree = "<group>"; };
 		65E9E737150546B6007007F6 /* NotificationKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationKeys.h; sourceTree = "<group>"; };
 		65E9E737150546B6007007F7 /* stream_info.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; path = stream_info.json; sourceTree = "<group>"; };
+		65E9E737150546B6007007F9 /* Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stream.m; sourceTree = "<group>"; };
+		65E9E737150546B6007007FC /* Stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stream.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -361,6 +365,8 @@
 		6597646C14FEB35600473A3A /* Stream */ = {
 			isa = PBXGroup;
 			children = (
+				65E9E737150546B6007007FC /* Stream.h */,
+				65E9E737150546B6007007F9 /* Stream.m */,
 				61E069FA3A11768DD7DEEBF8 /* PlayerViewController.m */,
 				61E069FA3A11768DD7DEEBF7 /* PlayerViewController.h */,
 				6597646C14FEB35600473A41 /* StreamPlayer.h */,
@@ -633,6 +639,7 @@
 				6597646C14FEB35600473A83 /* ShowTableViewCell.m in Sources */,
 				6597646C14FEB35600473A86 /* TimetableDeserializer.m in Sources */,
 				65E9E737150546B6007007F4 /* NotificationKeys.m in Sources */,
+				65E9E737150546B6007007FA /* Stream.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -647,6 +654,7 @@
 				6597646C14FEB35600473A7A /* TimetableInteractorTest.m in Sources */,
 				6597646C14FEB35600473A7D /* Test.m in Sources */,
 				65E9E737150546B6007007F5 /* NotificationKeys.m in Sources */,
+				65E9E737150546B6007007FB /* Stream.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

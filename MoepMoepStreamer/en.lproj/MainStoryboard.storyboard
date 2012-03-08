@@ -51,39 +51,26 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="wbb3-header-logo.png" id="Br5-DU-xNM">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="wbb3-header-logo.png" id="Br5-DU-xNM">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="vqy-cS-Mso">
-                                <rect key="frame" x="20" y="50" width="280" height="189"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="#moepmoep1 - Datensuppe" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="JtB-eb-g3j">
-                                <rect key="frame" x="20" y="21" width="280" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="#moep1 (128 Kbps)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="JtB-eb-g3j">
+                                <rect key="frame" x="20" y="262" width="280" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" id="U8H-I9-4K8">
-                                <rect key="frame" x="20" y="236" width="280" height="102"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Die Datensuppe ist ein wöchentliche Podcast mit der Küchenchefin @annika_k von gulli.com Küchenchefs @j4rkill &amp; @riotburnz. Es geht um Daten(schutz), Daten(jäger), Daten(sammler), Daten(haie), Daten(zensur) …
-</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hr9-Nm-zFz">
-                                <rect key="frame" x="20" y="346" width="227" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="20" y="353" width="227" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <state key="normal" title="Play">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <state key="disabled" title="Verbinde...">
+                                <state key="disabled" title="Kein Stream">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="selected" title="Stop"/>
@@ -95,12 +82,12 @@
                                 </connections>
                             </button>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="gray" id="Hc6-u1-Mgk">
-                                <rect key="frame" x="36" y="354" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="36" y="361" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="id7-Lq-tiO">
-                                <rect key="frame" x="255" y="346" width="45" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="255" y="353" width="45" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                 <state key="normal" image="01-refresh.png">
                                     <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
@@ -113,15 +100,37 @@
                                     <action selector="refreshButtonClicked" destination="YuY-Wd-s9m" eventType="touchDown" id="XEI-KJ-D3m"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" id="GXO-4G-GhT">
+                                <rect key="frame" x="0.0" y="64" width="320" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="YuY-Wd-s9m" id="Ldn-nz-bH1"/>
+                                    <outlet property="delegate" destination="YuY-Wd-s9m" id="RTG-ba-RMy"/>
+                                </connections>
+                            </pickerView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="dEZ-RV-wh8">
+                                <rect key="frame" x="20" y="293" width="280" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <segments>
+                                    <segment title="High Quality"/>
+                                    <segment title="Mobile"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentControlClicked" destination="YuY-Wd-s9m" eventType="touchDown" id="odG-si-6Oh"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
-                        <color key="backgroundColor" red="0.15686275064945221" green="0.15686275064945221" blue="0.15686275064945221" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="backgroundColor" red="0.20000001788139343" green="0.20000001788139343" blue="0.27450981736183167" alpha="1" colorSpace="deviceRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Player" image="194-note-2.png" id="dLw-2s-WlK"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
                     <connections>
                         <outlet property="activityView" destination="Hc6-u1-Mgk" id="VgO-E8-j2I"/>
-                        <outlet property="imageView" destination="vqy-cS-Mso" id="7mj-An-neg"/>
+                        <outlet property="pickerView" destination="GXO-4G-GhT" id="3cw-NU-PfG"/>
                         <outlet property="playButton" destination="hr9-Nm-zFz" id="NFg-a6-yfW"/>
+                        <outlet property="segmentedControl" destination="dEZ-RV-wh8" id="YHY-Zk-Por"/>
+                        <outlet property="streamTextLabel" destination="JtB-eb-g3j" id="RXE-Sb-5JW"/>
                     </connections>
                 </viewController>
             </objects>
@@ -211,8 +220,10 @@
                 <relationship kind="action" name="playButtonClicked"/>
                 <relationship kind="action" name="refreshButtonClicked"/>
                 <relationship kind="outlet" name="activityView" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="pickerView" candidateClass="UIPickerView"/>
                 <relationship kind="outlet" name="playButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="segmentedControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="streamTextLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="TimetableTableViewController" superclassName="BaseViewController">

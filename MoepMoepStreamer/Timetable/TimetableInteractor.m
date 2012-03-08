@@ -24,7 +24,7 @@
     self = [super init];
     
     if (self) {
-        self.dataRetriever = retriever;
+        self.dataRetriever = [retriever retain];
     }
 
     return self;
