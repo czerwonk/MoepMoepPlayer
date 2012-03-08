@@ -56,6 +56,7 @@
 
     streams = [[NSArray alloc] initWithObjects:moep1, moep2, nil];
     currentStream = moep1;
+    self.streamTextLabel.text = currentStream.name;
     [self streamSwitched];
 
     [moep2 release];
@@ -99,9 +100,9 @@
 - (void)playerStartedLoadingFromUrl:(NSString *)streamUrl {
     [self.activityView startAnimating];
     self.playButton.enabled = NO;
+    self.playButton.titleLabel.frame = self.playButton.frame;
     self.playButton.titleLabel.textAlignment = UITextAlignmentCenter;
     self.playButton.titleLabel.text = NSLocalizedString(@"Connect", @"Verbinde...");
-    self.playButton.frame = self.playButton.frame;
 }
 
 - (void)playerIsReadyToPlay {
@@ -112,9 +113,9 @@
 - (void)playerFailed {
     [self.activityView stopAnimating];
     self.playButton.enabled = NO;
+    self.playButton.titleLabel.frame = self.playButton.frame;
     self.playButton.titleLabel.textAlignment = UITextAlignmentCenter;
     self.playButton.titleLabel.text = NSLocalizedString(@"Offline", @"Offline");
-    self.playButton.frame = self.playButton.frame;
 }
 
 - (void)streamSwitched {
