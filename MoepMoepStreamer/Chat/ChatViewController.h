@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface ChatViewController : UIViewController<UIWebViewDelegate>
+@interface ChatViewController : BaseViewController<UIWebViewDelegate>
 
 @property (nonatomic, retain) IBOutlet UIWebView *webView;
-@property (nonatomic, retain) IBOutlet UIActivityIndicatorView *activityView;
 
 @end

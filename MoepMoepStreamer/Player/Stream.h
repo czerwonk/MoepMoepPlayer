@@ -7,7 +7,6 @@
 
 #import <Foundation/Foundation.h>
 
-
 @interface Stream : NSObject {
 
 }

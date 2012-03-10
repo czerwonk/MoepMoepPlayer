@@ -7,10 +7,12 @@
 
 #import "View.h"
 #import "Player.h"
+#import "PlayerViewDelegate.h"
 
 @protocol PlayerView<View>
 
+- (void)setViewDelegate:(id<PlayerViewDelegate>)delegate;
 - (void)setStreams:(NSArray *)streams;
-- (void)streamChangedStatus:(PlayerStatus)status;
+//- (void)playerChangedStatusTo:(PlayerStatus)status;
 
 @end

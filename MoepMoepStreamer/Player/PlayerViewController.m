@@ -8,6 +8,7 @@
 
 #import "PlayerViewController.h"
 #import "StreamPlayer.h"
+#import "PlayerViewDelegate.h"
 
 @interface PlayerViewController ()
 
@@ -28,10 +29,11 @@
 @implementation PlayerViewController
 
 @synthesize playButton;
-@synthesize activityView;
 @synthesize segmentedControl;
 @synthesize pickerView;
 @synthesize streamTextLabel;
+@synthesize viewDelegate;
+@synthesize playerActivityView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -47,24 +49,9 @@
                                        self.pickerView.frame.origin.y + 8,
                                        self.pickerView.frame.size.width,
                                        162);
-    
-    Stream *moep1 = [[Stream alloc] init];
-    moep1.name = @"#moep1";
-    moep1.mainStreamUrl = @"http://radio.moepmoep.org:8000/stream.mp3";
-    moep1.mobileStreamUrl = @"http://relay.moepmoep.org:9000/stream2.mp3";
 
-    Stream *moep2 = [[Stream alloc] init];
-    moep2.name = @"#moep2";
-    moep2.mainStreamUrl = @"http://radio.moepmoep.org:9500/stream4.mp3";
-    moep2.mobileStreamUrl = @"http://relay.moepmoep.org:8500/stream5.mp3";
-
-    streams = [[NSArray alloc] initWithObjects:moep1, moep2, nil];
-    currentStream = moep1;
-    self.streamTextLabel.text = currentStream.name;
-    [self streamSwitched];
-
-    [moep2 release];
-    [self streamSwitched];
+    [self startActivityViewWithText:NSLocalizedString(@"LoadingStreamList", nil)];
+    [self.viewDelegate reloadStreams];
 }
 
 - (void)viewDidUnload {
@@ -114,8 +101,23 @@
     }
 }
 
+- (void)setStreams:(NSArray *)retrievedStreams {
+    [self stopActivityView];
+
+    [streams release];
+    streams = [[NSArray alloc] initWithArray:retrievedStreams];
+
+    if (streams.count > 0) {
+        [currentStream release];
+        currentStream = [[streams objectAtIndex:0] retain];
+
+        [self streamSwitched];
+        [self.pickerView reloadAllComponents];
+    }
+}
+
 - (void)playerStartedLoading {
-    [self.activityView startAnimating];
+    [self.playerActivityView startAnimating];
     self.playButton.enabled = NO;
     self.playButton.titleLabel.frame = self.playButton.frame;
     self.playButton.titleLabel.textAlignment = UITextAlignmentCenter;
@@ -123,12 +125,12 @@
 }
 
 - (void)playerIsReadyToPlay {
-    [self.activityView stopAnimating];
+    [self.playerActivityView stopAnimating];
     self.playButton.enabled = YES;
 }
 
 - (void)playerFailed {
-    [self.activityView stopAnimating];
+    [self.playerActivityView stopAnimating];
     self.playButton.enabled = NO;
     self.playButton.titleLabel.frame = self.playButton.frame;
     self.playButton.titleLabel.textAlignment = UITextAlignmentCenter;
@@ -153,6 +155,8 @@
             player.streamUrl = currentStream.mobileStreamUrl;
             break;
     }
+
+    self.streamTextLabel.text = currentStream.name;
 }
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
@@ -187,7 +191,8 @@
     [streamTextLabel release];
     [pickerView release];
     [segmentedControl release];
-    [activityView release];
+    [playerActivityView release];
+    [viewDelegate release];
 }
 
 @end

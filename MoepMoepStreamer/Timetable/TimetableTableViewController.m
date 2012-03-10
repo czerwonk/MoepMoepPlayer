@@ -43,7 +43,6 @@ static int ArraySundayIndex = 6;
     showsGroupedByWeekday = [[NSMutableDictionary alloc] init];
 
     [table registerNib:[UINib nibWithNibName:@"ShowTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:ShowCellIdentifier];
-    //[self scrollToCurrentWeekday];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -53,13 +52,14 @@ static int ArraySundayIndex = 6;
 }
 
 - (void)refreshTimetable {
-    [self.activityView startAnimating];
+    [self startActivityViewWithText:NSLocalizedString(@"Loading", nil)];
     [self.viewDelegate refreshTimetable];
 }
 
 - (void)setTimetable:(Timetable *)timetable {
-    [self.activityView stopAnimating];
+    [self stopActivityView];
     [self updateTableWithTimetable:timetable];
+    [self scrollToCurrentWeekday];
 }
 
 - (void)updateTableWithTimetable:(Timetable *)timetable {
@@ -117,7 +117,7 @@ static int ArraySundayIndex = 6;
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *components = [calendar components:NSWeekdayCalendarUnit fromDate:[NSDate date]];
 
-    int weekdayIndex = components.weekday == CalendarSundayIndex ? ArraySundayIndex : components.weekday - 1;
+    int weekdayIndex = components.weekday == CalendarSundayIndex ? ArraySundayIndex : components.weekday - 2;
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:weekdayIndex];
     [table scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
 }

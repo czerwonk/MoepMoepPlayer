@@ -11,8 +11,12 @@
 #import "PlayerDelegate.h"
 #import "Stream.h"
 #import "Player.h"
+#import "PlayerView.h"
+#import "BaseViewController.h"
 
-@interface PlayerViewController : UIViewController<PlayerDelegate, UIPickerViewDataSource, UIPickerViewDelegate> {
+@protocol PlayerViewDelegate;
+
+@interface PlayerViewController : BaseViewController<PlayerDelegate, PlayerView, UIPickerViewDataSource, UIPickerViewDelegate> {
 
     @private
     id<Player> player;
@@ -22,10 +26,11 @@
 }
 
 @property (nonatomic, retain) IBOutlet UIButton *playButton;
-@property (nonatomic, retain) IBOutlet UIActivityIndicatorView *activityView;
+@property (nonatomic, retain) IBOutlet UIActivityIndicatorView *playerActivityView;
 @property (nonatomic, retain) IBOutlet UISegmentedControl *segmentedControl;
 @property (nonatomic, retain) IBOutlet UIPickerView *pickerView;
 @property (nonatomic, retain) IBOutlet UILabel *streamTextLabel;
+@property (nonatomic, retain) id<PlayerViewDelegate> viewDelegate;
 
 - (IBAction)playButtonClicked;
 - (IBAction)refreshButtonClicked;

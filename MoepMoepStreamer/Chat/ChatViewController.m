@@ -17,7 +17,6 @@
 @implementation ChatViewController
 
 @synthesize webView;
-@synthesize activityView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -36,20 +35,25 @@
 }
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
-    [activityView startAnimating];
+    [self startActivityViewWithText:NSLocalizedString(@"Loading", nil)];
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
-    [activityView stopAnimating];
+    [self stopActivityView];
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
-    [activityView stopAnimating];
+    [self showErrorWithMessage:error.localizedDescription];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
     return YES;
 }
 
+- (void)dealloc {
+    [webView release];
+
+    [super dealloc];
+}
 
 @end

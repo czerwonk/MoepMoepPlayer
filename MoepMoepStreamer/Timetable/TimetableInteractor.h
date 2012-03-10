@@ -9,9 +9,10 @@
 #import "TimetableView.h"
 #import "TimetableViewDelegate.h"
 #import "DataRetriever.h"
+#import "InteractorBase.h"
 
 
-@interface TimetableInteractor : NSObject<TimetableViewDelegate, DataRetrieverDelegate> {
+@interface TimetableInteractor : InteractorBase<TimetableViewDelegate, DataRetrieverDelegate> {
     @private
     id<DataRetriever> dataRetriever;
     id<TimetableView> view;
