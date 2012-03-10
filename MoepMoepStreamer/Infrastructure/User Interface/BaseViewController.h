@@ -10,9 +10,10 @@
 
 
 @interface BaseViewController : UIViewController<View> {
-
+    UIAlertView *activityAlertView;
 }
 
-@property (nonatomic, retain) IBOutlet UIActivityIndicatorView *activityView;
+- (void)startActivityViewWithText:(NSString *)text;
+- (void)stopActivityView;
 
 @end

@@ -12,9 +12,8 @@
 @implementation TimetableInteractorTest
 
 - (void)testRefreshShouldRetrieveData {
-    id<DataRetriever> dataRetriever = [OCMockObject mockForProtocol:@protocol(DataRetriever)];
+    id<DataRetriever> dataRetriever = [OCMockObject niceMockForProtocol:@protocol(DataRetriever)];
     [[dataRetriever expect] retrieveDataAsynchronous];
-    [[dataRetriever stub] setDelegate:[OCMArg any]];
 
     TimetableInteractor *interactor = [[[TimetableInteractor alloc] init] autorelease];
     interactor.dataRetriever = dataRetriever;
@@ -26,9 +25,8 @@
 - (void)testShouldUpdateViewAfterReceivedData {
     Timetable *timetable = [[[Timetable alloc] init] autorelease];
 
-    id<TimetableView> view = [OCMockObject mockForProtocol:@protocol(TimetableView)];
+    id<TimetableView> view = [OCMockObject niceMockForProtocol:@protocol(TimetableView)];
     [[view expect] setTimetable:timetable];
-    [[view stub] setViewDelegate:[OCMArg any]];
 
     TimetableInteractor *interactor = [[[TimetableInteractor alloc] init] autorelease];
     interactor.view = view;
@@ -41,9 +39,8 @@
     NSError *error = [OCMockObject mockForClass:[NSError class]];
     [[[error stub] andReturn:@"Test"] localizedDescription];
 
-    id<TimetableView> view = [OCMockObject mockForProtocol:@protocol(TimetableView)];
+    id<TimetableView> view = [OCMockObject niceMockForProtocol:@protocol(TimetableView)];
     [[view expect] showErrorWithMessage:error.localizedDescription];
-    [[view stub] setViewDelegate:[OCMArg any]];
 
     TimetableInteractor *interactor = [[[TimetableInteractor alloc] init] autorelease];
     interactor.view = view;

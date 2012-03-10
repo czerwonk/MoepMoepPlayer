@@ -6,14 +6,19 @@
 //
 
 #import "MainTabBarController.h"
-#import "TimetableDataRetriever.h"
 #import "TimetableInteractor.h"
 #import "TimetableDeserializer.h"
+#import "PlayerViewController.h"
+#import "PlayerInteractor.h"
+#import "HttpGetDataRetriever.h"
+#import "StreamListDeserializer.h"
 
 
 @interface MainTabBarController ()
 
 - (void)initializeTimetableView;
+
+- (void)initializePlayerView;
 
 @end
 
@@ -22,6 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    [self initializePlayerView];
     [self initializeTimetableView];
 }
 
@@ -37,21 +43,31 @@
     TimetableTableViewController *timetableViewController = [self.viewControllers objectAtIndex:1];
 
     TimetableDeserializer *deserializer = [[TimetableDeserializer alloc] init];
-    TimetableDataRetriever *dataRetriever = [[TimetableDataRetriever alloc] init];
+    HttpGetDataRetriever *dataRetriever = [[HttpGetDataRetriever alloc] initWithUrl:@"http://www.moepmoep.org/streamerapp/sendeplan.txt"];
     dataRetriever.deserializer = deserializer;
     [deserializer release];
 
     TimetableInteractor *interactor = [[TimetableInteractor alloc] initWithDataRetriever:dataRetriever];
     interactor.view = timetableViewController;
     [dataRetriever release];
-
-    timetableViewController.viewDelegate = interactor;
     [interactor release];
 }
 
-- (void)dealloc {
-    [super dealloc];
-}
+- (void)initializePlayerView {
+    PlayerViewController *controller = [self.viewControllers objectAtIndex:0];
 
+    PlayerInteractor *interactor = [[PlayerInteractor alloc] init];
+    interactor.view = controller;
+
+    HttpGetDataRetriever *dataRetriever = [[HttpGetDataRetriever alloc] initWithUrl:@"http://www.dc-devel.net/streams.json"];
+    StreamListDeserializer *deserializer = [[StreamListDeserializer alloc] init];
+    dataRetriever.deserializer = deserializer;
+    [deserializer release];
+
+    interactor.streamListDataRetriever = dataRetriever;
+    [dataRetriever release];
+
+    [interactor release];
+}
 
 @end

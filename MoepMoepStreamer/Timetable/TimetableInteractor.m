@@ -9,12 +9,6 @@
 #import "Timetable.h"
 
 
-@interface TimetableInteractor ()
-
-- (void)runSyncInMainThread:(void (^)(void))block;
-
-@end
-
 @implementation TimetableInteractor
 
 @dynamic view;
@@ -56,7 +50,7 @@
 
 - (void)retriever:(id<DataRetriever>)retriever retrievedData:(id)object {
     if (retriever == self.dataRetriever) {
-        [self runSyncInMainThread:^{
+        [self executeInMainThread:^{
             [view setTimetable:(Timetable *)object];
         }];
     }
@@ -64,21 +58,10 @@
 
 - (void)retriever:(id<DataRetriever>)retriever failedRetrievingData:(NSError *)error {
     if (retriever == self.dataRetriever) {
-        [self runSyncInMainThread:^{
+        [self executeInMainThread:^{
             [view showErrorWithMessage:error.localizedDescription];
         }];
     }
-}
-
-- (void)runSyncInMainThread:(void (^)(void))block {
-    dispatch_semaphore_t s = dispatch_semaphore_create(0);
-
-    dispatch_async(dispatch_get_main_queue(), ^{
-        block();
-        dispatch_semaphore_signal(s);
-    });
-
-    dispatch_semaphore_wait(s, DISPATCH_TIME_FOREVER);
 }
 
 - (void)dealloc {

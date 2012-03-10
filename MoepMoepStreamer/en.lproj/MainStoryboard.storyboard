@@ -25,17 +25,12 @@
                                     <outlet property="delegate" destination="IPH-8p-QM2" id="i2s-J3-o8j"/>
                                 </connections>
                             </tableView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="whiteLarge" id="r6B-nd-esb">
-                                <rect key="frame" x="0.0" y="187" width="320" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Sendeplan" image="83-calendar.png" id="mIH-ww-bU5"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
                     <connections>
-                        <outlet property="activityView" destination="r6B-nd-esb" id="qfM-NW-6dc"/>
                         <outlet property="table" destination="GSW-QK-hbL" id="ZD9-kL-a1u"/>
                     </connections>
                 </viewController>
@@ -126,9 +121,9 @@
                     <tabBarItem key="tabBarItem" title="Player" image="194-note-2.png" id="dLw-2s-WlK"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
                     <connections>
-                        <outlet property="activityView" destination="Hc6-u1-Mgk" id="VgO-E8-j2I"/>
                         <outlet property="pickerView" destination="GXO-4G-GhT" id="3cw-NU-PfG"/>
                         <outlet property="playButton" destination="hr9-Nm-zFz" id="NFg-a6-yfW"/>
+                        <outlet property="playerActivityView" destination="Hc6-u1-Mgk" id="eyM-6N-5AZ"/>
                         <outlet property="segmentedControl" destination="dEZ-RV-wh8" id="YHY-Zk-Por"/>
                         <outlet property="streamTextLabel" destination="JtB-eb-g3j" id="RXE-Sb-5JW"/>
                     </connections>
@@ -172,17 +167,12 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <dataDetectorType key="dataDetectorTypes"/>
                             </webView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="whiteLarge" id="0W5-af-dJN">
-                                <rect key="frame" x="142" y="187" width="37" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Chat" image="09-chat-2.png" id="ywO-xq-I6z"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
                     <connections>
-                        <outlet property="activityView" destination="0W5-af-dJN" id="GdN-ko-niI"/>
                         <outlet property="webView" destination="QA7-8V-1Up" id="NeZ-Jp-f6O"/>
                     </connections>
                 </viewController>
@@ -200,28 +190,24 @@
     <classes>
         <class className="BaseViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BaseViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="activityView" candidateClass="UIActivityIndicatorView"/>
-            </relationships>
         </class>
-        <class className="ChatViewController" superclassName="UIViewController">
+        <class className="ChatViewController" superclassName="BaseViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ChatViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="activityView" candidateClass="UIActivityIndicatorView"/>
                 <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
             </relationships>
         </class>
         <class className="MainTabBarController" superclassName="UITabBarController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MainTabBarController.h"/>
         </class>
-        <class className="PlayerViewController" superclassName="UIViewController">
+        <class className="PlayerViewController" superclassName="BaseViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PlayerViewController.h"/>
             <relationships>
                 <relationship kind="action" name="playButtonClicked"/>
                 <relationship kind="action" name="refreshButtonClicked"/>
-                <relationship kind="outlet" name="activityView" candidateClass="UIActivityIndicatorView"/>
                 <relationship kind="outlet" name="pickerView" candidateClass="UIPickerView"/>
                 <relationship kind="outlet" name="playButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="playerActivityView" candidateClass="UIActivityIndicatorView"/>
                 <relationship kind="outlet" name="segmentedControl" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="streamTextLabel" candidateClass="UILabel"/>
             </relationships>

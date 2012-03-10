@@ -61,6 +61,7 @@
     }
 
     [body release];
+    [regex release];
 }
 
 - (Weekday)weekdayForString:(NSString *)weekdayString {
