@@ -36,7 +36,7 @@
     NSString *body = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
 
     NSError *error = nil;
-    NSRegularExpression *regex = [[NSRegularExpression alloc] initWithPattern:@"(Montag|Dienstag|Mittwoch|Donnerstag|Freitag|Samstag|Sontag\r\n)|((\\d{2}:\\d{2}) (#[^ ]+) (mit )?([^\r]+))"
+    NSRegularExpression *regex = [[NSRegularExpression alloc] initWithPattern:@"(Montag|Dienstag|Mittwoch|Donnerstag|Freitag|Samstag|Sonntags?)|((\\d{2}:\\d{2})[^#]+(#[^ ]+) (mit )?([^\r]+))"
                                                                       options:NSRegularExpressionCaseInsensitive error:&error];
     NSArray *matches = [regex matchesInString:body options:0 range:NSMakeRange(0, body.length)];
 
