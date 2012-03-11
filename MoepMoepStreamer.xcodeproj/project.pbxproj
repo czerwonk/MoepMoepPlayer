@@ -49,6 +49,7 @@
 		6597646C14FEB35600473A7D /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A7C /* Test.m */; };
 		6597646C14FEB35600473A83 /* ShowTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A82 /* ShowTableViewCell.m */; };
 		6597646C14FEB35600473A86 /* TimetableDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A85 /* TimetableDeserializer.m */; };
+		65AB6D93150D41CF002C9404 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 65AB6D92150D41CF002C9404 /* Settings.bundle */; };
 		65E9E737150546B6007007F4 /* NotificationKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B6007007F3 /* NotificationKeys.m */; };
 		65E9E737150546B6007007F5 /* NotificationKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B6007007F3 /* NotificationKeys.m */; };
 		65E9E737150546B6007007F8 /* stream_info.json in Resources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B6007007F7 /* stream_info.json */; };
@@ -214,6 +215,7 @@
 		6597646C14FEB35600473A84 /* ShowTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowTableViewCell.h; sourceTree = "<group>"; };
 		6597646C14FEB35600473A85 /* TimetableDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimetableDeserializer.m; sourceTree = "<group>"; };
 		6597646C14FEB35600473A87 /* TimetableDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimetableDeserializer.h; sourceTree = "<group>"; };
+		65AB6D92150D41CF002C9404 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = ../Settings.bundle; sourceTree = "<group>"; };
 		65E9E737150546B6007007F3 /* NotificationKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationKeys.m; sourceTree = "<group>"; };
 		65E9E737150546B6007007F6 /* NotificationKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationKeys.h; sourceTree = "<group>"; };
 		65E9E737150546B6007007F7 /* stream_info.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; path = stream_info.json; sourceTree = "<group>"; };
@@ -332,6 +334,7 @@
 		61E069FA3A11768DD7DEEBE9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				65AB6D92150D41CF002C9404 /* Settings.bundle */,
 				61E069FA3A11768DD7DEEBF0 /* MoepMoepStreamer-Prefix.pch */,
 				61E069FA3A11768DD7DEEBEE /* main.m */,
 				61E069FA3A11768DD7DEEBEC /* InfoPlist.strings */,
@@ -539,6 +542,7 @@
 				61E069FA3A11768DD7DEEBDE /* Sources */,
 				61E069FA3A11768DD7DEEBDF /* Frameworks */,
 				61E069FA3A11768DD7DEEBE0 /* Resources */,
+				65AB6D91150D4168002C9404 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -672,6 +676,7 @@
 				6597646C14FEB35600473A4D /* ShowTableViewCell.xib in Resources */,
 				6597646C14FEB35600473A77 /* Localizable.strings in Resources */,
 				65E9E737150546B6007007F8 /* stream_info.json in Resources */,
+				65AB6D93150D41CF002C9404 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -699,6 +704,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		65AB6D91150D4168002C9404 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "#!/bin/bash\ncd $PROJECT_DIR\nRELEASE_VERSION=$(/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" MoepMoepStreamer/MoepMoepStreamer-Info.plist)\n/usr/libexec/PlistBuddy -c \"Set :PreferenceSpecifiers:1:DefaultValue $RELEASE_VERSION\" Settings.bundle/Root.plist";
 		};
 /* End PBXShellScriptBuildPhase section */
 
