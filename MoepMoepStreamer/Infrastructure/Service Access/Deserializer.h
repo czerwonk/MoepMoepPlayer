@@ -7,6 +7,6 @@
 
 @protocol Deserializer<NSObject>
 
-- (id)deserializeResponse:(NSData *)body;
+- (id)deserializeResponse:(NSData *)body error:(NSError **)error;
 
 @end

@@ -20,7 +20,7 @@
 
 @implementation TimetableDeserializer
 
-- (id)deserializeResponse:(NSData *)body {
+- (id)deserializeResponse:(NSData *)body error:(NSError **)error {
     Timetable *timetable = [[[Timetable alloc] init] autorelease];
 
     NSMutableArray *array = [[NSMutableArray alloc] init];

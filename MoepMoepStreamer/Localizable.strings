@@ -6,3 +6,4 @@
 "Loading" = "Lade...";
 "Play" = "Play";
 "Stop" = "Stop";
+"ParsingFailed" = "Die Serverantwort konnte nicht verarbeitet werden.";
