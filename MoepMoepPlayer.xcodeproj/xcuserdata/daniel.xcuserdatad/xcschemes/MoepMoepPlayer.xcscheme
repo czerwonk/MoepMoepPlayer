@@ -14,9 +14,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "61E069FA3A11768DD7DEEBDA"
-               BuildableName = "MoepMoepStreamer.app"
-               BlueprintName = "MoepMoepStreamer"
-               ReferencedContainer = "container:MoepMoepStreamer.xcodeproj">
+               BuildableName = "MoepMoepPlayer.app"
+               BlueprintName = "MoepMoepPlayer"
+               ReferencedContainer = "container:MoepMoepPlayer.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,9 +32,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "61E069FA3A11768DD7DEEBDA"
-            BuildableName = "MoepMoepStreamer.app"
-            BlueprintName = "MoepMoepStreamer"
-            ReferencedContainer = "container:MoepMoepStreamer.xcodeproj">
+            BuildableName = "MoepMoepPlayer.app"
+            BlueprintName = "MoepMoepPlayer"
+            ReferencedContainer = "container:MoepMoepPlayer.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -51,9 +51,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "61E069FA3A11768DD7DEEBDA"
-            BuildableName = "MoepMoepStreamer.app"
-            BlueprintName = "MoepMoepStreamer"
-            ReferencedContainer = "container:MoepMoepStreamer.xcodeproj">
+            BuildableName = "MoepMoepPlayer.app"
+            BlueprintName = "MoepMoepPlayer"
+            ReferencedContainer = "container:MoepMoepPlayer.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -69,9 +69,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "61E069FA3A11768DD7DEEBDA"
-            BuildableName = "MoepMoepStreamer.app"
-            BlueprintName = "MoepMoepStreamer"
-            ReferencedContainer = "container:MoepMoepStreamer.xcodeproj">
+            BuildableName = "MoepMoepPlayer.app"
+            BlueprintName = "MoepMoepPlayer"
+            ReferencedContainer = "container:MoepMoepPlayer.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
@@ -80,7 +80,6 @@
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"
-      customArchiveName = "MoepMoepPlayer"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

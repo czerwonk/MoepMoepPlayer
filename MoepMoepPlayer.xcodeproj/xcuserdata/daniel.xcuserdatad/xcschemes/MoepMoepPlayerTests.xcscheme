@@ -16,9 +16,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6570BF4714FEBA88008C3C52"
-               BuildableName = "MoepMoepStreamerTests.octest"
-               BlueprintName = "MoepMoepStreamerTests"
-               ReferencedContainer = "container:MoepMoepStreamer.xcodeproj">
+               BuildableName = "MoepMoepPlayerTests.octest"
+               BlueprintName = "MoepMoepPlayerTests"
+               ReferencedContainer = "container:MoepMoepPlayer.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
