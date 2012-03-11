@@ -13,6 +13,6 @@
 
 - (void)setViewDelegate:(id<PlayerViewDelegate>)delegate;
 - (void)setStreams:(NSArray *)streams;
-//- (void)playerChangedStatusTo:(PlayerStatus)status;
+- (void)playerChangedStatusTo:(PlayerStatus)status;
 
 @end

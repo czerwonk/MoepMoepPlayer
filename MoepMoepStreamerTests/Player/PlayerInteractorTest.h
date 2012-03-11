@@ -23,5 +23,16 @@
 
 - (void)testShouldNotifyViewOnError;
 
+- (void)testShouldSetDelegateOfPlayer;
+
+- (void)testShouldRefreshPlayer;
+
+- (void)testShouldStartPlayerIfStopped;
+
+- (void)testShouldStartPlayerIfReady;
+
+- (void)testShouldSetMobileStreamUrlToPlayer;
+
+- (void)testShouldSetMainStreamUrlToPlayer;
 
 @end

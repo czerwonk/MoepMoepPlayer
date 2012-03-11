@@ -16,11 +16,8 @@
 
 @protocol PlayerViewDelegate;
 
-@interface PlayerViewController : BaseViewController<PlayerDelegate, PlayerView, UIPickerViewDataSource, UIPickerViewDelegate> {
-
+@interface PlayerViewController : BaseViewController<PlayerView, UIPickerViewDataSource, UIPickerViewDelegate> {
     @private
-    id<Player> player;
-    BOOL isPlaying;
     NSArray *streams;
     Stream *currentStream;
 }
