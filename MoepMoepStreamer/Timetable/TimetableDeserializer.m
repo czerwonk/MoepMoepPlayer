@@ -5,7 +5,6 @@
 //  Copyright 2012 Daniel Czerwonk. All rights reserved.
 //
 
-#import <SBJson/SBJson.h>
 #import "TimetableDeserializer.h"
 #import "Timetable.h"
 #import "Show.h"
@@ -36,7 +35,7 @@
     NSString *body = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
 
     NSError *error = nil;
-    NSRegularExpression *regex = [[NSRegularExpression alloc] initWithPattern:@"(Montag|Dienstag|Mittwoch|Donnerstag|Freitag|Samstag|Sonntags?)|((\\d{2}:\\d{2})[^#]+(#[^ ]+) (mit )?([^\r]+))"
+    NSRegularExpression *regex = [[NSRegularExpression alloc] initWithPattern:@"(Montag|Dienstag|Mittwoch|Donnerstag|Freitag|Samstag|Sonntags?)|(\\d{1,2}:\\d{2})[^#]+(#[^ ,]+)([^\\r]+)?"
                                                                       options:NSRegularExpressionCaseInsensitive error:&error];
     NSArray *matches = [regex matchesInString:body options:0 range:NSMakeRange(0, body.length)];
 
@@ -50,9 +49,9 @@
         }
         else {
             Show *show = [[Show alloc] init];
-            show.startTime = [body substringWithRange:[match rangeAtIndex:3]];
-            show.title = [body substringWithRange:[match rangeAtIndex:4]];
-            show.showDescription = [body substringWithRange:[match rangeAtIndex:6]];
+            show.startTime = [body substringWithRange:[match rangeAtIndex:2]];
+            show.title = [body substringWithRange:[match rangeAtIndex:3]];
+            show.showDescription = [body substringWithRange:[match rangeAtIndex:4]];
             show.weekday = weekday;
 
             [array addObject:show];
