@@ -20,8 +20,6 @@
 
 - (void)playerStartedPlaying;
 
-- (void)playerStoppedPlaying;
-
 - (void)streamSwitched;
 
 @end
@@ -96,7 +94,7 @@
             break;
 
         case PlayerStatusStopped:
-            [self playerStoppedPlaying];
+            [self playerIsReadyToPlay];
             break;
     }
 }
@@ -119,30 +117,28 @@
 - (void)playerStartedLoading {
     [self.playerActivityView startAnimating];
     self.playButton.enabled = NO;
-    self.playButton.titleLabel.frame = self.playButton.frame;
-    self.playButton.titleLabel.textAlignment = UITextAlignmentCenter;
-    self.playButton.titleLabel.text = NSLocalizedString(@"Connect", @"Verbinde...");
+    [self.playButton setSelected:NO];
+    [self.playButton setTitle:NSLocalizedString(@"Connect", nil) forState:UIControlStateDisabled];
 }
 
 - (void)playerIsReadyToPlay {
     [self.playerActivityView stopAnimating];
     self.playButton.enabled = YES;
+    [self.playButton setSelected:NO];
+    [self.playButton setTitle:NSLocalizedString(@"Play", nil) forState:UIControlStateNormal];
 }
 
 - (void)playerFailed {
     [self.playerActivityView stopAnimating];
     self.playButton.enabled = NO;
-    self.playButton.titleLabel.frame = self.playButton.frame;
-    self.playButton.titleLabel.textAlignment = UITextAlignmentCenter;
-    self.playButton.titleLabel.text = NSLocalizedString(@"Offline", @"Offline");
+    [self.playButton setSelected:NO];
+    [self.playButton setTitle:NSLocalizedString(@"Offline", nil) forState:UIControlStateDisabled];
 }
 
 - (void)playerStartedPlaying {
+    self.playButton.enabled = YES;
     [self.playButton setSelected:YES];
-}
-
-- (void)playerStoppedPlaying {
-    [self.playButton setSelected:NO];
+    [self.playButton setTitle:NSLocalizedString(@"Stop", nil) forState:UIControlStateSelected];
 }
 
 - (void)streamSwitched {
