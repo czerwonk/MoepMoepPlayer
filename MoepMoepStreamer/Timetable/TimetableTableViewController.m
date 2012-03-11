@@ -118,8 +118,11 @@ static int ArraySundayIndex = 6;
     NSDateComponents *components = [calendar components:NSWeekdayCalendarUnit fromDate:[NSDate date]];
 
     int weekdayIndex = components.weekday == CalendarSundayIndex ? ArraySundayIndex : components.weekday - 2;
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:weekdayIndex];
-    [table scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
+
+    if ([self tableView:table numberOfRowsInSection:weekdayIndex]) {
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:weekdayIndex];
+        [table scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
+    }
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
