@@ -21,6 +21,21 @@
     [view setViewDelegate:self];
 }
 
+- (void)setPlayer:(id<Player>)aPlayer {
+    [player release];
+    player = [aPlayer retain];
+
+    [player setDelegate:self];
+}
+
+- (id <Player>)player {
+    return player;
+}
+
+- (void)playerChangedStatusTo:(PlayerStatus)status {
+    [view playerChangedStatusTo:status];
+}
+
 - (id<DataRetriever>)streamListDataRetriever {
     return streamListDataRetriever;
 }
@@ -52,11 +67,33 @@
     [self.streamListDataRetriever retrieveDataAsynchronous];
 }
 
+- (void)refreshPlayer {
+    [player refresh];
+}
+
+- (void)playOrPause {
+    if (player.status == PlayerStatusReady || player.status == PlayerStatusStopped) {
+        [player play];
+    }
+    else {
+        [player pause];
+    }
+}
+
+- (void)switchToMainStream:(Stream *)stream {
+    [player setStreamUrl:stream.mainStreamUrl];
+}
+
+- (void)switchToMobileStream:(Stream *)stream {
+    [player setStreamUrl:stream.mobileStreamUrl];
+}
+
 - (void)dealloc {
     [super dealloc];
 
     [view release];
     [streamListDataRetriever release];
+    [player release];
 }
 
 @end

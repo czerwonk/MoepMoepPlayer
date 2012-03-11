@@ -10,9 +10,9 @@
 @protocol PlayerViewDelegate<NSObject>
 
 - (void)reloadStreams;
-//- (void)refreshPlayer;
-//- (void)startOrStopPlayer;
-//- (void)switchToMainStream:(Stream *)stream;
-//- (void)switchToMobileStream:(Stream *)stream;
+- (void)refreshPlayer;
+- (void)playOrPause;
+- (void)switchToMainStream:(Stream *)stream;
+- (void)switchToMobileStream:(Stream *)stream;
 
 @end

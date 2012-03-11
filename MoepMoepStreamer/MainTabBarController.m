@@ -12,6 +12,7 @@
 #import "PlayerInteractor.h"
 #import "HttpGetDataRetriever.h"
 #import "StreamListDeserializer.h"
+#import "StreamPlayer.h"
 
 
 @interface MainTabBarController ()
@@ -67,6 +68,10 @@
     interactor.streamListDataRetriever = dataRetriever;
     [dataRetriever release];
 
+    StreamPlayer *player = [[StreamPlayer alloc] init];
+    interactor.player = player;
+    [player release];
+    
     [interactor release];
 }
 

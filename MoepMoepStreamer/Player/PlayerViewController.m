@@ -7,8 +7,6 @@
 //
 
 #import "PlayerViewController.h"
-#import "StreamPlayer.h"
-#import "PlayerViewDelegate.h"
 
 @interface PlayerViewController ()
 
@@ -36,9 +34,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    player = [[StreamPlayer alloc] init];
-    player.delegate = self;
-
     [self.segmentedControl addTarget:self
                               action:@selector(streamSwitched)
                     forControlEvents:UIControlEventValueChanged];
@@ -62,20 +57,14 @@
 }
 
 - (IBAction)playButtonClicked {
-    if (isPlaying) {
-        [player pause];
-    } else {
-        [player play];
-    }
+    [viewDelegate playOrPause];
 }
 
 - (IBAction)refreshButtonClicked {
-    [player refresh];
+    [viewDelegate refreshPlayer];
 }
 
 - (void)playerChangedStatusTo:(PlayerStatus)status {
-    isPlaying = status == PlayerStatusPlaying;
-
     switch (status) {
         case PlayerStatusLoading:
             [self playerStartedLoading];
@@ -147,31 +136,31 @@
 - (void)streamSwitched {
     switch (self.segmentedControl.selectedSegmentIndex) {
         case 0:
-            player.streamUrl = currentStream.mainStreamUrl;
+            [viewDelegate switchToMainStream:currentStream];
             break;
 
         case 1:
-            player.streamUrl = currentStream.mobileStreamUrl;
+            [viewDelegate switchToMobileStream:currentStream];
             break;
     }
 
     self.streamTextLabel.text = currentStream.name;
 }
 
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)picker {
     return 1;
 }
 
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+- (NSInteger)pickerView:(UIPickerView *)picker numberOfRowsInComponent:(NSInteger)component {
     return streams.count;
 }
 
-- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+- (NSString *)pickerView:(UIPickerView *)picker titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     Stream *stream = [streams objectAtIndex:row];
     return stream.name;
 }
 
-- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+- (void)pickerView:(UIPickerView *)picker didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     Stream *stream = [streams objectAtIndex:row];
     [currentStream release];
     currentStream = [stream retain];
@@ -184,7 +173,6 @@
     [super dealloc];
 
     [playButton release];
-    [player release];
     [streams release];
     [currentStream release];
     [streamTextLabel release];
