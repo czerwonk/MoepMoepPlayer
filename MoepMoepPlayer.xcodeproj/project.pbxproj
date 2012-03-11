@@ -49,6 +49,7 @@
 		6597646C14FEB35600473A7D /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A7C /* Test.m */; };
 		6597646C14FEB35600473A83 /* ShowTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A82 /* ShowTableViewCell.m */; };
 		6597646C14FEB35600473A86 /* TimetableDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A85 /* TimetableDeserializer.m */; };
+		65AB6D93150D41CF002C9404 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 65AB6D92150D41CF002C9404 /* Settings.bundle */; };
 		65E9E737150546B6007007F4 /* NotificationKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B6007007F3 /* NotificationKeys.m */; };
 		65E9E737150546B6007007F5 /* NotificationKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B6007007F3 /* NotificationKeys.m */; };
 		65E9E737150546B6007007F8 /* stream_info.json in Resources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B6007007F7 /* stream_info.json */; };
@@ -150,14 +151,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		61E069FA3A11768DD7DEEBD9 /* MoepMoepStreamer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoepMoepStreamer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		61E069FA3A11768DD7DEEBD9 /* MoepMoepPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoepMoepPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61E069FA3A11768DD7DEEBE2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		61E069FA3A11768DD7DEEBE4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		61E069FA3A11768DD7DEEBE6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		61E069FA3A11768DD7DEEBEA /* MoepMoepStreamer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MoepMoepStreamer-Info.plist"; sourceTree = "<group>"; };
+		61E069FA3A11768DD7DEEBEA /* MoepMoepPlayer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MoepMoepPlayer-Info.plist"; sourceTree = "<group>"; };
 		61E069FA3A11768DD7DEEBEB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		61E069FA3A11768DD7DEEBEE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		61E069FA3A11768DD7DEEBF0 /* MoepMoepStreamer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MoepMoepStreamer-Prefix.pch"; sourceTree = "<group>"; };
+		61E069FA3A11768DD7DEEBF0 /* MoepMoepPlayer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MoepMoepPlayer-Prefix.pch"; sourceTree = "<group>"; };
 		61E069FA3A11768DD7DEEBF1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		61E069FA3A11768DD7DEEBF2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		61E069FA3A11768DD7DEEBF4 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = MainStoryboard.storyboard; path = ../en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
@@ -169,10 +170,10 @@
 		6554915C14FD7B7B0013947F /* wbb3-header-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wbb3-header-logo.png"; sourceTree = "<group>"; };
 		6558AEA414FD948600378967 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
 		6558AEA514FD948600378967 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
-		6570BF4814FEBA88008C3C52 /* MoepMoepStreamerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoepMoepStreamerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6570BF4E14FEBA88008C3C52 /* MoepMoepStreamerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MoepMoepStreamerTests-Info.plist"; sourceTree = "<group>"; };
+		6570BF4814FEBA88008C3C52 /* MoepMoepPlayerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoepMoepPlayerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6570BF4E14FEBA88008C3C52 /* MoepMoepPlayerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MoepMoepPlayerTests-Info.plist"; sourceTree = "<group>"; };
 		6570BF5014FEBA88008C3C52 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6570BF5514FEBA88008C3C52 /* MoepMoepStreamerTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MoepMoepStreamerTests-Prefix.pch"; sourceTree = "<group>"; };
+		6570BF5514FEBA88008C3C52 /* MoepMoepPlayerTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MoepMoepPlayerTests-Prefix.pch"; sourceTree = "<group>"; };
 		6570BF5F14FEBAE1008C3C52 /* libochamcrest.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libochamcrest.a; path = "Libs/OCHamcrest/Source/build/Release-iphonesimulator/libochamcrest.a"; sourceTree = "<group>"; };
 		65820BE11502EE2700A93BB5 /* OCHamcrestIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrestIOS.framework; path = Libs/OCHamcrest/Source/build/Release/OCHamcrestIOS.framework; sourceTree = "<group>"; };
 		6597644B14FEB33A00473A39 /* SBJson.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SBJson.xcodeproj; path = Libs/JSON/SBJson.xcodeproj; sourceTree = "<group>"; };
@@ -214,6 +215,7 @@
 		6597646C14FEB35600473A84 /* ShowTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowTableViewCell.h; sourceTree = "<group>"; };
 		6597646C14FEB35600473A85 /* TimetableDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimetableDeserializer.m; sourceTree = "<group>"; };
 		6597646C14FEB35600473A87 /* TimetableDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimetableDeserializer.h; sourceTree = "<group>"; };
+		65AB6D92150D41CF002C9404 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = ../Settings.bundle; sourceTree = "<group>"; };
 		65E9E737150546B6007007F3 /* NotificationKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationKeys.m; sourceTree = "<group>"; };
 		65E9E737150546B6007007F6 /* NotificationKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationKeys.h; sourceTree = "<group>"; };
 		65E9E737150546B6007007F7 /* stream_info.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; path = stream_info.json; sourceTree = "<group>"; };
@@ -276,16 +278,16 @@
 				65CD5747150B605800A5152B /* Third Party */,
 				61E069FA3A11768DD7DEEBD6 /* Products */,
 				61E069FA3A11768DD7DEEBE1 /* Frameworks */,
-				61E069FA3A11768DD7DEEBE8 /* MoepMoepStreamer */,
-				6570BF4C14FEBA88008C3C52 /* MoepMoepStreamerTests */,
+				61E069FA3A11768DD7DEEBE8 /* MoepMoepPlayer */,
+				6570BF4C14FEBA88008C3C52 /* MoepMoepPlayerTests */,
 			);
 			sourceTree = "<group>";
 		};
 		61E069FA3A11768DD7DEEBD6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				61E069FA3A11768DD7DEEBD9 /* MoepMoepStreamer.app */,
-				6570BF4814FEBA88008C3C52 /* MoepMoepStreamerTests.octest */,
+				61E069FA3A11768DD7DEEBD9 /* MoepMoepPlayer.app */,
+				6570BF4814FEBA88008C3C52 /* MoepMoepPlayerTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -305,7 +307,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		61E069FA3A11768DD7DEEBE8 /* MoepMoepStreamer */ = {
+		61E069FA3A11768DD7DEEBE8 /* MoepMoepPlayer */ = {
 			isa = PBXGroup;
 			children = (
 				65E9E737150546B60070081F /* ErrorFactory.h */,
@@ -326,16 +328,17 @@
 				6597646C14FEB35600473A3C /* Chat */,
 				6597646C14FEB35600473A67 /* Infrastructure */,
 			);
-			path = MoepMoepStreamer;
+			path = MoepMoepPlayer;
 			sourceTree = "<group>";
 		};
 		61E069FA3A11768DD7DEEBE9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				61E069FA3A11768DD7DEEBF0 /* MoepMoepStreamer-Prefix.pch */,
+				65AB6D92150D41CF002C9404 /* Settings.bundle */,
+				61E069FA3A11768DD7DEEBF0 /* MoepMoepPlayer-Prefix.pch */,
 				61E069FA3A11768DD7DEEBEE /* main.m */,
 				61E069FA3A11768DD7DEEBEC /* InfoPlist.strings */,
-				61E069FA3A11768DD7DEEBEA /* MoepMoepStreamer-Info.plist */,
+				61E069FA3A11768DD7DEEBEA /* MoepMoepPlayer-Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -355,7 +358,7 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		6570BF4C14FEBA88008C3C52 /* MoepMoepStreamerTests */ = {
+		6570BF4C14FEBA88008C3C52 /* MoepMoepPlayerTests */ = {
 			isa = PBXGroup;
 			children = (
 				6597646C14FEB35600473A7E /* Test.h */,
@@ -365,15 +368,15 @@
 				65E9E737150546B600700804 /* Player */,
 				65E9E737150546B600700819 /* Resources */,
 			);
-			path = MoepMoepStreamerTests;
+			path = MoepMoepPlayerTests;
 			sourceTree = "<group>";
 		};
 		6570BF4D14FEBA88008C3C52 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				6570BF4E14FEBA88008C3C52 /* MoepMoepStreamerTests-Info.plist */,
+				6570BF4E14FEBA88008C3C52 /* MoepMoepPlayerTests-Info.plist */,
 				6570BF4F14FEBA88008C3C52 /* InfoPlist.strings */,
-				6570BF5514FEBA88008C3C52 /* MoepMoepStreamerTests-Prefix.pch */,
+				6570BF5514FEBA88008C3C52 /* MoepMoepPlayerTests-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -532,27 +535,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		61E069FA3A11768DD7DEEBDA /* MoepMoepStreamer */ = {
+		61E069FA3A11768DD7DEEBDA /* MoepMoepPlayer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 61E069FA3A11768DD7DEEBDB /* Build configuration list for PBXNativeTarget "MoepMoepStreamer" */;
+			buildConfigurationList = 61E069FA3A11768DD7DEEBDB /* Build configuration list for PBXNativeTarget "MoepMoepPlayer" */;
 			buildPhases = (
 				61E069FA3A11768DD7DEEBDE /* Sources */,
 				61E069FA3A11768DD7DEEBDF /* Frameworks */,
 				61E069FA3A11768DD7DEEBE0 /* Resources */,
+				65AB6D91150D4168002C9404 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				65E9E737150546B6007007F2 /* PBXTargetDependency */,
 			);
-			name = MoepMoepStreamer;
+			name = MoepMoepPlayer;
 			productName = StreamTest;
-			productReference = 61E069FA3A11768DD7DEEBD9 /* MoepMoepStreamer.app */;
+			productReference = 61E069FA3A11768DD7DEEBD9 /* MoepMoepPlayer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6570BF4714FEBA88008C3C52 /* MoepMoepStreamerTests */ = {
+		6570BF4714FEBA88008C3C52 /* MoepMoepPlayerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6570BF5614FEBA88008C3C52 /* Build configuration list for PBXNativeTarget "MoepMoepStreamerTests" */;
+			buildConfigurationList = 6570BF5614FEBA88008C3C52 /* Build configuration list for PBXNativeTarget "MoepMoepPlayerTests" */;
 			buildPhases = (
 				6570BF4314FEBA88008C3C52 /* Sources */,
 				6570BF4414FEBA88008C3C52 /* Frameworks */,
@@ -566,9 +570,9 @@
 				6570BF5C14FEBAC4008C3C52 /* PBXTargetDependency */,
 				6570BF5A14FEBABE008C3C52 /* PBXTargetDependency */,
 			);
-			name = MoepMoepStreamerTests;
+			name = MoepMoepPlayerTests;
 			productName = MoepMoepStreamerTests;
-			productReference = 6570BF4814FEBA88008C3C52 /* MoepMoepStreamerTests.octest */;
+			productReference = 6570BF4814FEBA88008C3C52 /* MoepMoepPlayerTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -576,7 +580,7 @@
 /* Begin PBXProject section */
 		61E069FA3A11768DD7DEEBD3 /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = 61E069FA3A11768DD7DEEBD4 /* Build configuration list for PBXProject "MoepMoepStreamer" */;
+			buildConfigurationList = 61E069FA3A11768DD7DEEBD4 /* Build configuration list for PBXProject "MoepMoepPlayer" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -598,8 +602,8 @@
 			);
 			projectRoot = "";
 			targets = (
-				61E069FA3A11768DD7DEEBDA /* MoepMoepStreamer */,
-				6570BF4714FEBA88008C3C52 /* MoepMoepStreamerTests */,
+				61E069FA3A11768DD7DEEBDA /* MoepMoepPlayer */,
+				6570BF4714FEBA88008C3C52 /* MoepMoepPlayerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -672,6 +676,7 @@
 				6597646C14FEB35600473A4D /* ShowTableViewCell.xib in Resources */,
 				6597646C14FEB35600473A77 /* Localizable.strings in Resources */,
 				65E9E737150546B6007007F8 /* stream_info.json in Resources */,
+				65AB6D93150D41CF002C9404 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -699,6 +704,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		65AB6D91150D4168002C9404 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "#!/bin/bash\ncd $PROJECT_DIR\nRELEASE_VERSION=$(/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" MoepMoepPlayer/MoepMoepPlayer-Info.plist)\n/usr/libexec/PlistBuddy -c \"Set :PreferenceSpecifiers:1:DefaultValue $RELEASE_VERSION\" Settings.bundle/Root.plist";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -767,7 +785,7 @@
 		};
 		6570BF5E14FEBAC9008C3C52 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 61E069FA3A11768DD7DEEBDA /* MoepMoepStreamer */;
+			target = 61E069FA3A11768DD7DEEBDA /* MoepMoepPlayer */;
 			targetProxy = 6570BF5D14FEBAC9008C3C52 /* PBXContainerItemProxy */;
 		};
 		65E9E737150546B6007007F2 /* PBXTargetDependency */ = {
@@ -861,11 +879,11 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MoepMoepStreamer/MoepMoepStreamer-Prefix.pch";
+				GCC_PREFIX_HEADER = "MoepMoepPlayer/MoepMoepPlayer-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Libs/JSON\"/**";
-				INFOPLIST_FILE = "MoepMoepStreamer/MoepMoepStreamer-Info.plist";
+				INFOPLIST_FILE = "MoepMoepPlayer/MoepMoepPlayer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				PRODUCT_NAME = MoepMoepStreamer;
+				PRODUCT_NAME = MoepMoepPlayer;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -875,11 +893,11 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MoepMoepStreamer/MoepMoepStreamer-Prefix.pch";
+				GCC_PREFIX_HEADER = "MoepMoepPlayer/MoepMoepPlayer-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Libs/JSON\"/**";
-				INFOPLIST_FILE = "MoepMoepStreamer/MoepMoepStreamer-Info.plist";
+				INFOPLIST_FILE = "MoepMoepPlayer/MoepMoepPlayer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				PRODUCT_NAME = MoepMoepStreamer;
+				PRODUCT_NAME = MoepMoepPlayer;
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Libs/OCMock/Source/** \"${PROJECT_DIR}/Libs/JSON/**";
 				WRAPPER_EXTENSION = app;
 			};
@@ -894,12 +912,12 @@
 					"\"$(SRCROOT)/Libs/OCHamcrest/Source/build/Release\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MoepMoepStreamerTests/MoepMoepStreamerTests-Prefix.pch";
+				GCC_PREFIX_HEADER = "MoepMoepPlayerTests/MoepMoepPlayerTests-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"\"${PROJECT_DIR}/Libs/OCMock/Headers\"",
 					"\"${PROJECT_DIR}/Libs/JSON\"/**",
 				);
-				INFOPLIST_FILE = "MoepMoepStreamerTests/MoepMoepStreamerTests-Info.plist";
+				INFOPLIST_FILE = "MoepMoepPlayerTests/MoepMoepPlayerTests-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Libs/OCHamcrest/Source/build/Release-iphonesimulator\"",
@@ -908,7 +926,7 @@
 					"-all_load",
 					"-ObjC",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MoepMoepPlayerTests;
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
@@ -922,12 +940,12 @@
 					"\"$(SRCROOT)/Libs/OCHamcrest/Source/build/Release\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MoepMoepStreamerTests/MoepMoepStreamerTests-Prefix.pch";
+				GCC_PREFIX_HEADER = "MoepMoepPlayerTests/MoepMoepPlayerTests-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"\"${PROJECT_DIR}/Libs/OCMock/Headers\"",
 					"\"${PROJECT_DIR}/Libs/JSON\"/**",
 				);
-				INFOPLIST_FILE = "MoepMoepStreamerTests/MoepMoepStreamerTests-Info.plist";
+				INFOPLIST_FILE = "MoepMoepPlayerTests/MoepMoepPlayerTests-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Libs/OCHamcrest/Source/build/Release-iphonesimulator\"",
@@ -936,7 +954,7 @@
 					"-all_load",
 					"-ObjC",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MoepMoepPlayerTests;
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Libs/JSON/**";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -945,7 +963,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		61E069FA3A11768DD7DEEBD4 /* Build configuration list for PBXProject "MoepMoepStreamer" */ = {
+		61E069FA3A11768DD7DEEBD4 /* Build configuration list for PBXProject "MoepMoepPlayer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				61E069FA3A11768DD7DEEBD7 /* Release */,
@@ -954,7 +972,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		61E069FA3A11768DD7DEEBDB /* Build configuration list for PBXNativeTarget "MoepMoepStreamer" */ = {
+		61E069FA3A11768DD7DEEBDB /* Build configuration list for PBXNativeTarget "MoepMoepPlayer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				61E069FA3A11768DD7DEEBDC /* Release */,
@@ -963,7 +981,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6570BF5614FEBA88008C3C52 /* Build configuration list for PBXNativeTarget "MoepMoepStreamerTests" */ = {
+		6570BF5614FEBA88008C3C52 /* Build configuration list for PBXNativeTarget "MoepMoepPlayerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6570BF5714FEBA88008C3C52 /* Release */,
