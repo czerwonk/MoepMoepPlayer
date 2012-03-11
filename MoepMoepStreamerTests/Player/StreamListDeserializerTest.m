@@ -18,7 +18,7 @@
     NSData *data = [NSData dataWithContentsOfFile:path];
 
     StreamListDeserializer *deserializer = [[[StreamListDeserializer alloc] init] autorelease];
-    NSArray *array = [deserializer deserializeResponse:data];
+    NSArray *array = [deserializer deserializeResponse:data error:NULL];
 
     STAssertEquals((int)array.count, 2, nil);
 

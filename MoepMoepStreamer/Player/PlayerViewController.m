@@ -96,6 +96,9 @@
         case PlayerStatusStopped:
             [self playerIsReadyToPlay];
             break;
+            
+        default:
+            break;
     }
 }
 

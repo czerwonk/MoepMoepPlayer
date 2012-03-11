@@ -50,8 +50,16 @@
 }
 
 - (void)deserializeAndReturnData:(NSData *)data {
-    id object = [self.deserializer deserializeResponse:data];
-    [self.delegate retriever:self retrievedData:object];
+    NSError *error = nil;
+
+    id object = [self.deserializer deserializeResponse:data error:&error];
+    
+    if (error == nil) {
+        [self.delegate retriever:self retrievedData:object];
+    }
+    else {
+        [self.delegate retriever:self failedRetrievingData:error];
+    }
 }
 
 - (void)dealloc {

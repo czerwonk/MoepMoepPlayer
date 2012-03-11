@@ -65,6 +65,8 @@
 		65E9E737150546B600700814 /* StreamListDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B600700812 /* StreamListDeserializer.m */; };
 		65E9E737150546B600700817 /* StreamListDeserializerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B600700816 /* StreamListDeserializerTest.m */; };
 		65E9E737150546B60070081B /* streams_test.json in Resources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B60070081A /* streams_test.json */; };
+		65E9E737150546B60070081D /* ErrorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B60070081C /* ErrorFactory.m */; };
+		65E9E737150546B60070081E /* ErrorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B60070081C /* ErrorFactory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -234,6 +236,8 @@
 		65E9E737150546B600700816 /* StreamListDeserializerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreamListDeserializerTest.m; sourceTree = "<group>"; };
 		65E9E737150546B600700818 /* StreamListDeserializerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamListDeserializerTest.h; sourceTree = "<group>"; };
 		65E9E737150546B60070081A /* streams_test.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; path = streams_test.json; sourceTree = "<group>"; };
+		65E9E737150546B60070081C /* ErrorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorFactory.m; sourceTree = "<group>"; };
+		65E9E737150546B60070081F /* ErrorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorFactory.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -304,6 +308,8 @@
 		61E069FA3A11768DD7DEEBE8 /* MoepMoepStreamer */ = {
 			isa = PBXGroup;
 			children = (
+				65E9E737150546B60070081F /* ErrorFactory.h */,
+				65E9E737150546B60070081C /* ErrorFactory.m */,
 				65E9E737150546B600700808 /* streams.json */,
 				65E9E737150546B6007007F7 /* stream_info.json */,
 				65E9E737150546B6007007F6 /* NotificationKeys.h */,
@@ -720,6 +726,7 @@
 				65E9E737150546B60070080B /* InteractorBase.m in Sources */,
 				65E9E737150546B60070080F /* HttpGetDataRetriever.m in Sources */,
 				65E9E737150546B600700813 /* StreamListDeserializer.m in Sources */,
+				65E9E737150546B60070081D /* ErrorFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -741,6 +748,7 @@
 				65E9E737150546B600700810 /* HttpGetDataRetriever.m in Sources */,
 				65E9E737150546B600700814 /* StreamListDeserializer.m in Sources */,
 				65E9E737150546B600700817 /* StreamListDeserializerTest.m in Sources */,
+				65E9E737150546B60070081E /* ErrorFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
