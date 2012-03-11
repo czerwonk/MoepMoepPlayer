@@ -1,0 +1,9 @@
+"Info" = "Info";
+"Error" = "Error";
+"Offline" = "Offline";
+"Connect" = "Verbinde...";
+"LoadingStreamList" = "Lade Streamliste...";
+"Loading" = "Lade...";
+"Play" = "Play";
+"Stop" = "Stop";
+"ParsingFailed" = "Die Serverantwort konnte nicht verarbeitet werden.";

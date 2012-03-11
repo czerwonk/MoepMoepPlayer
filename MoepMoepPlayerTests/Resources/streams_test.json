@@ -1,0 +1,16 @@
+{
+    "streams": {
+        "stream": [
+            {
+                "name": "#moep1",
+                "url": "http://radio.moepmoep.org:8000/stream.mp3",
+                "mobile_url": "http://relay.moepmoep.org:9000/stream2.mp3"
+            },
+            {
+                "name": "#moep2",
+                "url": "http://radio.moepmoep.org:9500/stream4.mp3",
+                "mobile_url": "http://relay.moepmoep.org:8500/stream5.mp3"
+            }
+        ]
+    }
+}
