@@ -60,7 +60,7 @@
     PlayerInteractor *interactor = [[PlayerInteractor alloc] init];
     interactor.view = controller;
 
-    HttpGetDataRetriever *dataRetriever = [[HttpGetDataRetriever alloc] initWithUrl:@"http://www.dc-devel.net/streams.json"];
+    HttpGetDataRetriever *dataRetriever = [[HttpGetDataRetriever alloc] initWithUrl:@"http://www.moepmoep.org/streamerapp/streams.json"];
     StreamListDeserializer *deserializer = [[StreamListDeserializer alloc] init];
     dataRetriever.deserializer = deserializer;
     [deserializer release];
