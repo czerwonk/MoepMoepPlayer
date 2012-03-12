@@ -30,11 +30,11 @@
     }
 
     NSDictionary *arrayDictionary = [streamsDictionary objectForKey:@"streams"];
-    NSArray *streamsArray = [arrayDictionary objectForKey:@"stream"];
+    NSArray *channelArray = [arrayDictionary objectForKey:@"channel"];
 
     NSMutableArray *streams = [[[NSMutableArray alloc] init] autorelease];
     
-    for (NSDictionary *streamDictionary in streamsArray) {
+    for (NSDictionary *streamDictionary in channelArray) {
         Stream *stream = [self newStreamFromDictionary:streamDictionary];
         [streams addObject:stream];
         [stream release];
@@ -47,7 +47,7 @@
     Stream *stream = [[Stream alloc] init];
     stream.name = [dictionary objectForKey:@"name"];
     stream.mainStreamUrl = [dictionary objectForKey:@"url"];
-    stream.mobileStreamUrl = [dictionary objectForKey:@"mobile_url"];
+    stream.mobileStreamUrl = [dictionary objectForKey:@"mobile"];
 
     return stream;
 }
