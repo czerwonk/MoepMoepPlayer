@@ -13,7 +13,11 @@
 
 @interface ChannelListDeserializer ()
 
-- (Channel *)newStreamFromDictionary:(NSDictionary *)dictionary;
+- (Channel *)newChannelFromDictionary:(NSDictionary *)dictionary;
+
+- (void)fillStreamUrlsOfChannel:(Channel *)channel byFlavors:(NSArray *)flavors;
+
+- (void)setStreamUrlOfChannel:(Channel *)channel byFlavor:(NSDictionary *)flavor;
 
 @end
 
@@ -30,26 +34,45 @@
     }
 
     NSDictionary *arrayDictionary = [streamsDictionary objectForKey:@"streams"];
-    NSArray *channelArray = [arrayDictionary objectForKey:@"stream"];
+    NSArray *channelArray = [arrayDictionary objectForKey:@"channel"];
 
-    NSMutableArray *streams = [[[NSMutableArray alloc] init] autorelease];
+    NSMutableArray *channels = [[[NSMutableArray alloc] init] autorelease];
     
     for (NSDictionary *streamDictionary in channelArray) {
-        Channel *stream = [self newStreamFromDictionary:streamDictionary];
-        [streams addObject:stream];
-        [stream release];
+        Channel *channel = [self newChannelFromDictionary:streamDictionary];
+        [channels addObject:channel];
+        [channel release];
     }
     
-    return streams;
+    return channels;
 }
 
-- (Channel *)newStreamFromDictionary:(NSDictionary *)dictionary {
-    Channel *stream = [[Channel alloc] init];
-    stream.name = [dictionary objectForKey:@"name"];
-    stream.mainStreamUrl = [dictionary objectForKey:@"url"];
-    stream.mobileStreamUrl = [dictionary objectForKey:@"mobile"];
+- (Channel *)newChannelFromDictionary:(NSDictionary *)dictionary {
+    Channel *channel = [[Channel alloc] init];
+    channel.name = [dictionary objectForKey:@"name"];
 
-    return stream;
+    NSArray *flavors = [dictionary objectForKey:@"flavor"];
+    [self fillStreamUrlsOfChannel:channel byFlavors:flavors];
+
+    return channel;
+}
+
+- (void)fillStreamUrlsOfChannel:(Channel *)channel byFlavors:(NSArray *)flavorsArray {
+    for (NSDictionary *flavor in flavorsArray) {
+        [self setStreamUrlOfChannel:channel byFlavor:flavor];
+    }
+}
+
+- (void)setStreamUrlOfChannel:(Channel *)channel byFlavor:(NSDictionary *)flavorDictionary {
+    NSString *type = [flavorDictionary objectForKey:@"type"];
+    NSString *url = [flavorDictionary objectForKey:@"url"];
+
+    if ([type isEqualToString:@"main"]) {
+        channel.mainStreamUrl = url;
+    }
+    else if ([type isEqualToString:@"mobile"]) {
+        channel.mobileStreamUrl = url;
+    }
 }
 
 @end

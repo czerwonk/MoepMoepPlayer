@@ -52,7 +52,6 @@
 		65AB6D93150D41CF002C9404 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 65AB6D92150D41CF002C9404 /* Settings.bundle */; };
 		65E9E737150546B6007007F4 /* NotificationKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B6007007F3 /* NotificationKeys.m */; };
 		65E9E737150546B6007007F5 /* NotificationKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B6007007F3 /* NotificationKeys.m */; };
-		65E9E737150546B6007007F8 /* stream_info.json in Resources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B6007007F7 /* stream_info.json */; };
 		65E9E737150546B6007007FA /* Channel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B6007007F9 /* Channel.m */; };
 		65E9E737150546B6007007FB /* Channel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B6007007F9 /* Channel.m */; };
 		65E9E737150546B6007007FE /* PlayerInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B6007007FD /* PlayerInteractor.m */; };
@@ -218,7 +217,6 @@
 		65AB6D92150D41CF002C9404 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = ../Settings.bundle; sourceTree = "<group>"; };
 		65E9E737150546B6007007F3 /* NotificationKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationKeys.m; sourceTree = "<group>"; };
 		65E9E737150546B6007007F6 /* NotificationKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationKeys.h; sourceTree = "<group>"; };
-		65E9E737150546B6007007F7 /* stream_info.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; path = stream_info.json; sourceTree = "<group>"; };
 		65E9E737150546B6007007F9 /* Channel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Channel.m; sourceTree = "<group>"; };
 		65E9E737150546B6007007FC /* Channel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Channel.h; sourceTree = "<group>"; };
 		65E9E737150546B6007007FD /* PlayerInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerInteractor.m; sourceTree = "<group>"; };
@@ -228,7 +226,6 @@
 		65E9E737150546B600700803 /* PlayerStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerStatus.h; sourceTree = "<group>"; };
 		65E9E737150546B600700805 /* PlayerInteractorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerInteractorTest.m; sourceTree = "<group>"; };
 		65E9E737150546B600700807 /* PlayerInteractorTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerInteractorTest.h; sourceTree = "<group>"; };
-		65E9E737150546B600700808 /* streams.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; path = streams.json; sourceTree = "<group>"; };
 		65E9E737150546B60070080A /* InteractorBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InteractorBase.m; sourceTree = "<group>"; };
 		65E9E737150546B60070080D /* InteractorBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractorBase.h; sourceTree = "<group>"; };
 		65E9E737150546B60070080E /* HttpGetDataRetriever.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpGetDataRetriever.m; sourceTree = "<group>"; };
@@ -312,8 +309,6 @@
 			children = (
 				65E9E737150546B60070081F /* ErrorFactory.h */,
 				65E9E737150546B60070081C /* ErrorFactory.m */,
-				65E9E737150546B600700808 /* streams.json */,
-				65E9E737150546B6007007F7 /* stream_info.json */,
 				65E9E737150546B6007007F6 /* NotificationKeys.h */,
 				65E9E737150546B6007007F3 /* NotificationKeys.m */,
 				6597646C14FEB35600473A76 /* Localizable.strings */,
@@ -675,7 +670,6 @@
 				6597646C14FEB35600473A4B /* 01-refresh.png in Resources */,
 				6597646C14FEB35600473A4D /* ShowTableViewCell.xib in Resources */,
 				6597646C14FEB35600473A77 /* Localizable.strings in Resources */,
-				65E9E737150546B6007007F8 /* stream_info.json in Resources */,
 				65AB6D93150D41CF002C9404 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -60,7 +60,7 @@
     PlayerInteractor *interactor = [[PlayerInteractor alloc] init];
     interactor.view = controller;
 
-    HttpGetDataRetriever *dataRetriever = [[HttpGetDataRetriever alloc] initWithUrl:@"http://www.moepmoep.org/streamerapp/streams.json"];
+    HttpGetDataRetriever *dataRetriever = [[HttpGetDataRetriever alloc] initWithUrl:@"http://www.moepmoep.org/streamerapp/api/0.3/channels/list.json"];
     ChannelListDeserializer *deserializer = [[ChannelListDeserializer alloc] init];
     dataRetriever.deserializer = deserializer;
     [deserializer release];

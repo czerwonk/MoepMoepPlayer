@@ -1,21 +1,85 @@
 {
     "meta": {
         "name": "streamlist",
-        "version": "0.2"
+        "version": "0.3"
     },
     "streams": {
         "channel": [
             {
                 "name": "#moep1",
-                "url": "http://radio.moepmoep.org:8000/stream.mp3",
-                "mobile": "http://relay.moepmoep.org:9000/stream2.mp3",
-                "relive": "http://relay.moepmoep.org:10000/stream3.mp3"
+                "flavor": [
+                    {
+                        "url": "http://radio.moepmoep.org:8000/stream.mp3",
+                        "type": "main",
+                        "quality": "128 kbps",
+                        "playlist_links": {
+                            "pls": "" ,
+                            "asx": "",
+                            "m3u": "",
+                            "ram": ""
+                        }
+                    },
+                    {
+                        "url": "http://relay.moepmoep.org:9000/stream2.mp3",
+                        "type": "mobile",
+                        "quality": "64 kbps",
+                        "playlist_links": {
+                            "pls": "" ,
+                            "asx": "",
+                            "m3u": "",
+                            "ram": ""
+                        }
+                    },
+                    {
+                        "url": "http://relay.moepmoep.org:10000/stream3.mp3",
+                        "type": "relive",
+                        "quality": "128 kbps",
+                        "playlist_links": {
+                            "pls": "" ,
+                            "asx": "",
+                            "m3u": "",
+                            "ram": ""
+                        }
+                    }
+                ]
             },
             {
                 "name": "#moep2",
-                "url": "http://radio.moepmoep.org:9500/stream4.mp3",
-                "mobile": "http://relay.moepmoep.org:8500/stream5.mp3",
-                "relive": "http://relay.moepmoep.org:10500/stream6.mp3"
+                "flavor": [
+                    {
+                        "url": "http://radio.moepmoep.org:9500/stream4.mp3",
+                        "type": "main",
+                        "quality": "128 kbps",
+                        "playlist_links": {
+                            "pls": "" ,
+                            "asx": "",
+                            "m3u": "",
+                            "ram": ""
+                        }
+                    },
+                    {
+                        "url": "http://relay.moepmoep.org:8500/stream5.mp3",
+                        "type": "mobile",
+                        "quality": "64 kbps",
+                        "playlist_links": {
+                            "pls": "" ,
+                            "asx": "",
+                            "m3u": "",
+                            "ram": ""
+                        }
+                    },
+                    {
+                        "url": "http://relay.moepmoep.org:10500/stream6.mp3",
+                        "type": "relive",
+                        "quality": "128 kbps",
+                        "playlist_links": {
+                            "pls": "" ,
+                            "asx": "",
+                            "m3u": "",
+                            "ram": ""
+                        }
+                    }
+                ]
             }
         ]
     }
