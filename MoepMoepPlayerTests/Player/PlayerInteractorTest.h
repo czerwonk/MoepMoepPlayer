@@ -17,9 +17,9 @@
 
 - (void)testShouldSetDelegateOfDataRetriever;
 
-- (void)testShouldRetrieveDataOnReloadStreams;
+- (void)testShouldRetrieveDataOnReloadChannels;
 
-- (void)testShouldSetStreamsAfterRetrievingData;
+- (void)testShouldSetChannelsAfterRetrievingData;
 
 - (void)testShouldNotifyViewOnError;
 

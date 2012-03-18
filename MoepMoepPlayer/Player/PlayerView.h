@@ -12,7 +12,7 @@
 @protocol PlayerView<View>
 
 - (void)setViewDelegate:(id<PlayerViewDelegate>)delegate;
-- (void)setStreams:(NSArray *)streams;
+- (void)setChannels:(NSArray *)channels;
 - (void)playerChangedStatusTo:(PlayerStatus)status;
 
 @end

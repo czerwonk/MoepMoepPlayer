@@ -36,35 +36,35 @@
     [view playerChangedStatusTo:status];
 }
 
-- (id<DataRetriever>)streamListDataRetriever {
-    return streamListDataRetriever;
+- (id<DataRetriever>)channelListDataRetriever {
+    return channelListDataRetriever;
 }
 
-- (void)setStreamListDataRetriever:(id<DataRetriever>)aStreamListDataRetriever {
-    [streamListDataRetriever release];
-    streamListDataRetriever = [aStreamListDataRetriever retain];
+- (void)setChannelListDataRetriever:(id<DataRetriever>)aChannelListDataRetriever {
+    [channelListDataRetriever release];
+    channelListDataRetriever = [aChannelListDataRetriever retain];
 
-    [streamListDataRetriever setDelegate:self];
+    [channelListDataRetriever setDelegate:self];
 }
 
 - (void)retriever:(id<DataRetriever>)retriever retrievedData:(id)object {
-    if (retriever == streamListDataRetriever) {
+    if (retriever == channelListDataRetriever) {
         [self executeInMainThread:^{
-            [view setStreams:(NSArray *)object];
+            [view setChannels:(NSArray *)object];
         }];
     }
 }
 
 - (void)retriever:(id<DataRetriever>)retriever failedRetrievingData:(NSError *)error {
-    if (retriever == streamListDataRetriever) {
+    if (retriever == channelListDataRetriever) {
         [self executeInMainThread:^{
             [view showErrorWithMessage:error.localizedDescription];
         }];
     }
 }
 
-- (void)reloadStreams {
-    [self.streamListDataRetriever retrieveDataAsynchronous];
+- (void)reloadChannels {
+    [self.channelListDataRetriever retrieveDataAsynchronous];
 }
 
 - (void)refreshPlayer {
@@ -80,19 +80,19 @@
     }
 }
 
-- (void)switchToMainStream:(Stream *)stream {
-    [player setStreamUrl:stream.mainStreamUrl];
+- (void)switchToMainStream:(Channel *)channel {
+    [player setStreamUrl:channel.mainStreamUrl];
 }
 
-- (void)switchToMobileStream:(Stream *)stream {
-    [player setStreamUrl:stream.mobileStreamUrl];
+- (void)switchToMobileStream:(Channel *)channel {
+    [player setStreamUrl:channel.mobileStreamUrl];
 }
 
 - (void)dealloc {
     [super dealloc];
 
     [view release];
-    [streamListDataRetriever release];
+    [channelListDataRetriever release];
     [player release];
 }
 

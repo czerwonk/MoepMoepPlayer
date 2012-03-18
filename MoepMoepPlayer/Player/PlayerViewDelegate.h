@@ -5,14 +5,14 @@
 //  Copyright 2012 Daniel Czerwonk. All rights reserved.
 //
 
-#import "Stream.h"
+#import "Channel.h"
 
 @protocol PlayerViewDelegate<NSObject>
 
-- (void)reloadStreams;
+- (void)reloadChannels;
 - (void)refreshPlayer;
 - (void)playOrPause;
-- (void)switchToMainStream:(Stream *)stream;
-- (void)switchToMobileStream:(Stream *)stream;
+- (void)switchToMainStream:(Channel *)channel;
+- (void)switchToMobileStream:(Channel *)channel;
 
 @end

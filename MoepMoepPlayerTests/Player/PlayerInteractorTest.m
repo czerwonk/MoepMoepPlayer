@@ -28,35 +28,35 @@
     id<DataRetriever> retriever = [OCMockObject mockForProtocol:@protocol(DataRetriever)];
     [[retriever expect] setDelegate:interactor];
 
-    interactor.streamListDataRetriever = retriever;
+    interactor.channelListDataRetriever = retriever;
     [self verifyMockExpectations:retriever];
 }
 
-- (void)testShouldRetrieveDataOnReloadStreams {
+- (void)testShouldRetrieveDataOnReloadChannels {
     id<DataRetriever> retriever = [OCMockObject niceMockForProtocol:@protocol(DataRetriever)];
     [[retriever expect] retrieveDataAsynchronous];
 
     PlayerInteractor *interactor = [[[PlayerInteractor alloc] init] autorelease];
-    interactor.streamListDataRetriever = retriever;
+    interactor.channelListDataRetriever = retriever;
 
-    [interactor reloadStreams];
+    [interactor reloadChannels];
 
     [self verifyMockExpectations:retriever];
 }
 
-- (void)testShouldSetStreamsAfterRetrievingData {
+- (void)testShouldSetChannelsAfterRetrievingData {
     id<DataRetriever> retriever = [OCMockObject niceMockForProtocol:@protocol(DataRetriever)];
 
-    NSArray *streams = [[[NSArray alloc] init] autorelease];
+    NSArray *channels = [[[NSArray alloc] init] autorelease];
 
     id<PlayerView> view = [OCMockObject niceMockForProtocol:@protocol(PlayerView)];
-    [[view expect] setStreams:streams];
+    [[view expect] setChannels:channels];
 
     PlayerInteractor *interactor = [[[PlayerInteractor alloc] init] autorelease];
-    interactor.streamListDataRetriever = retriever;
+    interactor.channelListDataRetriever = retriever;
     interactor.view = view;
 
-    [interactor retriever:retriever retrievedData:streams];
+    [interactor retriever:retriever retrievedData:channels];
 
     [self verifyMockExpectations:view];
 }
@@ -70,7 +70,7 @@
     [[view expect] showErrorWithMessage:error.localizedDescription];
 
     PlayerInteractor *interactor = [[[PlayerInteractor alloc] init] autorelease];
-    interactor.streamListDataRetriever = retriever;
+    interactor.channelListDataRetriever = retriever;
     interactor.view = view;
 
     [interactor retriever:retriever failedRetrievingData:error];
@@ -156,31 +156,31 @@
 }
 
 - (void)testShouldSetMobileStreamUrlToPlayer {
-    Stream *stream = [[[Stream alloc] init] autorelease];
-    stream.mobileStreamUrl = @"bar";
+    Channel *channel = [[[Channel alloc] init] autorelease];
+    channel.mobileStreamUrl = @"bar";
 
     PlayerInteractor *interactor = [[[PlayerInteractor alloc] init] autorelease];
 
     id<Player> player = [OCMockObject niceMockForProtocol:@protocol(Player)];
-    [[player expect] setStreamUrl:stream.mobileStreamUrl];
+    [[player expect] setStreamUrl:channel.mobileStreamUrl];
     interactor.player = player;
 
-    [interactor switchToMobileStream:stream];
+    [interactor switchToMobileStream:channel];
 
     [self verifyMockExpectations:player];
 }
 
 - (void)testShouldSetMainStreamUrlToPlayer {
-    Stream *stream = [[[Stream alloc] init] autorelease];
-    stream.mainStreamUrl = @"foo";
+    Channel *channel = [[[Channel alloc] init] autorelease];
+    channel.mainStreamUrl = @"foo";
 
     PlayerInteractor *interactor = [[[PlayerInteractor alloc] init] autorelease];
 
     id<Player> player = [OCMockObject niceMockForProtocol:@protocol(Player)];
-    [[player expect] setStreamUrl:stream.mainStreamUrl];
+    [[player expect] setStreamUrl:channel.mainStreamUrl];
     interactor.player = player;
 
-    [interactor switchToMainStream:stream];
+    [interactor switchToMainStream:channel];
 
     [self verifyMockExpectations:player];
 }

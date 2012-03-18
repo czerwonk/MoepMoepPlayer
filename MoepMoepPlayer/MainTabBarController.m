@@ -11,7 +11,7 @@
 #import "PlayerViewController.h"
 #import "PlayerInteractor.h"
 #import "HttpGetDataRetriever.h"
-#import "StreamListDeserializer.h"
+#import "ChannelListDeserializer.h"
 #import "StreamPlayer.h"
 
 
@@ -61,11 +61,11 @@
     interactor.view = controller;
 
     HttpGetDataRetriever *dataRetriever = [[HttpGetDataRetriever alloc] initWithUrl:@"http://www.moepmoep.org/streamerapp/streams.json"];
-    StreamListDeserializer *deserializer = [[StreamListDeserializer alloc] init];
+    ChannelListDeserializer *deserializer = [[ChannelListDeserializer alloc] init];
     dataRetriever.deserializer = deserializer;
     [deserializer release];
 
-    interactor.streamListDataRetriever = dataRetriever;
+    interactor.channelListDataRetriever = dataRetriever;
     [dataRetriever release];
 
     StreamPlayer *player = [[StreamPlayer alloc] init];

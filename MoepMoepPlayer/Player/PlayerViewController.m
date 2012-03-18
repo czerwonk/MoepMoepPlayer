@@ -18,7 +18,7 @@
 
 - (void)playerStartedPlaying;
 
-- (void)streamSwitched;
+- (void)channelSwitched;
 
 @end
 
@@ -27,7 +27,7 @@
 @synthesize playButton;
 @synthesize segmentedControl;
 @synthesize pickerView;
-@synthesize streamTextLabel;
+@synthesize channelNameTextLabel;
 @synthesize viewDelegate;
 @synthesize playerActivityView;
 
@@ -35,7 +35,7 @@
     [super viewDidLoad];
 
     [self.segmentedControl addTarget:self
-                              action:@selector(streamSwitched)
+                              action:@selector(channelSwitched)
                     forControlEvents:UIControlEventValueChanged];
 
     self.pickerView.frame = CGRectMake(self.pickerView.frame.origin.x,
@@ -44,7 +44,7 @@
                                        162);
 
     [self startActivityViewWithText:NSLocalizedString(@"LoadingStreamList", nil)];
-    [self.viewDelegate reloadStreams];
+    [self.viewDelegate reloadChannels];
 }
 
 - (void)viewDidUnload {
@@ -91,17 +91,17 @@
     }
 }
 
-- (void)setStreams:(NSArray *)retrievedStreams {
+- (void)setChannels:(NSArray *)theChannels {
     [self stopActivityView];
 
-    [streams release];
-    streams = [[NSArray alloc] initWithArray:retrievedStreams];
+    [channels release];
+    channels = [[NSArray alloc] initWithArray:theChannels];
 
-    if (streams.count > 0) {
-        [currentStream release];
-        currentStream = [[streams objectAtIndex:0] retain];
+    if (channels.count > 0) {
+        [currentChannel release];
+        currentChannel = [[channels objectAtIndex:0] retain];
 
-        [self streamSwitched];
+        [self channelSwitched];
         [self.pickerView reloadAllComponents];
     }
 }
@@ -133,18 +133,18 @@
     [self.playButton setTitle:NSLocalizedString(@"Stop", nil) forState:UIControlStateSelected];
 }
 
-- (void)streamSwitched {
+- (void)channelSwitched {
     switch (self.segmentedControl.selectedSegmentIndex) {
         case 0:
-            [viewDelegate switchToMainStream:currentStream];
+            [viewDelegate switchToMainStream:currentChannel];
             break;
 
         case 1:
-            [viewDelegate switchToMobileStream:currentStream];
+            [viewDelegate switchToMobileStream:currentChannel];
             break;
     }
 
-    self.streamTextLabel.text = currentStream.name;
+    self.channelNameTextLabel.text = currentChannel.name;
 }
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)picker {
@@ -152,30 +152,30 @@
 }
 
 - (NSInteger)pickerView:(UIPickerView *)picker numberOfRowsInComponent:(NSInteger)component {
-    return streams.count;
+    return channels.count;
 }
 
 - (NSString *)pickerView:(UIPickerView *)picker titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    Stream *stream = [streams objectAtIndex:row];
+    Channel *stream = [channels objectAtIndex:row];
     return stream.name;
 }
 
 - (void)pickerView:(UIPickerView *)picker didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    Stream *stream = [streams objectAtIndex:row];
-    [currentStream release];
-    currentStream = [stream retain];
-    self.streamTextLabel.text = currentStream.name;
+    Channel *channel = [channels objectAtIndex:row];
+    [currentChannel release];
+    currentChannel = [channel retain];
+    self.channelNameTextLabel.text = currentChannel.name;
 
-    [self streamSwitched];
+    [self channelSwitched];
 }
 
 - (void)dealloc {
     [super dealloc];
 
     [playButton release];
-    [streams release];
-    [currentStream release];
-    [streamTextLabel release];
+    [channels release];
+    [currentChannel release];
+    [channelNameTextLabel release];
     [pickerView release];
     [segmentedControl release];
     [playerActivityView release];

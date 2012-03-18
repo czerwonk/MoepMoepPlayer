@@ -124,7 +124,7 @@
                         <outlet property="playButton" destination="hr9-Nm-zFz" id="NFg-a6-yfW"/>
                         <outlet property="playerActivityView" destination="Hc6-u1-Mgk" id="eyM-6N-5AZ"/>
                         <outlet property="segmentedControl" destination="dEZ-RV-wh8" id="YHY-Zk-Por"/>
-                        <outlet property="streamTextLabel" destination="JtB-eb-g3j" id="RXE-Sb-5JW"/>
+                        <outlet property="channelNameTextLabel" destination="JtB-eb-g3j" id="RXE-Sb-5JW"/>
                     </connections>
                 </viewController>
             </objects>

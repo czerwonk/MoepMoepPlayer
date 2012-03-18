@@ -53,8 +53,8 @@
 		65E9E737150546B6007007F4 /* NotificationKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B6007007F3 /* NotificationKeys.m */; };
 		65E9E737150546B6007007F5 /* NotificationKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B6007007F3 /* NotificationKeys.m */; };
 		65E9E737150546B6007007F8 /* stream_info.json in Resources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B6007007F7 /* stream_info.json */; };
-		65E9E737150546B6007007FA /* Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B6007007F9 /* Stream.m */; };
-		65E9E737150546B6007007FB /* Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B6007007F9 /* Stream.m */; };
+		65E9E737150546B6007007FA /* Channel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B6007007F9 /* Channel.m */; };
+		65E9E737150546B6007007FB /* Channel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B6007007F9 /* Channel.m */; };
 		65E9E737150546B6007007FE /* PlayerInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B6007007FD /* PlayerInteractor.m */; };
 		65E9E737150546B6007007FF /* PlayerInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B6007007FD /* PlayerInteractor.m */; };
 		65E9E737150546B600700806 /* PlayerInteractorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B600700805 /* PlayerInteractorTest.m */; };
@@ -62,9 +62,9 @@
 		65E9E737150546B60070080C /* InteractorBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B60070080A /* InteractorBase.m */; };
 		65E9E737150546B60070080F /* HttpGetDataRetriever.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B60070080E /* HttpGetDataRetriever.m */; };
 		65E9E737150546B600700810 /* HttpGetDataRetriever.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B60070080E /* HttpGetDataRetriever.m */; };
-		65E9E737150546B600700813 /* StreamListDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B600700812 /* StreamListDeserializer.m */; };
-		65E9E737150546B600700814 /* StreamListDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B600700812 /* StreamListDeserializer.m */; };
-		65E9E737150546B600700817 /* StreamListDeserializerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B600700816 /* StreamListDeserializerTest.m */; };
+		65E9E737150546B600700813 /* ChannelListDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B600700812 /* ChannelListDeserializer.m */; };
+		65E9E737150546B600700814 /* ChannelListDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B600700812 /* ChannelListDeserializer.m */; };
+		65E9E737150546B600700817 /* ChannelListDeserializerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B600700816 /* ChannelListDeserializerTest.m */; };
 		65E9E737150546B60070081B /* streams_test.json in Resources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B60070081A /* streams_test.json */; };
 		65E9E737150546B60070081D /* ErrorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B60070081C /* ErrorFactory.m */; };
 		65E9E737150546B60070081E /* ErrorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B60070081C /* ErrorFactory.m */; };
@@ -219,8 +219,8 @@
 		65E9E737150546B6007007F3 /* NotificationKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationKeys.m; sourceTree = "<group>"; };
 		65E9E737150546B6007007F6 /* NotificationKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationKeys.h; sourceTree = "<group>"; };
 		65E9E737150546B6007007F7 /* stream_info.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; path = stream_info.json; sourceTree = "<group>"; };
-		65E9E737150546B6007007F9 /* Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stream.m; sourceTree = "<group>"; };
-		65E9E737150546B6007007FC /* Stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stream.h; sourceTree = "<group>"; };
+		65E9E737150546B6007007F9 /* Channel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Channel.m; sourceTree = "<group>"; };
+		65E9E737150546B6007007FC /* Channel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Channel.h; sourceTree = "<group>"; };
 		65E9E737150546B6007007FD /* PlayerInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerInteractor.m; sourceTree = "<group>"; };
 		65E9E737150546B600700800 /* PlayerInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerInteractor.h; sourceTree = "<group>"; };
 		65E9E737150546B600700801 /* PlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerView.h; sourceTree = "<group>"; };
@@ -233,10 +233,10 @@
 		65E9E737150546B60070080D /* InteractorBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractorBase.h; sourceTree = "<group>"; };
 		65E9E737150546B60070080E /* HttpGetDataRetriever.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpGetDataRetriever.m; sourceTree = "<group>"; };
 		65E9E737150546B600700811 /* HttpGetDataRetriever.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpGetDataRetriever.h; sourceTree = "<group>"; };
-		65E9E737150546B600700812 /* StreamListDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreamListDeserializer.m; sourceTree = "<group>"; };
-		65E9E737150546B600700815 /* StreamListDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamListDeserializer.h; sourceTree = "<group>"; };
-		65E9E737150546B600700816 /* StreamListDeserializerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreamListDeserializerTest.m; sourceTree = "<group>"; };
-		65E9E737150546B600700818 /* StreamListDeserializerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamListDeserializerTest.h; sourceTree = "<group>"; };
+		65E9E737150546B600700812 /* ChannelListDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelListDeserializer.m; sourceTree = "<group>"; };
+		65E9E737150546B600700815 /* ChannelListDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelListDeserializer.h; sourceTree = "<group>"; };
+		65E9E737150546B600700816 /* ChannelListDeserializerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelListDeserializerTest.m; sourceTree = "<group>"; };
+		65E9E737150546B600700818 /* ChannelListDeserializerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelListDeserializerTest.h; sourceTree = "<group>"; };
 		65E9E737150546B60070081A /* streams_test.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; path = streams_test.json; sourceTree = "<group>"; };
 		65E9E737150546B60070081C /* ErrorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorFactory.m; sourceTree = "<group>"; };
 		65E9E737150546B60070081F /* ErrorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorFactory.h; sourceTree = "<group>"; };
@@ -405,15 +405,15 @@
 		6597646C14FEB35600473A3A /* Player */ = {
 			isa = PBXGroup;
 			children = (
-				65E9E737150546B600700815 /* StreamListDeserializer.h */,
-				65E9E737150546B600700812 /* StreamListDeserializer.m */,
+				65E9E737150546B600700815 /* ChannelListDeserializer.h */,
+				65E9E737150546B600700812 /* ChannelListDeserializer.m */,
 				65E9E737150546B600700803 /* PlayerStatus.h */,
 				65E9E737150546B600700802 /* PlayerViewDelegate.h */,
 				65E9E737150546B600700801 /* PlayerView.h */,
 				65E9E737150546B600700800 /* PlayerInteractor.h */,
 				65E9E737150546B6007007FD /* PlayerInteractor.m */,
-				65E9E737150546B6007007FC /* Stream.h */,
-				65E9E737150546B6007007F9 /* Stream.m */,
+				65E9E737150546B6007007FC /* Channel.h */,
+				65E9E737150546B6007007F9 /* Channel.m */,
 				61E069FA3A11768DD7DEEBF8 /* PlayerViewController.m */,
 				61E069FA3A11768DD7DEEBF7 /* PlayerViewController.h */,
 				6597646C14FEB35600473A41 /* StreamPlayer.h */,
@@ -507,8 +507,8 @@
 		65E9E737150546B600700804 /* Player */ = {
 			isa = PBXGroup;
 			children = (
-				65E9E737150546B600700818 /* StreamListDeserializerTest.h */,
-				65E9E737150546B600700816 /* StreamListDeserializerTest.m */,
+				65E9E737150546B600700818 /* ChannelListDeserializerTest.h */,
+				65E9E737150546B600700816 /* ChannelListDeserializerTest.m */,
 				65E9E737150546B600700807 /* PlayerInteractorTest.h */,
 				65E9E737150546B600700805 /* PlayerInteractorTest.m */,
 			);
@@ -739,11 +739,11 @@
 				6597646C14FEB35600473A83 /* ShowTableViewCell.m in Sources */,
 				6597646C14FEB35600473A86 /* TimetableDeserializer.m in Sources */,
 				65E9E737150546B6007007F4 /* NotificationKeys.m in Sources */,
-				65E9E737150546B6007007FA /* Stream.m in Sources */,
+				65E9E737150546B6007007FA /* Channel.m in Sources */,
 				65E9E737150546B6007007FE /* PlayerInteractor.m in Sources */,
 				65E9E737150546B60070080B /* InteractorBase.m in Sources */,
 				65E9E737150546B60070080F /* HttpGetDataRetriever.m in Sources */,
-				65E9E737150546B600700813 /* StreamListDeserializer.m in Sources */,
+				65E9E737150546B600700813 /* ChannelListDeserializer.m in Sources */,
 				65E9E737150546B60070081D /* ErrorFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -759,13 +759,13 @@
 				6597646C14FEB35600473A7A /* TimetableInteractorTest.m in Sources */,
 				6597646C14FEB35600473A7D /* Test.m in Sources */,
 				65E9E737150546B6007007F5 /* NotificationKeys.m in Sources */,
-				65E9E737150546B6007007FB /* Stream.m in Sources */,
+				65E9E737150546B6007007FB /* Channel.m in Sources */,
 				65E9E737150546B6007007FF /* PlayerInteractor.m in Sources */,
 				65E9E737150546B600700806 /* PlayerInteractorTest.m in Sources */,
 				65E9E737150546B60070080C /* InteractorBase.m in Sources */,
 				65E9E737150546B600700810 /* HttpGetDataRetriever.m in Sources */,
-				65E9E737150546B600700814 /* StreamListDeserializer.m in Sources */,
-				65E9E737150546B600700817 /* StreamListDeserializerTest.m in Sources */,
+				65E9E737150546B600700814 /* ChannelListDeserializer.m in Sources */,
+				65E9E737150546B600700817 /* ChannelListDeserializerTest.m in Sources */,
 				65E9E737150546B60070081E /* ErrorFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -5,29 +5,29 @@
 //  Copyright 2012 Daniel Czerwonk. All rights reserved.
 //
 
-#import "StreamListDeserializerTest.h"
-#import "StreamListDeserializer.h"
-#import "Stream.h"
+#import "ChannelListDeserializerTest.h"
+#import "ChannelListDeserializer.h"
+#import "Channel.h"
 
 
-@implementation StreamListDeserializerTest
+@implementation ChannelListDeserializerTest
 
 - (void)testShouldParse {
-    NSString *path = [[NSBundle bundleForClass:[StreamListDeserializerTest class]]
+    NSString *path = [[NSBundle bundleForClass:[ChannelListDeserializerTest class]]
             pathForResource:@"streams_test" ofType:@"json"];
     NSData *data = [NSData dataWithContentsOfFile:path];
 
-    StreamListDeserializer *deserializer = [[[StreamListDeserializer alloc] init] autorelease];
+    ChannelListDeserializer *deserializer = [[[ChannelListDeserializer alloc] init] autorelease];
     NSArray *array = [deserializer deserializeResponse:data error:NULL];
 
     STAssertEquals((int)array.count, 2, nil);
 
-    Stream *stream1 = [array objectAtIndex:0];
+    Channel *stream1 = [array objectAtIndex:0];
     assertThat(stream1.name, is(equalTo(@"#moep1")));
     assertThat(stream1.mainStreamUrl, is(equalTo(@"http://radio.moepmoep.org:8000/stream.mp3")));
     assertThat(stream1.mobileStreamUrl, is(equalTo(@"http://relay.moepmoep.org:9000/stream2.mp3")));
 
-    Stream *stream2 = [array objectAtIndex:1];
+    Channel *stream2 = [array objectAtIndex:1];
     assertThat(stream2.name, is(equalTo(@"#moep2")));
     assertThat(stream2.mainStreamUrl, is(equalTo(@"http://radio.moepmoep.org:9500/stream4.mp3")));
     assertThat(stream2.mobileStreamUrl, is(equalTo(@"http://relay.moepmoep.org:8500/stream5.mp3")));

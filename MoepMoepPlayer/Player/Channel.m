@@ -5,10 +5,10 @@
 //  Copyright 2012 Daniel Czerwonk. All rights reserved.
 //
 
-#import "Stream.h"
+#import "Channel.h"
 
 
-@implementation Stream
+@implementation Channel
 
 @synthesize name;
 @synthesize mainStreamUrl;
