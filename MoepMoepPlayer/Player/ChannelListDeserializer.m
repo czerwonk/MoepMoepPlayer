@@ -19,7 +19,6 @@
 
 #import "ChannelListDeserializer.h"
 #import "Channel.h"
-#import "NSObject+SBJson.h"
 #import "ErrorFactory.h"
 
 
@@ -36,17 +35,18 @@
 @implementation ChannelListDeserializer
 
 - (id)deserializeResponse:(NSData *)body error:(NSError **)error {
-    NSString *json = [[NSString alloc] initWithData:body encoding:NSUTF8StringEncoding];
-    id streamsDictionary = [json JSONValue];
-    [json release];
+    id dictionary =  [NSJSONSerialization JSONObjectWithData:body options:0 error:error];
     
-    if (streamsDictionary == nil && error != NULL) {
-        *error = [ErrorFactory errorWithLocalizedDescription:NSLocalizedString(@"ParsingFailed", nil)];
+    if (dictionary == nil) {
+        if (error != NULL) {
+            *error = [ErrorFactory errorWithLocalizedDescription:NSLocalizedString(@"ParsingFailed", nil)];
+        }
+
         return nil;
     }
 
-    NSDictionary *arrayDictionary = [streamsDictionary objectForKey:@"streams"];
-    NSArray *channelArray = [arrayDictionary objectForKey:@"channel"];
+    NSDictionary *streamsDictionary = [dictionary objectForKey:@"streams"];
+    NSArray *channelArray = [streamsDictionary objectForKey:@"channel"];
 
     NSMutableArray *channels = [[[NSMutableArray alloc] init] autorelease];
     

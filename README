@@ -17,7 +17,6 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>
 
 Third party code/libraries used in this project:
-json-framework (https://github.com/stig/json-framework) 
 OCMock (http://ocmock.org/)
 OCHamcrest (2011 hamcrest.org, https://github.com/jonreid/OCHamcrest)
 

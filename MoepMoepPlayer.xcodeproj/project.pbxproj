@@ -17,8 +17,6 @@
 		61E069FA3A11768DD7DEEBF9 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E069FA3A11768DD7DEEBF8 /* PlayerViewController.m */; };
 		61E069FA3A11768DD7DEEC13 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E069FA3A11768DD7DEEC12 /* AVFoundation.framework */; };
 		652770E814FD897400EBA085 /* moepmoepapp.png in Resources */ = {isa = PBXBuildFile; fileRef = 652770E714FD897400EBA085 /* moepmoepapp.png */; };
-		653A6DA6150ADB090013F952 /* libsbjson-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6597645A14FEB33B00473A39 /* libsbjson-ios.a */; };
-		653A6DA7150ADB120013F952 /* libsbjson-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6597645A14FEB33B00473A39 /* libsbjson-ios.a */; };
 		6554915D14FD7B7B0013947F /* wbb3-header-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6554915C14FD7B7B0013947F /* wbb3-header-logo.png */; };
 		6558AEA614FD948600378967 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6558AEA514FD948600378967 /* ChatViewController.m */; };
 		6570BF4914FEBA88008C3C52 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E069FA3A11768DD7DEEC03 /* SenTestingKit.framework */; };
@@ -70,13 +68,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6570BF5914FEBABE008C3C52 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6597644B14FEB33A00473A39 /* SBJson.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = BCC2626813920FC7003D9994;
-			remoteInfo = "sbjson-ios";
-		};
 		6570BF5B14FEBAC4008C3C52 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6597645E14FEB35500473A39 /* OCMock.xcodeproj */;
@@ -90,34 +81,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 61E069FA3A11768DD7DEEBDA;
 			remoteInfo = MoepMoepStreamer;
-		};
-		6597645514FEB33B00473A39 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6597644B14FEB33A00473A39 /* SBJson.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BC12323D1391D5CC00131607;
-			remoteInfo = SBJson;
-		};
-		6597645714FEB33B00473A39 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6597644B14FEB33A00473A39 /* SBJson.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BC1232521391D5CC00131607;
-			remoteInfo = SBJsonTests;
-		};
-		6597645914FEB33B00473A39 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6597644B14FEB33A00473A39 /* SBJson.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BCC2626913920FC7003D9994;
-			remoteInfo = "sbjson-ios";
-		};
-		6597645B14FEB33B00473A39 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6597644B14FEB33A00473A39 /* SBJson.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BCC2627313920FC7003D9994;
-			remoteInfo = "sbjson-iosTests";
 		};
 		6597646714FEB35600473A39 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -139,13 +102,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = 030EF0DC14632FF700B04273;
 			remoteInfo = OCMockLib;
-		};
-		65E9E736150546B6007007F2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6597644B14FEB33A00473A39 /* SBJson.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = BCC2626813920FC7003D9994;
-			remoteInfo = "sbjson-ios";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -175,7 +131,6 @@
 		6570BF5514FEBA88008C3C52 /* MoepMoepPlayerTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MoepMoepPlayerTests-Prefix.pch"; sourceTree = "<group>"; };
 		6570BF5F14FEBAE1008C3C52 /* libochamcrest.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libochamcrest.a; path = "Libs/OCHamcrest/Source/build/Release-iphonesimulator/libochamcrest.a"; sourceTree = "<group>"; };
 		65820BE11502EE2700A93BB5 /* OCHamcrestIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrestIOS.framework; path = Libs/OCHamcrest/Source/build/Release/OCHamcrestIOS.framework; sourceTree = "<group>"; };
-		6597644B14FEB33A00473A39 /* SBJson.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SBJson.xcodeproj; path = Libs/JSON/SBJson.xcodeproj; sourceTree = "<group>"; };
 		6597645E14FEB35500473A39 /* OCMock.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OCMock.xcodeproj; path = Libs/OCMock/Source/OCMock.xcodeproj; sourceTree = "<group>"; };
 		6597646C14FEB35600473A3D /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		6597646C14FEB35600473A3E /* PlayerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerDelegate.h; sourceTree = "<group>"; };
@@ -244,7 +199,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				653A6DA6150ADB090013F952 /* libsbjson-ios.a in Frameworks */,
 				61E069FA3A11768DD7DEEBE3 /* UIKit.framework in Frameworks */,
 				61E069FA3A11768DD7DEEBE5 /* Foundation.framework in Frameworks */,
 				61E069FA3A11768DD7DEEBE7 /* CoreGraphics.framework in Frameworks */,
@@ -257,7 +211,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				653A6DA7150ADB120013F952 /* libsbjson-ios.a in Frameworks */,
 				65820C431502F34F00A93BB5 /* libOCMock.a in Frameworks */,
 				65820BE21502EE2700A93BB5 /* OCHamcrestIOS.framework in Frameworks */,
 				6570BF4914FEBA88008C3C52 /* SenTestingKit.framework in Frameworks */,
@@ -376,17 +329,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		6597644C14FEB33A00473A39 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6597645614FEB33B00473A39 /* SBJson.framework */,
-				6597645814FEB33B00473A39 /* SBJsonTests.octest */,
-				6597645A14FEB33B00473A39 /* libsbjson-ios.a */,
-				6597645C14FEB33B00473A39 /* sbjson-iosTests.octest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		6597645F14FEB35500473A39 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -494,7 +436,6 @@
 			isa = PBXGroup;
 			children = (
 				6597645E14FEB35500473A39 /* OCMock.xcodeproj */,
-				6597644B14FEB33A00473A39 /* SBJson.xcodeproj */,
 			);
 			name = "Third Party";
 			sourceTree = "<group>";
@@ -542,7 +483,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				65E9E737150546B6007007F2 /* PBXTargetDependency */,
 			);
 			name = MoepMoepPlayer;
 			productName = StreamTest;
@@ -563,7 +503,6 @@
 			dependencies = (
 				6570BF5E14FEBAC9008C3C52 /* PBXTargetDependency */,
 				6570BF5C14FEBAC4008C3C52 /* PBXTargetDependency */,
-				6570BF5A14FEBABE008C3C52 /* PBXTargetDependency */,
 			);
 			name = MoepMoepPlayerTests;
 			productName = MoepMoepStreamerTests;
@@ -590,10 +529,6 @@
 					ProductGroup = 6597645F14FEB35500473A39 /* Products */;
 					ProjectRef = 6597645E14FEB35500473A39 /* OCMock.xcodeproj */;
 				},
-				{
-					ProductGroup = 6597644C14FEB33A00473A39 /* Products */;
-					ProjectRef = 6597644B14FEB33A00473A39 /* SBJson.xcodeproj */;
-				},
 			);
 			projectRoot = "";
 			targets = (
@@ -604,34 +539,6 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		6597645614FEB33B00473A39 /* SBJson.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SBJson.framework;
-			remoteRef = 6597645514FEB33B00473A39 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6597645814FEB33B00473A39 /* SBJsonTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = SBJsonTests.octest;
-			remoteRef = 6597645714FEB33B00473A39 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6597645A14FEB33B00473A39 /* libsbjson-ios.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libsbjson-ios.a";
-			remoteRef = 6597645914FEB33B00473A39 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6597645C14FEB33B00473A39 /* sbjson-iosTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "sbjson-iosTests.octest";
-			remoteRef = 6597645B14FEB33B00473A39 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		6597646814FEB35600473A39 /* OCMock.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -767,11 +674,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		6570BF5A14FEBABE008C3C52 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "sbjson-ios";
-			targetProxy = 6570BF5914FEBABE008C3C52 /* PBXContainerItemProxy */;
-		};
 		6570BF5C14FEBAC4008C3C52 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = OCMockLib;
@@ -781,11 +683,6 @@
 			isa = PBXTargetDependency;
 			target = 61E069FA3A11768DD7DEEBDA /* MoepMoepPlayer */;
 			targetProxy = 6570BF5D14FEBAC9008C3C52 /* PBXContainerItemProxy */;
-		};
-		65E9E737150546B6007007F2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "sbjson-ios";
-			targetProxy = 65E9E736150546B6007007F2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -874,7 +771,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MoepMoepPlayer/MoepMoepPlayer-Prefix.pch";
-				HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Libs/JSON\"/**";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "MoepMoepPlayer/MoepMoepPlayer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = MoepMoepPlayer;
@@ -888,7 +785,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MoepMoepPlayer/MoepMoepPlayer-Prefix.pch";
-				HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Libs/JSON\"/**";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "MoepMoepPlayer/MoepMoepPlayer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = MoepMoepPlayer;
@@ -907,10 +804,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MoepMoepPlayerTests/MoepMoepPlayerTests-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"\"${PROJECT_DIR}/Libs/OCMock/Headers\"",
-					"\"${PROJECT_DIR}/Libs/JSON\"/**",
-				);
+				HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Libs/OCMock/Headers\"";
 				INFOPLIST_FILE = "MoepMoepPlayerTests/MoepMoepPlayerTests-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -935,10 +829,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MoepMoepPlayerTests/MoepMoepPlayerTests-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"\"${PROJECT_DIR}/Libs/OCMock/Headers\"",
-					"\"${PROJECT_DIR}/Libs/JSON\"/**",
-				);
+				HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Libs/OCMock/Headers\"";
 				INFOPLIST_FILE = "MoepMoepPlayerTests/MoepMoepPlayerTests-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
