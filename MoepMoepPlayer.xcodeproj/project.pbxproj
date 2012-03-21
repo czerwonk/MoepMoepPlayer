@@ -19,6 +19,8 @@
 		652770E814FD897400EBA085 /* moepmoepapp.png in Resources */ = {isa = PBXBuildFile; fileRef = 652770E714FD897400EBA085 /* moepmoepapp.png */; };
 		6554915D14FD7B7B0013947F /* wbb3-header-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6554915C14FD7B7B0013947F /* wbb3-header-logo.png */; };
 		6558AEA614FD948600378967 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6558AEA514FD948600378967 /* ChatViewController.m */; };
+		6566C8831519103000CF24D2 /* TweetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6566C8821519103000CF24D2 /* TweetTableViewCell.xib */; };
+		6566C8A715191A2F00CF24D2 /* 23-bird.png in Resources */ = {isa = PBXBuildFile; fileRef = 6566C8A615191A2F00CF24D2 /* 23-bird.png */; };
 		6570BF4914FEBA88008C3C52 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E069FA3A11768DD7DEEC03 /* SenTestingKit.framework */; };
 		6570BF4A14FEBA88008C3C52 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E069FA3A11768DD7DEEBE2 /* UIKit.framework */; };
 		6570BF4B14FEBA88008C3C52 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E069FA3A11768DD7DEEBE4 /* Foundation.framework */; };
@@ -65,6 +67,12 @@
 		65E9E737150546B60070081B /* streams_test.json in Resources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B60070081A /* streams_test.json */; };
 		65E9E737150546B60070081D /* ErrorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B60070081C /* ErrorFactory.m */; };
 		65E9E737150546B60070081E /* ErrorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B60070081C /* ErrorFactory.m */; };
+		65E9E737150546B600700822 /* TweetTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B600700821 /* TweetTableViewCell.m */; };
+		65E9E737150546B600700825 /* TweetsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B600700824 /* TweetsTableViewController.m */; };
+		65E9E737150546B60070082A /* TweetsDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B600700829 /* TweetsDeserializer.m */; };
+		65E9E737150546B60070082B /* TweetsDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B600700829 /* TweetsDeserializer.m */; };
+		65E9E737150546B60070082E /* TweetsInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B60070082D /* TweetsInteractor.m */; };
+		65E9E737150546B60070082F /* TweetsInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B60070082D /* TweetsInteractor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +133,8 @@
 		6554915C14FD7B7B0013947F /* wbb3-header-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wbb3-header-logo.png"; sourceTree = "<group>"; };
 		6558AEA414FD948600378967 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
 		6558AEA514FD948600378967 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		6566C8821519103000CF24D2 /* TweetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TweetTableViewCell.xib; sourceTree = "<group>"; };
+		6566C8A615191A2F00CF24D2 /* 23-bird.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "23-bird.png"; sourceTree = "<group>"; };
 		6570BF4814FEBA88008C3C52 /* MoepMoepPlayerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoepMoepPlayerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6570BF4E14FEBA88008C3C52 /* MoepMoepPlayerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MoepMoepPlayerTests-Info.plist"; sourceTree = "<group>"; };
 		6570BF5014FEBA88008C3C52 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -192,6 +202,16 @@
 		65E9E737150546B60070081A /* streams_test.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; path = streams_test.json; sourceTree = "<group>"; };
 		65E9E737150546B60070081C /* ErrorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorFactory.m; sourceTree = "<group>"; };
 		65E9E737150546B60070081F /* ErrorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorFactory.h; sourceTree = "<group>"; };
+		65E9E737150546B600700821 /* TweetTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetTableViewCell.m; sourceTree = "<group>"; };
+		65E9E737150546B600700823 /* TweetTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetTableViewCell.h; sourceTree = "<group>"; };
+		65E9E737150546B600700824 /* TweetsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetsTableViewController.m; sourceTree = "<group>"; };
+		65E9E737150546B600700826 /* TweetsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetsTableViewController.h; sourceTree = "<group>"; };
+		65E9E737150546B600700827 /* TweetsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetsView.h; sourceTree = "<group>"; };
+		65E9E737150546B600700828 /* TweetsViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetsViewDelegate.h; sourceTree = "<group>"; };
+		65E9E737150546B600700829 /* TweetsDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetsDeserializer.m; sourceTree = "<group>"; };
+		65E9E737150546B60070082C /* TweetsDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetsDeserializer.h; sourceTree = "<group>"; };
+		65E9E737150546B60070082D /* TweetsInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetsInteractor.m; sourceTree = "<group>"; };
+		65E9E737150546B600700830 /* TweetsInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetsInteractor.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,6 +295,7 @@
 				6597646C14FEB35600473A3B /* Timetable */,
 				6597646C14FEB35600473A3C /* Chat */,
 				6597646C14FEB35600473A67 /* Infrastructure */,
+				65E9E737150546B600700820 /* Twitter */,
 			);
 			path = MoepMoepPlayer;
 			sourceTree = "<group>";
@@ -294,6 +315,7 @@
 		6554915D14FD7B7B00139480 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6566C8A615191A2F00CF24D2 /* 23-bird.png */,
 				6597646C14FEB35600473A4C /* ShowTableViewCell.xib */,
 				61E069FA3A11768DD7DEEBF5 /* MainStoryboard.storyboard */,
 				652770E714FD897400EBA085 /* moepmoepapp.png */,
@@ -302,6 +324,7 @@
 				6597646C14FEB35600473A46 /* 194-note-2.png */,
 				6597646C14FEB35600473A44 /* 09-chat-2.png */,
 				6554915C14FD7B7B0013947F /* wbb3-header-logo.png */,
+				6566C8821519103000CF24D2 /* TweetTableViewCell.xib */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -468,6 +491,23 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		65E9E737150546B600700820 /* Twitter */ = {
+			isa = PBXGroup;
+			children = (
+				65E9E737150546B600700830 /* TweetsInteractor.h */,
+				65E9E737150546B60070082D /* TweetsInteractor.m */,
+				65E9E737150546B60070082C /* TweetsDeserializer.h */,
+				65E9E737150546B600700829 /* TweetsDeserializer.m */,
+				65E9E737150546B600700828 /* TweetsViewDelegate.h */,
+				65E9E737150546B600700827 /* TweetsView.h */,
+				65E9E737150546B600700826 /* TweetsTableViewController.h */,
+				65E9E737150546B600700824 /* TweetsTableViewController.m */,
+				65E9E737150546B600700823 /* TweetTableViewCell.h */,
+				65E9E737150546B600700821 /* TweetTableViewCell.m */,
+			);
+			path = Twitter;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -578,6 +618,8 @@
 				6597646C14FEB35600473A4D /* ShowTableViewCell.xib in Resources */,
 				6597646C14FEB35600473A77 /* Localizable.strings in Resources */,
 				65AB6D93150D41CF002C9404 /* Settings.bundle in Resources */,
+				6566C8831519103000CF24D2 /* TweetTableViewCell.xib in Resources */,
+				6566C8A715191A2F00CF24D2 /* 23-bird.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -646,6 +688,10 @@
 				65E9E737150546B60070080F /* HttpGetDataRetriever.m in Sources */,
 				65E9E737150546B600700813 /* ChannelListDeserializer.m in Sources */,
 				65E9E737150546B60070081D /* ErrorFactory.m in Sources */,
+				65E9E737150546B600700822 /* TweetTableViewCell.m in Sources */,
+				65E9E737150546B600700825 /* TweetsTableViewController.m in Sources */,
+				65E9E737150546B60070082A /* TweetsDeserializer.m in Sources */,
+				65E9E737150546B60070082E /* TweetsInteractor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -668,6 +714,8 @@
 				65E9E737150546B600700814 /* ChannelListDeserializer.m in Sources */,
 				65E9E737150546B600700817 /* ChannelListDeserializerTest.m in Sources */,
 				65E9E737150546B60070081E /* ErrorFactory.m in Sources */,
+				65E9E737150546B60070082B /* TweetsDeserializer.m in Sources */,
+				65E9E737150546B60070082F /* TweetsInteractor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
