@@ -35,9 +35,12 @@
 @implementation ChannelListDeserializer
 
 - (id)deserializeResponse:(NSData *)body error:(NSError **)error {
-    id dictionary =  [NSJSONSerialization JSONObjectWithData:body options:0 error:error];
+    NSError *theError = nil;
+    id dictionary =  [NSJSONSerialization JSONObjectWithData:body options:0 error:&theError];
     
     if (dictionary == nil) {
+        NSLog(@"Error parsing channels: %@", theError.localizedDescription);
+
         if (error != NULL) {
             *error = [ErrorFactory errorWithLocalizedDescription:NSLocalizedString(@"ParsingFailed", nil)];
         }
