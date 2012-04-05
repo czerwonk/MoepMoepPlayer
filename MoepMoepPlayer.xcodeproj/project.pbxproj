@@ -73,6 +73,10 @@
 		65E9E737150546B60070082B /* TweetsDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B600700829 /* TweetsDeserializer.m */; };
 		65E9E737150546B60070082E /* TweetsInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B60070082D /* TweetsInteractor.m */; };
 		65E9E737150546B60070082F /* TweetsInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B60070082D /* TweetsInteractor.m */; };
+		65E9E737150546B600700832 /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B600700831 /* Tweet.m */; };
+		65E9E737150546B600700833 /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B600700831 /* Tweet.m */; };
+		65E9E737150546B600700836 /* twitter.json in Resources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B600700835 /* twitter.json */; };
+		65E9E737150546B600700839 /* TweetsDeserializerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B600700838 /* TweetsDeserializerTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -212,6 +216,11 @@
 		65E9E737150546B60070082C /* TweetsDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetsDeserializer.h; sourceTree = "<group>"; };
 		65E9E737150546B60070082D /* TweetsInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetsInteractor.m; sourceTree = "<group>"; };
 		65E9E737150546B600700830 /* TweetsInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetsInteractor.h; sourceTree = "<group>"; };
+		65E9E737150546B600700831 /* Tweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tweet.m; sourceTree = "<group>"; };
+		65E9E737150546B600700834 /* Tweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tweet.h; sourceTree = "<group>"; };
+		65E9E737150546B600700835 /* twitter.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; path = twitter.json; sourceTree = "<group>"; };
+		65E9E737150546B600700838 /* TweetsDeserializerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetsDeserializerTest.m; sourceTree = "<group>"; };
+		65E9E737150546B60070083A /* TweetsDeserializerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetsDeserializerTest.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -338,6 +347,7 @@
 				6597646C14FEB35600473A78 /* Timetable */,
 				65E9E737150546B600700804 /* Player */,
 				65E9E737150546B600700819 /* Resources */,
+				65E9E737150546B600700837 /* Twitter */,
 			);
 			path = MoepMoepPlayerTests;
 			sourceTree = "<group>";
@@ -486,6 +496,7 @@
 		65E9E737150546B600700819 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				65E9E737150546B600700835 /* twitter.json */,
 				65E9E737150546B60070081A /* streams_test.json */,
 			);
 			path = Resources;
@@ -494,6 +505,8 @@
 		65E9E737150546B600700820 /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
+				65E9E737150546B600700834 /* Tweet.h */,
+				65E9E737150546B600700831 /* Tweet.m */,
 				65E9E737150546B600700830 /* TweetsInteractor.h */,
 				65E9E737150546B60070082D /* TweetsInteractor.m */,
 				65E9E737150546B60070082C /* TweetsDeserializer.h */,
@@ -504,6 +517,15 @@
 				65E9E737150546B600700824 /* TweetsTableViewController.m */,
 				65E9E737150546B600700823 /* TweetTableViewCell.h */,
 				65E9E737150546B600700821 /* TweetTableViewCell.m */,
+			);
+			path = Twitter;
+			sourceTree = "<group>";
+		};
+		65E9E737150546B600700837 /* Twitter */ = {
+			isa = PBXGroup;
+			children = (
+				65E9E737150546B60070083A /* TweetsDeserializerTest.h */,
+				65E9E737150546B600700838 /* TweetsDeserializerTest.m */,
 			);
 			path = Twitter;
 			sourceTree = "<group>";
@@ -629,6 +651,7 @@
 			files = (
 				6570BF5114FEBA88008C3C52 /* InfoPlist.strings in Resources */,
 				65E9E737150546B60070081B /* streams_test.json in Resources */,
+				65E9E737150546B600700836 /* twitter.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -692,6 +715,7 @@
 				65E9E737150546B600700825 /* TweetsTableViewController.m in Sources */,
 				65E9E737150546B60070082A /* TweetsDeserializer.m in Sources */,
 				65E9E737150546B60070082E /* TweetsInteractor.m in Sources */,
+				65E9E737150546B600700832 /* Tweet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -716,6 +740,8 @@
 				65E9E737150546B60070081E /* ErrorFactory.m in Sources */,
 				65E9E737150546B60070082B /* TweetsDeserializer.m in Sources */,
 				65E9E737150546B60070082F /* TweetsInteractor.m in Sources */,
+				65E9E737150546B600700833 /* Tweet.m in Sources */,
+				65E9E737150546B600700839 /* TweetsDeserializerTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

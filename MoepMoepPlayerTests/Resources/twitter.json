@@ -1,0 +1,60 @@
+{
+    "completed_in":0.126,
+    "max_id":0,
+    "max_id_str":"0",
+    "next_page":"?page=2&max_id=0&q=from%3Amoepmoeporg%20OR%20moepmoep%20OR%20%40moepmoeporg&rpp=20",
+    "page":1,
+    "query":"from%3Amoepmoeporg+OR+moepmoep+OR+%40moepmoeporg",
+    "results":
+    [
+        {
+            "created_at":"Thu, 05 Apr 2012 18:55:47 +0000",
+            "from_user":"Netzgespraeche",
+            "from_user_id":493804026,
+            "from_user_id_str":"493804026",
+            "from_user_name":"Netzgespr\u00e4che",
+            "geo":null,
+            "id":187976845323550720,
+            "id_str":"187976845323550720",
+            "iso_language_code":"de",
+            "metadata":
+            {
+                "result_type":"recent"
+            },
+            "profile_image_url":"http:\/\/a0.twimg.com\/profile_images\/1861898579\/podlogo_small_t_normal.png",
+            "profile_image_url_https":"https:\/\/si0.twimg.com\/profile_images\/1861898579\/podlogo_small_t_normal.png",
+            "source":"&lt;a href=&quot;http:\/\/www.tweetdeck.com&quot; rel=&quot;nofollow&quot;&gt;TweetDeck&lt;\/a&gt;",
+            "text":"RT @Witzman Netzgespr\u00e4che gleich live: Stream http:\/\/t.co\/EIpfGWDO http:\/\/t.co\/EfczG2Dj #Podcast #live #moepmoep",
+            "to_user":null,
+            "to_user_id":null,
+            "to_user_id_str":null,
+            "to_user_name":null
+        },
+        {
+            "created_at":"Thu, 05 Apr 2012 18:54:23 +0000",
+            "from_user":"moepmoep",
+            "from_user_id":70698817,
+            "from_user_id_str":"70698817",
+            "from_user_name":"andi heimann",
+            "geo":null,
+            "id":187976493098467329,
+            "id_str":"187976493098467329",
+            "iso_language_code":"de",
+            "metadata":
+            {
+                "result_type":"recent"
+            },
+            "profile_image_url":"http:\/\/a0.twimg.com\/profile_images\/422108218\/logo_kreis_weiss_unten_links_normal.png",
+            "profile_image_url_https":"https:\/\/si0.twimg.com\/profile_images\/422108218\/moepmoep.png",
+            "source":"&lt;a href=&quot;http:\/\/twitter.com\/#!\/download\/iphone&quot; rel=&quot;nofollow&quot;&gt;Twitter for iPhone&lt;\/a&gt;",
+            "text":"Test-Tweet",
+            "to_user":null,
+            "to_user_id":null,
+            "to_user_id_str":null,
+            "to_user_name":null
+        }
+    ],
+    "results_per_page":2,
+    "since_id":0,
+    "since_id_str":"0"
+}
