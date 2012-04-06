@@ -18,32 +18,57 @@
 //
 
 #import "TweetsInteractor.h"
-#import "DataRetriever.h"
-#import "TweetsView.h"
 
 
 @implementation TweetsInteractor
 
-@synthesize dataRetriever;
-@synthesize view;
+- (id<DataRetriever>)dataRetriever {
+    return dataRetriever;
+}
+
+- (void)setDataRetriever:(id<DataRetriever>)retriever {
+    [dataRetriever release];
+    dataRetriever = [retriever retain];
+
+    dataRetriever.delegate = self;
+}
+
+- (id<TweetsView>)view {
+    return view;
+}
+
+- (void)setView:(id<TweetsView>)aView {
+    [view release];
+    view = [aView retain];
+
+    view.viewDelegate = self;
+}
 
 - (void)refreshTweets {
-
+    [dataRetriever retrieveDataAsynchronous];
 }
 
-- (void)retriever:(id <DataRetriever>)retriever retrievedData:(id)object {
-
+- (void)retriever:(id<DataRetriever>)retriever retrievedData:(id)object {
+    if (retriever == dataRetriever) {
+        [self executeInMainThread:^{
+            [view setTweets:(NSArray *)object];
+        }];
+    }
 }
 
-- (void)retriever:(id <DataRetriever>)retriever failedRetrievingData:(NSError *)error {
-
+- (void)retriever:(id<DataRetriever>)retriever failedRetrievingData:(NSError *)error {
+    if (retriever == dataRetriever) {
+        [self executeInMainThread:^{
+            [view showErrorWithMessage:error.localizedDescription];
+        }];
+    }
 }
 
 - (void)dealloc {
     [super dealloc];
 
-    [view release];
     [dataRetriever release];
+    [view release];
 }
 
 @end

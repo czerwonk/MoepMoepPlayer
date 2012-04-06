@@ -18,20 +18,21 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DataRetriever.h"
-#import "TweetsView.h"
-#import "InteractorBase.h"
+#import "Test.h"
 
 
-@interface TweetsInteractor : InteractorBase<DataRetrieverDelegate, TweetsViewDelegate> {
-    @private
-    id<DataRetriever> dataRetriever;
-    id<TweetsView> view;
+@interface TweetsInteractorTest : Test {
+
 }
 
-@property (nonatomic, retain) id<DataRetriever> dataRetriever;
-@property (nonatomic, retain) id<TweetsView> view;
+- (void)testShouldSetDelegateOfView;
 
-- (void)refreshTweets;
+- (void)testShouldSetDelegateOfDataRetriever;
+
+- (void)testShouldNotifyViewOnError;
+
+- (void)testShouldSetTweetsToViewAfterRetrieving;
+
+- (void)testShouldRetrieveDataOnRefresh;
 
 @end

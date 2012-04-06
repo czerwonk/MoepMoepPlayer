@@ -77,6 +77,7 @@
 		65E9E737150546B600700833 /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B600700831 /* Tweet.m */; };
 		65E9E737150546B600700836 /* twitter.json in Resources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B600700835 /* twitter.json */; };
 		65E9E737150546B600700839 /* TweetsDeserializerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B600700838 /* TweetsDeserializerTest.m */; };
+		65E9E737150546B60070083C /* TweetsInteractorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B60070083B /* TweetsInteractorTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -221,6 +222,8 @@
 		65E9E737150546B600700835 /* twitter.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; path = twitter.json; sourceTree = "<group>"; };
 		65E9E737150546B600700838 /* TweetsDeserializerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetsDeserializerTest.m; sourceTree = "<group>"; };
 		65E9E737150546B60070083A /* TweetsDeserializerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetsDeserializerTest.h; sourceTree = "<group>"; };
+		65E9E737150546B60070083B /* TweetsInteractorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetsInteractorTest.m; sourceTree = "<group>"; };
+		65E9E737150546B60070083D /* TweetsInteractorTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetsInteractorTest.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -524,6 +527,8 @@
 		65E9E737150546B600700837 /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
+				65E9E737150546B60070083D /* TweetsInteractorTest.h */,
+				65E9E737150546B60070083B /* TweetsInteractorTest.m */,
 				65E9E737150546B60070083A /* TweetsDeserializerTest.h */,
 				65E9E737150546B600700838 /* TweetsDeserializerTest.m */,
 			);
@@ -742,6 +747,7 @@
 				65E9E737150546B60070082F /* TweetsInteractor.m in Sources */,
 				65E9E737150546B600700833 /* Tweet.m in Sources */,
 				65E9E737150546B600700839 /* TweetsDeserializerTest.m in Sources */,
+				65E9E737150546B60070083C /* TweetsInteractorTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -889,6 +895,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = MoepMoepPlayerTests;
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Libs/OCMock/Source/**";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
@@ -914,7 +921,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = MoepMoepPlayerTests;
-				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Libs/JSON/**";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Libs/JSON/** \"${PROJECT_DIR}/Libs/OCMock/Source/**";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
