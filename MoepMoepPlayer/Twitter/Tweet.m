@@ -31,9 +31,9 @@
 - (void)dealloc {
     [super dealloc];
 
+    [date release];
     [from release];
     [text release];
-    [date release];
     [url release];
     [imageUrl release];
 }

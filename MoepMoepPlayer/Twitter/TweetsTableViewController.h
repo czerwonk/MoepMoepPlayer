@@ -23,7 +23,8 @@
 
 
 @interface TweetsTableViewController : BaseViewController<ViewWithDataSource, UITableViewDelegate, UITableViewDataSource> {
-
+    @private
+    NSMutableArray *tweets;
 }
 
 @property (nonatomic, retain) IBOutlet UITableView *table;

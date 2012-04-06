@@ -3,7 +3,7 @@
     <dependencies>
         <deployment version="1280" defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1179"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
     </dependencies>
     <scenes>
         <!--Timetable Table View Controller - Sendeplan-->
@@ -140,8 +140,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <connections>
-                            <outlet property="dataSource" destination="zz5-I6-fnB" id="rlo-aA-miF"/>
-                            <outlet property="delegate" destination="zz5-I6-fnB" id="Mmh-6f-eQH"/>
+                            <outlet property="dataSource" destination="zz5-I6-fnB" id="ISd-eg-CjA"/>
+                            <outlet property="delegate" destination="zz5-I6-fnB" id="XpD-4f-Toi"/>
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Tweets" image="23-bird.png" id="A9f-gt-c1V"/>

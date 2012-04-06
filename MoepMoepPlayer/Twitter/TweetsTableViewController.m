@@ -18,6 +18,7 @@
 //
 
 #import "TweetsTableViewController.h"
+#import "Tweet.h"
 
 
 @implementation TweetsTableViewController
@@ -28,11 +29,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    tweets = [[NSMutableArray alloc] init];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+
+    [self startActivityViewWithText:NSLocalizedString(@"Loading", nil)];
     [viewDelegate reloadDataSource];
 }
 
-- (void)updateDataSource:(NSArray *)tweets {
+- (void)updateDataSource:(NSArray *)tweetsToShow {
     [self stopActivityView];
+    [self refreshTableWithTweets:tweetsToShow];
+}
+
+- (void)refreshTableWithTweets:(NSArray *)tweetsToShow {
+    [tweets removeAllObjects];
+    [tweets addObjectsFromArray:tweetsToShow];
+
+    [table reloadData];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -40,11 +56,27 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return tweets.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return nil;
+    Tweet *tweet = [tweets objectAtIndex:indexPath.row];
+
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TwitterCell"];
+
+    if (cell == nil) {
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"TwitterCell"] autorelease];
+        cell.textLabel.textColor = [UIColor whiteColor];
+    }
+
+    cell.textLabel.text = tweet.from;
+
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    Tweet *tweet = [tweets objectAtIndex:indexPath.row];
+    [[UIApplication sharedApplication] openURL:tweet.url];
 }
 
 - (void)dealloc {
@@ -52,6 +84,7 @@
 
     [table release];
     [viewDelegate release];
+    [tweets release];
 }
 
 @end

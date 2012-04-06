@@ -67,7 +67,7 @@
     tweet.from = [dictionary objectForKey:@"from_user"];
     tweet.text = [dictionary objectForKey:@"text"];
 
-    NSString *urlString = [NSString stringWithFormat:@"https://twitter.com/#!/%@/status/187976845323550720",
+    NSString *urlString = [NSString stringWithFormat:@"twitter://twitter.com/#!/%@/status/187976845323550720",
                                                      tweet.from, [dictionary objectForKey:@"id_str"]];
     tweet.url = [NSURL URLWithString:urlString];
 
