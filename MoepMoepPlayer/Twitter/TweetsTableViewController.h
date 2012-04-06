@@ -19,10 +19,10 @@
 
 #import <Foundation/Foundation.h>
 #import "BaseViewController.h"
-#import "TweetsView.h"
+#import "ViewWithDataSource.h"
 
 
-@interface TweetsTableViewController : BaseViewController<TweetsView, UITableViewDelegate, UITableViewDataSource> {
+@interface TweetsTableViewController : BaseViewController<ViewWithDataSource, UITableViewDelegate, UITableViewDataSource> {
 
 }
 

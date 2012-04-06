@@ -12,13 +12,25 @@
 //  but WITHOUT ANY WARRANTY; without even the implied warranty of
 //  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 //  GNU General Public License for more details.
-//
+//  
 //  You should have received a copy of the GNU General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>
 //
 
-@protocol TimetableViewDelegate<NSObject>
+#import <Foundation/Foundation.h>
+#import "InteractorBase.h"
+#import "ViewWithDataSourceDelegate.h"
+#import "DataRetrieverDelegate.h"
+#import "ViewWithDataSource.h"
 
-- (void)refreshTimetable;
+
+@interface InteractorWithSingleDataSource : InteractorBase<ViewWithDataSourceDelegate, DataRetrieverDelegate> {
+    @private
+    id<ViewWithDataSource> view;
+    id<DataRetriever> dataRetriever;
+}
+
+@property (nonatomic, retain) id<ViewWithDataSource> view;
+@property (nonatomic, retain) id<DataRetriever> dataRetriever;
 
 @end

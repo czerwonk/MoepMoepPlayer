@@ -18,12 +18,12 @@
 //
 
 #import "View.h"
-#import "TweetsViewDelegate.h"
+#import "ViewWithDataSourceDelegate.h"
 
-@protocol TweetsView<View>
+@protocol ViewWithDataSource<View>
 
-@property (nonatomic, retain) id<TweetsViewDelegate> viewDelegate;
+- (void)updateDataSource:(id)dataSource;
 
-- (void)setTweets:(NSArray *)tweets;
+@property (nonatomic, retain) id<ViewWithDataSourceDelegate> viewDelegate;
 
 @end

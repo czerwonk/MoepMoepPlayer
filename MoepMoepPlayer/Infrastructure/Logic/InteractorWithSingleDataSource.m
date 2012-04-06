@@ -17,58 +17,53 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>
 //
 
-#import "TweetsInteractor.h"
+#import "InteractorWithSingleDataSource.h"
+#import "DataRetriever.h"
 
 
-@implementation TweetsInteractor
+@implementation InteractorWithSingleDataSource
 
-- (id<DataRetriever>)dataRetriever {
-    return dataRetriever;
-}
-
-- (void)setDataRetriever:(id<DataRetriever>)retriever {
-    [dataRetriever release];
-    dataRetriever = [retriever retain];
-
-    dataRetriever.delegate = self;
-}
-
-- (id<TweetsView>)view {
+- (id <ViewWithDataSource>)view {
     return view;
 }
 
-- (void)setView:(id<TweetsView>)aView {
+- (void)setView:(id <ViewWithDataSource>)aView {
     [view release];
     view = [aView retain];
-
     view.viewDelegate = self;
 }
 
-- (void)refreshTweets {
+- (id <DataRetriever>)dataRetriever {
+    return dataRetriever;
+}
+
+- (void)setDataRetriever:(id <DataRetriever>)aRetriever {
+    [dataRetriever release];
+    dataRetriever = [aRetriever retain];
+    dataRetriever.delegate = self;
+}
+
+- (void)reloadDataSource {
     [dataRetriever retrieveDataAsynchronous];
 }
 
-- (void)retriever:(id<DataRetriever>)retriever retrievedData:(id)object {
-    if (retriever == dataRetriever) {
-        [self executeInMainThread:^{
-            [view setTweets:(NSArray *)object];
-        }];
-    }
+- (void)retriever:(id <DataRetriever>)retriever retrievedData:(id)object {
+    [self executeInMainThread:^{
+        [view updateDataSource:object];
+    }];
 }
 
-- (void)retriever:(id<DataRetriever>)retriever failedRetrievingData:(NSError *)error {
-    if (retriever == dataRetriever) {
-        [self executeInMainThread:^{
-            [view showErrorWithMessage:error.localizedDescription];
-        }];
-    }
+- (void)retriever:(id <DataRetriever>)retriever failedRetrievingData:(NSError *)error {
+    [self executeInMainThread:^{
+        [view showErrorWithMessage:error.localizedDescription];
+    }];
 }
 
 - (void)dealloc {
     [super dealloc];
 
-    [dataRetriever release];
     [view release];
+    [dataRetriever release];
 }
 
 @end

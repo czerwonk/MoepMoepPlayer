@@ -25,8 +25,14 @@
 @synthesize table;
 @synthesize viewDelegate;
 
-- (void)setTweets:(NSArray *)tweets {
+- (void)viewDidLoad {
+    [super viewDidLoad];
 
+    [viewDelegate reloadDataSource];
+}
+
+- (void)updateDataSource:(NSArray *)tweets {
+    [self stopActivityView];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

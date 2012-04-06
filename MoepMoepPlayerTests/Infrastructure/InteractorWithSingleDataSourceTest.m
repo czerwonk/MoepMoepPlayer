@@ -17,16 +17,17 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>
 //
 
-#import <AVFoundation/AVFoundation.h>
-#import "TweetsInteractorTest.h"
-#import "TweetsInteractor.h"
+#import "InteractorWithSingleDataSourceTest.h"
+#import "InteractorWithSingleDataSource.h"
+#import "DataRetriever.h"
 
-@implementation TweetsInteractorTest
+
+@implementation InteractorWithSingleDataSourceTest
 
 - (void)testShouldSetDelegateOfView {
-    TweetsInteractor *interactor = [[[TweetsInteractor alloc] init] autorelease];
+    InteractorWithSingleDataSource *interactor = [[[InteractorWithSingleDataSource alloc] init] autorelease];
 
-    id<TweetsView> view = [OCMockObject mockForProtocol:@protocol(TweetsView)];
+    id<ViewWithDataSource> view = [OCMockObject mockForProtocol:@protocol(ViewWithDataSource)];
     [[view expect] setViewDelegate:interactor];
 
     interactor.view = view;
@@ -35,7 +36,7 @@
 }
 
 - (void)testShouldSetDelegateOfDataRetriever {
-    TweetsInteractor *interactor = [[[TweetsInteractor alloc] init] autorelease];
+    InteractorWithSingleDataSource *interactor = [[[InteractorWithSingleDataSource alloc] init] autorelease];
 
     id<DataRetriever> retriever = [OCMockObject mockForProtocol:@protocol(DataRetriever)];
     [[retriever expect] setDelegate:interactor];
@@ -49,10 +50,10 @@
     NSError *error = [OCMockObject mockForClass:[NSError class]];
     [[[error stub] andReturn:@"Test"] localizedDescription];
 
-    id<TweetsView> view = [OCMockObject niceMockForProtocol:@protocol(TweetsView)];
+    id<ViewWithDataSource> view = [OCMockObject niceMockForProtocol:@protocol(ViewWithDataSource)];
     [[view expect] showErrorWithMessage:error.localizedDescription];
 
-    TweetsInteractor *interactor = [[[TweetsInteractor alloc] init] autorelease];
+    InteractorWithSingleDataSource *interactor = [[[InteractorWithSingleDataSource alloc] init] autorelease];
     interactor.view = view;
 
     [interactor retriever:nil failedRetrievingData:error];
@@ -60,31 +61,31 @@
     [self verifyMockExpectations:view];
 }
 
-- (void)testShouldSetTweetsToViewAfterRetrieving {
+- (void)testShouldUpdateDataSourceToViewAfterRetrieving {
     id<DataRetriever> retriever = [OCMockObject niceMockForProtocol:@protocol(DataRetriever)];
 
-    NSArray *tweets = [[[NSArray alloc] init] autorelease];
+    NSArray *data = [[[NSArray alloc] init] autorelease];
 
-    id<TweetsView> view = [OCMockObject niceMockForProtocol:@protocol(TweetsView)];
-    [[view expect] setTweets:tweets];
+    id<ViewWithDataSource> view = [OCMockObject niceMockForProtocol:@protocol(ViewWithDataSource)];
+    [[view expect] updateDataSource:data];
 
-    TweetsInteractor *interactor = [[[TweetsInteractor alloc] init] autorelease];
+    InteractorWithSingleDataSource *interactor = [[[InteractorWithSingleDataSource alloc] init] autorelease];
     interactor.dataRetriever = retriever;
     interactor.view = view;
 
-    [interactor retriever:retriever retrievedData:tweets];
+    [interactor retriever:retriever retrievedData:data];
 
     [self verifyMockExpectations:view];
 }
 
-- (void)testShouldRetrieveDataOnRefresh {
+- (void)testShouldRetrieveDataOnReload {
     id<DataRetriever> retriever = [OCMockObject niceMockForProtocol:@protocol(DataRetriever)];
     [[retriever expect] retrieveDataAsynchronous];
 
-    TweetsInteractor *interactor = [[[TweetsInteractor alloc] init] autorelease];
+    InteractorWithSingleDataSource *interactor = [[[InteractorWithSingleDataSource alloc] init] autorelease];
     interactor.dataRetriever = retriever;
 
-    [interactor refreshTweets];
+    [interactor reloadDataSource];
 
     [self verifyMockExpectations:retriever];
 }

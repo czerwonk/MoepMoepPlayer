@@ -18,13 +18,14 @@
 //
 
 #import "MainTabBarController.h"
-#import "TimetableInteractor.h"
 #import "TimetableDeserializer.h"
 #import "PlayerViewController.h"
 #import "PlayerInteractor.h"
 #import "HttpGetDataRetriever.h"
 #import "ChannelListDeserializer.h"
 #import "StreamPlayer.h"
+#import "InteractorWithSingleDataSource.h"
+#import "TweetsDeserializer.h"
 
 
 @interface MainTabBarController ()
@@ -32,6 +33,8 @@
 - (void)initializeTimetableView;
 
 - (void)initializePlayerView;
+
+- (void)initializeTweetsView;
 
 @end
 
@@ -42,6 +45,7 @@
 
     [self initializePlayerView];
     [self initializeTimetableView];
+    [self initializeTweetsView];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
@@ -56,11 +60,12 @@
     TimetableTableViewController *timetableViewController = [self.viewControllers objectAtIndex:1];
 
     TimetableDeserializer *deserializer = [[TimetableDeserializer alloc] init];
-    HttpGetDataRetriever *dataRetriever = [[HttpGetDataRetriever alloc] initWithUrl:@"http://www.moepmoep.org/streamerapp/sendeplan.txt"];
+    HttpGetDataRetriever *dataRetriever = [[HttpGetDataRetriever alloc] initWithUrl:@"https://www.moepmoep.org/streamerapp/sendeplan.txt"];
     dataRetriever.deserializer = deserializer;
     [deserializer release];
 
-    TimetableInteractor *interactor = [[TimetableInteractor alloc] initWithDataRetriever:dataRetriever];
+    InteractorWithSingleDataSource *interactor = [[InteractorWithSingleDataSource alloc] init];
+    interactor.dataRetriever = dataRetriever;
     interactor.view = timetableViewController;
     [dataRetriever release];
     [interactor release];
@@ -72,7 +77,7 @@
     PlayerInteractor *interactor = [[PlayerInteractor alloc] init];
     interactor.view = controller;
 
-    HttpGetDataRetriever *dataRetriever = [[HttpGetDataRetriever alloc] initWithUrl:@"http://www.moepmoep.org/streamerapp/api/0.3/channels/list.json"];
+    HttpGetDataRetriever *dataRetriever = [[HttpGetDataRetriever alloc] initWithUrl:@"https://www.moepmoep.org/streamerapp/api/0.3/channels/list.json"];
     ChannelListDeserializer *deserializer = [[ChannelListDeserializer alloc] init];
     dataRetriever.deserializer = deserializer;
     [deserializer release];
@@ -84,6 +89,22 @@
     interactor.player = player;
     [player release];
     
+    [interactor release];
+}
+
+- (void)initializeTweetsView {
+    TimetableTableViewController *timetableViewController = [self.viewControllers objectAtIndex:3];
+
+    TweetsDeserializer *deserializer = [[TweetsDeserializer alloc] init];
+    NSString *url = @"https://search.twitter.com/search.json?q=from:moepmoeporg%20OR%20moepmoep%20OR%20%40moepmoeporg&rpp=20&include_entities=false&result_type=recent&max_id=0";
+    HttpGetDataRetriever *dataRetriever = [[HttpGetDataRetriever alloc] initWithUrl:url];
+    dataRetriever.deserializer = deserializer;
+    [deserializer release];
+
+    InteractorWithSingleDataSource *interactor = [[InteractorWithSingleDataSource alloc] init];
+    interactor.dataRetriever = dataRetriever;
+    interactor.view = timetableViewController;
+    [dataRetriever release];
     [interactor release];
 }
 

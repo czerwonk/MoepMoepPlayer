@@ -65,10 +65,10 @@ static int ArraySundayIndex = 6;
 
 - (void)refreshTimetable {
     [self startActivityViewWithText:NSLocalizedString(@"Loading", nil)];
-    [self.viewDelegate refreshTimetable];
+    [self.viewDelegate reloadDataSource];
 }
 
-- (void)setTimetable:(Timetable *)timetable {
+- (void)updateDataSource:(Timetable *)timetable {
     [self stopActivityView];
     [self updateTableWithTimetable:timetable];
     [self scrollToCurrentWeekday];

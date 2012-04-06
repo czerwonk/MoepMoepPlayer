@@ -35,8 +35,6 @@
 		6597646C14FEB35600473A4B /* 01-refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A4A /* 01-refresh.png */; };
 		6597646C14FEB35600473A4D /* ShowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A4C /* ShowTableViewCell.xib */; };
 		6597646C14FEB35600473A52 /* TimetableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A51 /* TimetableTableViewController.m */; };
-		6597646C14FEB35600473A57 /* TimetableInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A56 /* TimetableInteractor.m */; };
-		6597646C14FEB35600473A58 /* TimetableInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A56 /* TimetableInteractor.m */; };
 		6597646C14FEB35600473A5C /* Timetable.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A5B /* Timetable.m */; };
 		6597646C14FEB35600473A5D /* Timetable.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A5B /* Timetable.m */; };
 		6597646C14FEB35600473A60 /* Show.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A5F /* Show.m */; };
@@ -45,7 +43,6 @@
 		6597646C14FEB35600473A73 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A72 /* BaseViewController.m */; };
 		6597646C14FEB35600473A74 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A72 /* BaseViewController.m */; };
 		6597646C14FEB35600473A77 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A76 /* Localizable.strings */; };
-		6597646C14FEB35600473A7A /* TimetableInteractorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A79 /* TimetableInteractorTest.m */; };
 		6597646C14FEB35600473A7D /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A7C /* Test.m */; };
 		6597646C14FEB35600473A83 /* ShowTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A82 /* ShowTableViewCell.m */; };
 		6597646C14FEB35600473A86 /* TimetableDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597646C14FEB35600473A85 /* TimetableDeserializer.m */; };
@@ -71,13 +68,13 @@
 		65E9E737150546B600700825 /* TweetsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B600700824 /* TweetsTableViewController.m */; };
 		65E9E737150546B60070082A /* TweetsDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B600700829 /* TweetsDeserializer.m */; };
 		65E9E737150546B60070082B /* TweetsDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B600700829 /* TweetsDeserializer.m */; };
-		65E9E737150546B60070082E /* TweetsInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B60070082D /* TweetsInteractor.m */; };
-		65E9E737150546B60070082F /* TweetsInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B60070082D /* TweetsInteractor.m */; };
 		65E9E737150546B600700832 /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B600700831 /* Tweet.m */; };
 		65E9E737150546B600700833 /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B600700831 /* Tweet.m */; };
 		65E9E737150546B600700836 /* twitter.json in Resources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B600700835 /* twitter.json */; };
 		65E9E737150546B600700839 /* TweetsDeserializerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B600700838 /* TweetsDeserializerTest.m */; };
-		65E9E737150546B60070083C /* TweetsInteractorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B60070083B /* TweetsInteractorTest.m */; };
+		65E9E737150546B600700841 /* InteractorWithSingleDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B600700840 /* InteractorWithSingleDataSource.m */; };
+		65E9E737150546B600700842 /* InteractorWithSingleDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B600700840 /* InteractorWithSingleDataSource.m */; };
+		65E9E737150546B600700846 /* InteractorWithSingleDataSourceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E737150546B600700845 /* InteractorWithSingleDataSourceTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -159,16 +156,12 @@
 		6597646C14FEB35600473A4C /* ShowTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowTableViewCell.xib; sourceTree = "<group>"; };
 		6597646C14FEB35600473A51 /* TimetableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimetableTableViewController.m; sourceTree = "<group>"; };
 		6597646C14FEB35600473A53 /* TimetableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimetableTableViewController.h; sourceTree = "<group>"; };
-		6597646C14FEB35600473A56 /* TimetableInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimetableInteractor.m; sourceTree = "<group>"; };
-		6597646C14FEB35600473A59 /* TimetableInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimetableInteractor.h; sourceTree = "<group>"; };
-		6597646C14FEB35600473A5A /* TimetableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimetableView.h; sourceTree = "<group>"; };
 		6597646C14FEB35600473A5B /* Timetable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Timetable.m; sourceTree = "<group>"; };
 		6597646C14FEB35600473A5E /* Timetable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timetable.h; sourceTree = "<group>"; };
 		6597646C14FEB35600473A5F /* Show.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Show.m; sourceTree = "<group>"; };
 		6597646C14FEB35600473A62 /* Show.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Show.h; sourceTree = "<group>"; };
 		6597646C14FEB35600473A63 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
 		6597646C14FEB35600473A65 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
-		6597646C14FEB35600473A66 /* TimetableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimetableViewDelegate.h; sourceTree = "<group>"; };
 		6597646C14FEB35600473A69 /* Deserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deserializer.h; sourceTree = "<group>"; };
 		6597646C14FEB35600473A6E /* DataRetriever.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataRetriever.h; sourceTree = "<group>"; };
 		6597646C14FEB35600473A6F /* DataRetrieverDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataRetrieverDelegate.h; sourceTree = "<group>"; };
@@ -176,8 +169,6 @@
 		6597646C14FEB35600473A72 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		6597646C14FEB35600473A75 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		6597646C14FEB35600473A76 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		6597646C14FEB35600473A79 /* TimetableInteractorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimetableInteractorTest.m; sourceTree = "<group>"; };
-		6597646C14FEB35600473A7B /* TimetableInteractorTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimetableInteractorTest.h; sourceTree = "<group>"; };
 		6597646C14FEB35600473A7C /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
 		6597646C14FEB35600473A7E /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
 		6597646C14FEB35600473A82 /* ShowTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowTableViewCell.m; sourceTree = "<group>"; };
@@ -211,19 +202,19 @@
 		65E9E737150546B600700823 /* TweetTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetTableViewCell.h; sourceTree = "<group>"; };
 		65E9E737150546B600700824 /* TweetsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetsTableViewController.m; sourceTree = "<group>"; };
 		65E9E737150546B600700826 /* TweetsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetsTableViewController.h; sourceTree = "<group>"; };
-		65E9E737150546B600700827 /* TweetsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetsView.h; sourceTree = "<group>"; };
-		65E9E737150546B600700828 /* TweetsViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetsViewDelegate.h; sourceTree = "<group>"; };
 		65E9E737150546B600700829 /* TweetsDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetsDeserializer.m; sourceTree = "<group>"; };
 		65E9E737150546B60070082C /* TweetsDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetsDeserializer.h; sourceTree = "<group>"; };
-		65E9E737150546B60070082D /* TweetsInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetsInteractor.m; sourceTree = "<group>"; };
-		65E9E737150546B600700830 /* TweetsInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetsInteractor.h; sourceTree = "<group>"; };
 		65E9E737150546B600700831 /* Tweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tweet.m; sourceTree = "<group>"; };
 		65E9E737150546B600700834 /* Tweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tweet.h; sourceTree = "<group>"; };
 		65E9E737150546B600700835 /* twitter.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; path = twitter.json; sourceTree = "<group>"; };
 		65E9E737150546B600700838 /* TweetsDeserializerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetsDeserializerTest.m; sourceTree = "<group>"; };
 		65E9E737150546B60070083A /* TweetsDeserializerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetsDeserializerTest.h; sourceTree = "<group>"; };
-		65E9E737150546B60070083B /* TweetsInteractorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetsInteractorTest.m; sourceTree = "<group>"; };
-		65E9E737150546B60070083D /* TweetsInteractorTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetsInteractorTest.h; sourceTree = "<group>"; };
+		65E9E737150546B60070083E /* ViewWithDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewWithDataSource.h; sourceTree = "<group>"; };
+		65E9E737150546B60070083F /* ViewWithDataSourceDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewWithDataSourceDelegate.h; sourceTree = "<group>"; };
+		65E9E737150546B600700840 /* InteractorWithSingleDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InteractorWithSingleDataSource.m; sourceTree = "<group>"; };
+		65E9E737150546B600700843 /* InteractorWithSingleDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractorWithSingleDataSource.h; sourceTree = "<group>"; };
+		65E9E737150546B600700845 /* InteractorWithSingleDataSourceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InteractorWithSingleDataSourceTest.m; sourceTree = "<group>"; };
+		65E9E737150546B600700847 /* InteractorWithSingleDataSourceTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractorWithSingleDataSourceTest.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -347,10 +338,10 @@
 				6597646C14FEB35600473A7E /* Test.h */,
 				6597646C14FEB35600473A7C /* Test.m */,
 				6570BF4D14FEBA88008C3C52 /* Supporting Files */,
-				6597646C14FEB35600473A78 /* Timetable */,
 				65E9E737150546B600700804 /* Player */,
 				65E9E737150546B600700819 /* Resources */,
 				65E9E737150546B600700837 /* Twitter */,
+				65E9E737150546B600700844 /* Infrastructure */,
 			);
 			path = MoepMoepPlayerTests;
 			sourceTree = "<group>";
@@ -404,14 +395,10 @@
 				6597646C14FEB35600473A85 /* TimetableDeserializer.m */,
 				6597646C14FEB35600473A84 /* ShowTableViewCell.h */,
 				6597646C14FEB35600473A82 /* ShowTableViewCell.m */,
-				6597646C14FEB35600473A66 /* TimetableViewDelegate.h */,
 				6597646C14FEB35600473A62 /* Show.h */,
 				6597646C14FEB35600473A5F /* Show.m */,
 				6597646C14FEB35600473A5E /* Timetable.h */,
 				6597646C14FEB35600473A5B /* Timetable.m */,
-				6597646C14FEB35600473A5A /* TimetableView.h */,
-				6597646C14FEB35600473A59 /* TimetableInteractor.h */,
-				6597646C14FEB35600473A56 /* TimetableInteractor.m */,
 				6597646C14FEB35600473A53 /* TimetableTableViewController.h */,
 				6597646C14FEB35600473A51 /* TimetableTableViewController.m */,
 			);
@@ -452,20 +439,13 @@
 		6597646C14FEB35600473A70 /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
+				65E9E737150546B60070083F /* ViewWithDataSourceDelegate.h */,
+				65E9E737150546B60070083E /* ViewWithDataSource.h */,
 				6597646C14FEB35600473A75 /* BaseViewController.h */,
 				6597646C14FEB35600473A72 /* BaseViewController.m */,
 				6597646C14FEB35600473A71 /* View.h */,
 			);
 			path = "User Interface";
-			sourceTree = "<group>";
-		};
-		6597646C14FEB35600473A78 /* Timetable */ = {
-			isa = PBXGroup;
-			children = (
-				6597646C14FEB35600473A7B /* TimetableInteractorTest.h */,
-				6597646C14FEB35600473A79 /* TimetableInteractorTest.m */,
-			);
-			path = Timetable;
 			sourceTree = "<group>";
 		};
 		65CD5747150B605800A5152B /* Third Party */ = {
@@ -490,6 +470,8 @@
 		65E9E737150546B600700809 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
+				65E9E737150546B600700843 /* InteractorWithSingleDataSource.h */,
+				65E9E737150546B600700840 /* InteractorWithSingleDataSource.m */,
 				65E9E737150546B60070080D /* InteractorBase.h */,
 				65E9E737150546B60070080A /* InteractorBase.m */,
 			);
@@ -510,12 +492,8 @@
 			children = (
 				65E9E737150546B600700834 /* Tweet.h */,
 				65E9E737150546B600700831 /* Tweet.m */,
-				65E9E737150546B600700830 /* TweetsInteractor.h */,
-				65E9E737150546B60070082D /* TweetsInteractor.m */,
 				65E9E737150546B60070082C /* TweetsDeserializer.h */,
 				65E9E737150546B600700829 /* TweetsDeserializer.m */,
-				65E9E737150546B600700828 /* TweetsViewDelegate.h */,
-				65E9E737150546B600700827 /* TweetsView.h */,
 				65E9E737150546B600700826 /* TweetsTableViewController.h */,
 				65E9E737150546B600700824 /* TweetsTableViewController.m */,
 				65E9E737150546B600700823 /* TweetTableViewCell.h */,
@@ -527,12 +505,19 @@
 		65E9E737150546B600700837 /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
-				65E9E737150546B60070083D /* TweetsInteractorTest.h */,
-				65E9E737150546B60070083B /* TweetsInteractorTest.m */,
 				65E9E737150546B60070083A /* TweetsDeserializerTest.h */,
 				65E9E737150546B600700838 /* TweetsDeserializerTest.m */,
 			);
 			path = Twitter;
+			sourceTree = "<group>";
+		};
+		65E9E737150546B600700844 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				65E9E737150546B600700847 /* InteractorWithSingleDataSourceTest.h */,
+				65E9E737150546B600700845 /* InteractorWithSingleDataSourceTest.m */,
+			);
+			path = Infrastructure;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -702,7 +687,6 @@
 				6558AEA614FD948600378967 /* ChatViewController.m in Sources */,
 				6597646C14FEB35600473A40 /* StreamPlayer.m in Sources */,
 				6597646C14FEB35600473A52 /* TimetableTableViewController.m in Sources */,
-				6597646C14FEB35600473A57 /* TimetableInteractor.m in Sources */,
 				6597646C14FEB35600473A5C /* Timetable.m in Sources */,
 				6597646C14FEB35600473A60 /* Show.m in Sources */,
 				6597646C14FEB35600473A64 /* MainTabBarController.m in Sources */,
@@ -719,8 +703,8 @@
 				65E9E737150546B600700822 /* TweetTableViewCell.m in Sources */,
 				65E9E737150546B600700825 /* TweetsTableViewController.m in Sources */,
 				65E9E737150546B60070082A /* TweetsDeserializer.m in Sources */,
-				65E9E737150546B60070082E /* TweetsInteractor.m in Sources */,
 				65E9E737150546B600700832 /* Tweet.m in Sources */,
+				65E9E737150546B600700841 /* InteractorWithSingleDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -728,11 +712,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6597646C14FEB35600473A58 /* TimetableInteractor.m in Sources */,
 				6597646C14FEB35600473A5D /* Timetable.m in Sources */,
 				6597646C14FEB35600473A61 /* Show.m in Sources */,
 				6597646C14FEB35600473A74 /* BaseViewController.m in Sources */,
-				6597646C14FEB35600473A7A /* TimetableInteractorTest.m in Sources */,
 				6597646C14FEB35600473A7D /* Test.m in Sources */,
 				65E9E737150546B6007007F5 /* NotificationKeys.m in Sources */,
 				65E9E737150546B6007007FB /* Channel.m in Sources */,
@@ -744,10 +726,10 @@
 				65E9E737150546B600700817 /* ChannelListDeserializerTest.m in Sources */,
 				65E9E737150546B60070081E /* ErrorFactory.m in Sources */,
 				65E9E737150546B60070082B /* TweetsDeserializer.m in Sources */,
-				65E9E737150546B60070082F /* TweetsInteractor.m in Sources */,
 				65E9E737150546B600700833 /* Tweet.m in Sources */,
 				65E9E737150546B600700839 /* TweetsDeserializerTest.m in Sources */,
-				65E9E737150546B60070083C /* TweetsInteractorTest.m in Sources */,
+				65E9E737150546B600700842 /* InteractorWithSingleDataSource.m in Sources */,
+				65E9E737150546B600700846 /* InteractorWithSingleDataSourceTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

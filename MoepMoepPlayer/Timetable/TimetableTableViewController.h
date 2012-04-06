@@ -19,10 +19,10 @@
 
 #import <Foundation/Foundation.h>
 #import "BaseViewController.h"
-#import "TimetableView.h"
+#import "ViewWithDataSource.h"
 
 
-@interface TimetableTableViewController : BaseViewController<UITableViewDataSource, UITableViewDelegate, TimetableView> {
+@interface TimetableTableViewController : BaseViewController<UITableViewDataSource, UITableViewDelegate, ViewWithDataSource> {
     @private
     NSArray *days;
     NSMutableDictionary *showsGroupedByWeekday;

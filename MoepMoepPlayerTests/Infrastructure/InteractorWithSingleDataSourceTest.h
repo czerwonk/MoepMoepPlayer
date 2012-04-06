@@ -21,7 +21,7 @@
 #import "Test.h"
 
 
-@interface TweetsInteractorTest : Test {
+@interface InteractorWithSingleDataSourceTest : Test {
 
 }
 
@@ -31,8 +31,8 @@
 
 - (void)testShouldNotifyViewOnError;
 
-- (void)testShouldSetTweetsToViewAfterRetrieving;
+- (void)testShouldUpdateDataSourceToViewAfterRetrieving;
 
-- (void)testShouldRetrieveDataOnRefresh;
+- (void)testShouldRetrieveDataOnReload;
 
 @end
